@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/BreadboardPIC12F1572.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=BreadboardPIC12F1572.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=breadboardpic12f1572.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/aj2019-kit.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=aj2019-kit.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=aj2019-kit/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/breadboardpic12f1572.x/bin
+makeDirectory ${TMPDIR}/aj2019-kit/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/breadboardpic12f1572.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/aj2019-kit.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/breadboardpic12f1572.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/aj2019-kit.tar *
 checkReturnCode
 
 # Cleanup

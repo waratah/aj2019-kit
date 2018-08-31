@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>BreadboardPIC12F1572</name>
-            <creation-uuid>176b6385-6df2-4e11-aefb-003caa1ff215</creation-uuid>
+            <name>aj2019-kit</name>
+            <creation-uuid>ae2d7375-a864-40a2-be1e-04bf1f52acbd</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>

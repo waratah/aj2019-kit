@@ -1,33 +1,33 @@
 [p LITE_MODE AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
 [d version 1.1 ]
 [d edition pro ]
-[d chip 12F1572 ]
+[d chip 12LF1572 ]
 [d frameptr 6 ]
-"86 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/adc1.c
-[e E3034 . `uc
+"86 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/adc1.c
+[e E3025 . `uc
 channel_AN0 0
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"98 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/main.c
-[e E3090 . `uc
+"105 C:\Users\lachlan\MPLABXProjects\aj2019-kit\main.c
+[e E3081 . `uc
 channel_AN0 0
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"10 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/sprcadd.c
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"4 /Applications/microchip/xc8/v2.00/pic/sources/c99/common/Umul8_16.c
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"49 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/main.c
+"51 C:\Users\lachlan\MPLABXProjects\aj2019-kit\main.c
 [v _main main `(v  1 e 1 0 ]
-"65 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/adc1.c
+"65 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/adc1.c
 [v _ADC1_Initialize ADC1_Initialize `(v  1 e 1 0 ]
 "113
 [v _ADC1_GetConversion ADC1_GetConversion `(us  1 e 2 0 ]
-"56 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/eusart.c
+"56 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 "88
 [v _EUSART_is_tx_done EUSART_is_tx_done `(a  1 e 1 0 ]
@@ -35,15 +35,15 @@ channel_FVR 31
 [v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
 "111
 [v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
-"50 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/mcc.c
+"50 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "63
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "73
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-"57 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/pin_manager.c
+"57 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"58 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/pwm1.c
+"58 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/pwm1.c
 [v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
 "113
 [v _PWM1_Start PWM1_Start `(v  1 e 1 0 ]
@@ -57,7 +57,7 @@ channel_FVR 31
 [v _PWM1_DutyCycleSet PWM1_DutyCycleSet `(v  1 e 1 0 ]
 "145
 [v _PWM1_PeriodSet PWM1_PeriodSet `(v  1 e 1 0 ]
-"58 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/pwm2.c
+"58 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/pwm2.c
 [v _PWM2_Initialize PWM2_Initialize `(v  1 e 1 0 ]
 "113
 [v _PWM2_Start PWM2_Start `(v  1 e 1 0 ]
@@ -71,7 +71,7 @@ channel_FVR 31
 [v _PWM2_DutyCycleSet PWM2_DutyCycleSet `(v  1 e 1 0 ]
 "145
 [v _PWM2_PeriodSet PWM2_PeriodSet `(v  1 e 1 0 ]
-"58 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/pwm3.c
+"58 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/pwm3.c
 [v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
 "113
 [v _PWM3_Start PWM3_Start `(v  1 e 1 0 ]
@@ -85,7 +85,19 @@ channel_FVR 31
 [v _PWM3_DutyCycleSet PWM3_DutyCycleSet `(v  1 e 1 0 ]
 "145
 [v _PWM3_PeriodSet PWM3_PeriodSet `(v  1 e 1 0 ]
-[s S671 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S784 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"447 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h
+[s S791 . 1 `uc 1 PORTA 1 0 :6:0 
+]
+[u S793 . 1 `S784 1 . 1 0 `S791 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES793  1 e 1 @12 ]
+[s S112 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXIF 1 0 :1:4 
@@ -93,12 +105,12 @@ channel_FVR 31
 `uc 1 ADIF 1 0 :1:6 
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
-"503 /Applications/microchip/xc8/v2.00/pic/include/pic12f1572.h
-[u S679 . 1 `S671 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES679  1 e 1 @17 ]
+"503
+[u S120 . 1 `S112 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES120  1 e 1 @17 ]
 "914
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-[s S385 . 1 `uc 1 PS0 1 0 :1:0 
+[s S26 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 PSA 1 0 :1:3 
@@ -108,13 +120,13 @@ channel_FVR 31
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1100
-[s S394 . 1 `uc 1 PS 1 0 :3:0 
+[s S35 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S399 . 1 `S385 1 . 1 0 `S394 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES399  1 e 1 @149 ]
+[u S40 . 1 `S26 1 . 1 0 `S35 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES40  1 e 1 @149 ]
 "1217
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1276
@@ -127,7 +139,7 @@ channel_FVR 31
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "1509
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S599 . 1 `uc 1 ADON 1 0 :1:0 
+[s S381 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -136,18 +148,18 @@ channel_FVR 31
 `uc 1 CHS4 1 0 :1:6 
 ]
 "1538
-[s S607 . 1 `uc 1 . 1 0 :1:0 
+[s S389 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
-[s S611 . 1 `uc 1 . 1 0 :1:0 
+[s S393 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[s S614 . 1 `uc 1 . 1 0 :1:0 
+[s S396 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[u S617 . 1 `S599 1 . 1 0 `S607 1 . 1 0 `S611 1 . 1 0 `S614 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES617  1 e 1 @157 ]
+[u S399 . 1 `S381 1 . 1 0 `S389 1 . 1 0 `S393 1 . 1 0 `S396 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES399  1 e 1 @157 ]
 "1598
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "1664
@@ -160,17 +172,17 @@ channel_FVR 31
 [v _APFCON APFCON `VEuc  1 e 1 @285 ]
 "2242
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
-"2480
+"2459
 [v _RCREG RCREG `VEuc  1 e 1 @409 ]
-"2500
+"2479
 [v _TXREG TXREG `VEuc  1 e 1 @410 ]
-"2527
+"2506
 [v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
-"2547
+"2526
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
-"2567
+"2546
 [v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
-[s S711 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S152 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -179,12 +191,12 @@ channel_FVR 31
 `uc 1 RX9 1 0 :1:6 
 `uc 1 SPEN 1 0 :1:7 
 ]
-"2584
-[u S720 . 1 `S711 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES720  1 e 1 @413 ]
-"2629
+"2563
+[u S161 . 1 `S152 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES161  1 e 1 @413 ]
+"2608
 [v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
-[s S690 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S131 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -193,252 +205,252 @@ channel_FVR 31
 `uc 1 TX9 1 0 :1:6 
 `uc 1 CSRC 1 0 :1:7 
 ]
-"2646
-[u S699 . 1 `S690 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES699  1 e 1 @414 ]
-"2691
+"2625
+[u S140 . 1 `S131 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES140  1 e 1 @414 ]
+"2670
 [v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
-"2743
+"2722
 [v _WPUA WPUA `VEuc  1 e 1 @524 ]
-"2801
+"2780
 [v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
-"3594
+"3573
 [v _PWM1PHL PWM1PHL `VEuc  1 e 1 @3473 ]
-"3672
+"3651
 [v _PWM1PHH PWM1PHH `VEuc  1 e 1 @3474 ]
-"3757
+"3736
 [v _PWM1DCL PWM1DCL `VEuc  1 e 1 @3475 ]
-"3835
+"3814
 [v _PWM1DCH PWM1DCH `VEuc  1 e 1 @3476 ]
-"3920
+"3899
 [v _PWM1PRL PWM1PRL `VEuc  1 e 1 @3477 ]
-"3998
+"3977
 [v _PWM1PRH PWM1PRH `VEuc  1 e 1 @3478 ]
-"4083
+"4062
 [v _PWM1OFL PWM1OFL `VEuc  1 e 1 @3479 ]
-"4161
+"4140
 [v _PWM1OFH PWM1OFH `VEuc  1 e 1 @3480 ]
-"4246
+"4225
 [v _PWM1TMRL PWM1TMRL `VEuc  1 e 1 @3481 ]
-"4324
+"4303
 [v _PWM1TMRH PWM1TMRH `VEuc  1 e 1 @3482 ]
-"4402
+"4381
 [v _PWM1CON PWM1CON `VEuc  1 e 1 @3483 ]
-[s S77 . 1 `uc 1 . 1 0 :2:0 
+[s S227 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 MODE 1 0 :2:2 
 `uc 1 POL 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
 `uc 1 OE 1 0 :1:6 
 `uc 1 EN 1 0 :1:7 
 ]
-"4435
-[s S452 . 1 `uc 1 . 1 0 :2:0 
+"4414
+[s S234 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM1MODE0 1 0 :1:2 
 `uc 1 PWM1MODE1 1 0 :1:3 
 ]
-[s S456 . 1 `uc 1 . 1 0 :2:0 
+[s S238 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM1MODE 1 0 :2:2 
 `uc 1 PWM1POL 1 0 :1:4 
 `uc 1 PWM1OUT 1 0 :1:5 
 `uc 1 PWM1OE 1 0 :1:6 
 `uc 1 PWM1EN 1 0 :1:7 
 ]
-[s S95 . 1 `uc 1 . 1 0 :2:0 
+[s S245 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 MODE0 1 0 :1:2 
 `uc 1 MODE1 1 0 :1:3 
 ]
-[u S467 . 1 `S77 1 . 1 0 `S452 1 . 1 0 `S456 1 . 1 0 `S95 1 . 1 0 ]
-[v _PWM1CONbits PWM1CONbits `VES467  1 e 1 @3483 ]
-"4510
+[u S249 . 1 `S227 1 . 1 0 `S234 1 . 1 0 `S238 1 . 1 0 `S245 1 . 1 0 ]
+[v _PWM1CONbits PWM1CONbits `VES249  1 e 1 @3483 ]
+"4489
 [v _PWM1INTE PWM1INTE `VEuc  1 e 1 @3484 ]
-"4636
+"4615
 [v _PWM1INTF PWM1INTF `VEuc  1 e 1 @3485 ]
-[s S165 . 1 `uc 1 PRIF 1 0 :1:0 
+[s S315 . 1 `uc 1 PRIF 1 0 :1:0 
 `uc 1 DCIF 1 0 :1:1 
 `uc 1 PHIF 1 0 :1:2 
 `uc 1 OFIF 1 0 :1:3 
 ]
-"4660
-[s S538 . 1 `uc 1 PWM1PRIF 1 0 :1:0 
+"4639
+[s S320 . 1 `uc 1 PWM1PRIF 1 0 :1:0 
 `uc 1 PWM1DCIF 1 0 :1:1 
 `uc 1 PWM1PHIF 1 0 :1:2 
 `uc 1 PWM1OFIF 1 0 :1:3 
 ]
-[u S543 . 1 `S165 1 . 1 0 `S538 1 . 1 0 ]
-[v _PWM1INTFbits PWM1INTFbits `VES543  1 e 1 @3485 ]
-"4762
+[u S325 . 1 `S315 1 . 1 0 `S320 1 . 1 0 ]
+[v _PWM1INTFbits PWM1INTFbits `VES325  1 e 1 @3485 ]
+"4741
 [v _PWM1CLKCON PWM1CLKCON `VEuc  1 e 1 @3486 ]
-"4870
+"4849
 [v _PWM1LDCON PWM1LDCON `VEuc  1 e 1 @3487 ]
-[s S127 . 1 `uc 1 LDS 1 0 :2:0 
+[s S277 . 1 `uc 1 LDS 1 0 :2:0 
 `uc 1 . 1 0 :4:2 
 `uc 1 LDT 1 0 :1:6 
 `uc 1 LDA 1 0 :1:7 
 ]
-"4897
-[s S500 . 1 `uc 1 PWM1LDS0 1 0 :1:0 
+"4876
+[s S282 . 1 `uc 1 PWM1LDS0 1 0 :1:0 
 `uc 1 PWM1LDS1 1 0 :1:1 
 ]
-[s S503 . 1 `uc 1 PWM1LDS 1 0 :2:0 
+[s S285 . 1 `uc 1 PWM1LDS 1 0 :2:0 
 `uc 1 . 1 0 :4:2 
 `uc 1 PWM1LDM 1 0 :1:6 
 `uc 1 PWM1LD 1 0 :1:7 
 ]
-[s S140 . 1 `uc 1 LDS0 1 0 :1:0 
+[s S290 . 1 `uc 1 LDS0 1 0 :1:0 
 `uc 1 LDS1 1 0 :1:1 
 ]
-[u S511 . 1 `S127 1 . 1 0 `S500 1 . 1 0 `S503 1 . 1 0 `S140 1 . 1 0 ]
-[v _PWM1LDCONbits PWM1LDCONbits `VES511  1 e 1 @3487 ]
-"4952
+[u S293 . 1 `S277 1 . 1 0 `S282 1 . 1 0 `S285 1 . 1 0 `S290 1 . 1 0 ]
+[v _PWM1LDCONbits PWM1LDCONbits `VES293  1 e 1 @3487 ]
+"4931
 [v _PWM1OFCON PWM1OFCON `VEuc  1 e 1 @3488 ]
-"5067
+"5046
 [v _PWM2PHL PWM2PHL `VEuc  1 e 1 @3489 ]
-"5145
+"5124
 [v _PWM2PHH PWM2PHH `VEuc  1 e 1 @3490 ]
-"5230
+"5209
 [v _PWM2DCL PWM2DCL `VEuc  1 e 1 @3491 ]
-"5308
+"5287
 [v _PWM2DCH PWM2DCH `VEuc  1 e 1 @3492 ]
-"5393
+"5372
 [v _PWM2PRL PWM2PRL `VEuc  1 e 1 @3493 ]
-"5471
+"5450
 [v _PWM2PRH PWM2PRH `VEuc  1 e 1 @3494 ]
-"5556
+"5535
 [v _PWM2OFL PWM2OFL `VEuc  1 e 1 @3495 ]
-"5634
+"5613
 [v _PWM2OFH PWM2OFH `VEuc  1 e 1 @3496 ]
-"5719
+"5698
 [v _PWM2TMRL PWM2TMRL `VEuc  1 e 1 @3497 ]
-"5797
+"5776
 [v _PWM2TMRH PWM2TMRH `VEuc  1 e 1 @3498 ]
-"5875
+"5854
 [v _PWM2CON PWM2CON `VEuc  1 e 1 @3499 ]
-"5908
-[s S244 . 1 `uc 1 . 1 0 :2:0 
+"5887
+[s S471 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM2MODE0 1 0 :1:2 
 `uc 1 PWM2MODE1 1 0 :1:3 
 ]
-[s S248 . 1 `uc 1 . 1 0 :2:0 
+[s S475 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM2MODE 1 0 :2:2 
 `uc 1 PWM2POL 1 0 :1:4 
 `uc 1 PWM2OUT 1 0 :1:5 
 `uc 1 PWM2OE 1 0 :1:6 
 `uc 1 PWM2EN 1 0 :1:7 
 ]
-[u S259 . 1 `S77 1 . 1 0 `S244 1 . 1 0 `S248 1 . 1 0 `S95 1 . 1 0 ]
-[v _PWM2CONbits PWM2CONbits `VES259  1 e 1 @3499 ]
-"5983
+[u S486 . 1 `S227 1 . 1 0 `S471 1 . 1 0 `S475 1 . 1 0 `S245 1 . 1 0 ]
+[v _PWM2CONbits PWM2CONbits `VES486  1 e 1 @3499 ]
+"5962
 [v _PWM2INTE PWM2INTE `VEuc  1 e 1 @3500 ]
-"6109
+"6088
 [v _PWM2INTF PWM2INTF `VEuc  1 e 1 @3501 ]
-"6133
-[s S330 . 1 `uc 1 PWM2PRIF 1 0 :1:0 
+"6112
+[s S557 . 1 `uc 1 PWM2PRIF 1 0 :1:0 
 `uc 1 PWM2DCIF 1 0 :1:1 
 `uc 1 PWM2PHIF 1 0 :1:2 
 `uc 1 PWM2OFIF 1 0 :1:3 
 ]
-[u S335 . 1 `S165 1 . 1 0 `S330 1 . 1 0 ]
-[v _PWM2INTFbits PWM2INTFbits `VES335  1 e 1 @3501 ]
-"6235
+[u S562 . 1 `S315 1 . 1 0 `S557 1 . 1 0 ]
+[v _PWM2INTFbits PWM2INTFbits `VES562  1 e 1 @3501 ]
+"6214
 [v _PWM2CLKCON PWM2CLKCON `VEuc  1 e 1 @3502 ]
-"6343
+"6322
 [v _PWM2LDCON PWM2LDCON `VEuc  1 e 1 @3503 ]
-"6370
-[s S292 . 1 `uc 1 PWM2LDS0 1 0 :1:0 
+"6349
+[s S519 . 1 `uc 1 PWM2LDS0 1 0 :1:0 
 `uc 1 PWM2LDS1 1 0 :1:1 
 ]
-[s S295 . 1 `uc 1 PWM2LDS 1 0 :2:0 
+[s S522 . 1 `uc 1 PWM2LDS 1 0 :2:0 
 `uc 1 . 1 0 :4:2 
 `uc 1 PWM2LDM 1 0 :1:6 
 `uc 1 PWM2LD 1 0 :1:7 
 ]
-[u S303 . 1 `S127 1 . 1 0 `S292 1 . 1 0 `S295 1 . 1 0 `S140 1 . 1 0 ]
-[v _PWM2LDCONbits PWM2LDCONbits `VES303  1 e 1 @3503 ]
-"6425
+[u S530 . 1 `S277 1 . 1 0 `S519 1 . 1 0 `S522 1 . 1 0 `S290 1 . 1 0 ]
+[v _PWM2LDCONbits PWM2LDCONbits `VES530  1 e 1 @3503 ]
+"6404
 [v _PWM2OFCON PWM2OFCON `VEuc  1 e 1 @3504 ]
-"6540
+"6519
 [v _PWM3PHL PWM3PHL `VEuc  1 e 1 @3505 ]
-"6618
+"6597
 [v _PWM3PHH PWM3PHH `VEuc  1 e 1 @3506 ]
-"6703
+"6682
 [v _PWM3DCL PWM3DCL `VEuc  1 e 1 @3507 ]
-"6781
+"6760
 [v _PWM3DCH PWM3DCH `VEuc  1 e 1 @3508 ]
-"6866
+"6845
 [v _PWM3PRL PWM3PRL `VEuc  1 e 1 @3509 ]
-"6944
+"6923
 [v _PWM3PRH PWM3PRH `VEuc  1 e 1 @3510 ]
-"7029
+"7008
 [v _PWM3OFL PWM3OFL `VEuc  1 e 1 @3511 ]
-"7107
+"7086
 [v _PWM3OFH PWM3OFH `VEuc  1 e 1 @3512 ]
-"7192
+"7171
 [v _PWM3TMRL PWM3TMRL `VEuc  1 e 1 @3513 ]
-"7270
+"7249
 [v _PWM3TMRH PWM3TMRH `VEuc  1 e 1 @3514 ]
-"7348
+"7327
 [v _PWM3CON PWM3CON `VEuc  1 e 1 @3515 ]
-"7381
-[s S84 . 1 `uc 1 . 1 0 :2:0 
+"7360
+[s S631 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM3MODE0 1 0 :1:2 
 `uc 1 PWM3MODE1 1 0 :1:3 
 ]
-[s S88 . 1 `uc 1 . 1 0 :2:0 
+[s S635 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM3MODE 1 0 :2:2 
 `uc 1 PWM3POL 1 0 :1:4 
 `uc 1 PWM3OUT 1 0 :1:5 
 `uc 1 PWM3OE 1 0 :1:6 
 `uc 1 PWM3EN 1 0 :1:7 
 ]
-[u S99 . 1 `S77 1 . 1 0 `S84 1 . 1 0 `S88 1 . 1 0 `S95 1 . 1 0 ]
-[v _PWM3CONbits PWM3CONbits `VES99  1 e 1 @3515 ]
-"7456
+[u S646 . 1 `S227 1 . 1 0 `S631 1 . 1 0 `S635 1 . 1 0 `S245 1 . 1 0 ]
+[v _PWM3CONbits PWM3CONbits `VES646  1 e 1 @3515 ]
+"7435
 [v _PWM3INTE PWM3INTE `VEuc  1 e 1 @3516 ]
-"7582
+"7561
 [v _PWM3INTF PWM3INTF `VEuc  1 e 1 @3517 ]
-"7606
-[s S170 . 1 `uc 1 PWM3PRIF 1 0 :1:0 
+"7585
+[s S717 . 1 `uc 1 PWM3PRIF 1 0 :1:0 
 `uc 1 PWM3DCIF 1 0 :1:1 
 `uc 1 PWM3PHIF 1 0 :1:2 
 `uc 1 PWM3OFIF 1 0 :1:3 
 ]
-[u S175 . 1 `S165 1 . 1 0 `S170 1 . 1 0 ]
-[v _PWM3INTFbits PWM3INTFbits `VES175  1 e 1 @3517 ]
-"7708
+[u S722 . 1 `S315 1 . 1 0 `S717 1 . 1 0 ]
+[v _PWM3INTFbits PWM3INTFbits `VES722  1 e 1 @3517 ]
+"7687
 [v _PWM3CLKCON PWM3CLKCON `VEuc  1 e 1 @3518 ]
-"7816
+"7795
 [v _PWM3LDCON PWM3LDCON `VEuc  1 e 1 @3519 ]
-"7843
-[s S132 . 1 `uc 1 PWM3LDS0 1 0 :1:0 
+"7822
+[s S679 . 1 `uc 1 PWM3LDS0 1 0 :1:0 
 `uc 1 PWM3LDS1 1 0 :1:1 
 ]
-[s S135 . 1 `uc 1 PWM3LDS 1 0 :2:0 
+[s S682 . 1 `uc 1 PWM3LDS 1 0 :2:0 
 `uc 1 . 1 0 :4:2 
 `uc 1 PWM3LDM 1 0 :1:6 
 `uc 1 PWM3LD 1 0 :1:7 
 ]
-[u S143 . 1 `S127 1 . 1 0 `S132 1 . 1 0 `S135 1 . 1 0 `S140 1 . 1 0 ]
-[v _PWM3LDCONbits PWM3LDCONbits `VES143  1 e 1 @3519 ]
-"7898
+[u S690 . 1 `S277 1 . 1 0 `S679 1 . 1 0 `S682 1 . 1 0 `S290 1 . 1 0 ]
+[v _PWM3LDCONbits PWM3LDCONbits `VES690  1 e 1 @3519 ]
+"7877
 [v _PWM3OFCON PWM3OFCON `VEuc  1 e 1 @3520 ]
-"49 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/main.c
+"51 C:\Users\lachlan\MPLABXProjects\aj2019-kit\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"97
-[v main@adc_result adc_result `us  1 a 2 9 ]
-"109
-[v main@receive receive `uc  1 a 1 0 ]
-"56
-[v main@LED3 LED3 `us  1 a 2 7 ]
-"55
-[v main@LED2 LED2 `us  1 a 2 5 ]
-"54
-[v main@LED1 LED1 `us  1 a 2 3 ]
+"100
+[v main@i i `i  1 a 2 2 ]
+"58
+[v main@LED3 LED3 `us  1 a 2 10 ]
 "57
-[v main@PERIOD PERIOD `us  1 a 2 1 ]
-"136
+[v main@LED2 LED2 `us  1 a 2 8 ]
+"56
+[v main@LED1 LED1 `us  1 a 2 6 ]
+"59
+[v main@PERIOD PERIOD `us  1 a 2 4 ]
+"96
+[v main@adc_result adc_result `us  1 a 2 0 ]
+"151
 } 0
-"50 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/mcc.c
+"50 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "61
@@ -448,42 +460,42 @@ channel_FVR 31
 {
 "77
 } 0
-"58 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/pwm3.c
+"58 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/pwm3.c
 [v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
 {
 "110
 } 0
-"58 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/pwm2.c
+"58 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/pwm2.c
 [v _PWM2_Initialize PWM2_Initialize `(v  1 e 1 0 ]
 {
 "110
 } 0
-"58 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/pwm1.c
+"58 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/pwm1.c
 [v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
 {
 "110
 } 0
-"57 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/pin_manager.c
+"57 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "95
 } 0
-"63 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/mcc.c
+"63 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "71
 } 0
-"56 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/eusart.c
+"56 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 {
 "76
 } 0
-"65 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/adc1.c
+"65 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/adc1.c
 [v _ADC1_Initialize ADC1_Initialize `(v  1 e 1 0 ]
 {
 "84
 } 0
-"118 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/pwm3.c
+"118 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/pwm3.c
 [v _PWM3_Stop PWM3_Stop `(v  1 e 1 0 ]
 {
 "121
@@ -516,7 +528,7 @@ channel_FVR 31
 [v PWM3_DutyCycleSet@dutyCycleCount dutyCycleCount `us  1 p 2 0 ]
 "143
 } 0
-"118 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/pwm2.c
+"118 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/pwm2.c
 [v _PWM2_Stop PWM2_Stop `(v  1 e 1 0 ]
 {
 "121
@@ -549,7 +561,7 @@ channel_FVR 31
 [v PWM2_DutyCycleSet@dutyCycleCount dutyCycleCount `us  1 p 2 0 ]
 "143
 } 0
-"118 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/pwm1.c
+"118 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/pwm1.c
 [v _PWM1_Stop PWM1_Stop `(v  1 e 1 0 ]
 {
 "121
@@ -582,7 +594,7 @@ channel_FVR 31
 [v PWM1_DutyCycleSet@dutyCycleCount dutyCycleCount `us  1 p 2 0 ]
 "143
 } 0
-"88 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/eusart.c
+"88 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/eusart.c
 [v _EUSART_is_tx_done EUSART_is_tx_done `(a  1 e 1 0 ]
 {
 "91
@@ -595,17 +607,12 @@ channel_FVR 31
 [v EUSART_Write@txData txData `uc  1 a 1 0 ]
 "118
 } 0
-"93
-[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
-{
-"109
-} 0
-"113 /Users/lachlan/Google Drive/AJ2019 Program Team/Activities/Onsite Activities/Technology/8. Electronics/MPLABX Projects/BreadboardPIC12F1572.X/mcc_generated_files/adc1.c
+"113 C:\Users\lachlan\MPLABXProjects\aj2019-kit\mcc_generated_files/adc1.c
 [v _ADC1_GetConversion ADC1_GetConversion `(us  1 e 2 0 ]
 {
-[v ADC1_GetConversion@channel channel `E3034  1 a 1 wreg ]
-[v ADC1_GetConversion@channel channel `E3034  1 a 1 wreg ]
+[v ADC1_GetConversion@channel channel `E3025  1 a 1 wreg ]
+[v ADC1_GetConversion@channel channel `E3025  1 a 1 wreg ]
 "116
-[v ADC1_GetConversion@channel channel `E3034  1 a 1 3 ]
+[v ADC1_GetConversion@channel channel `E3025  1 a 1 3 ]
 "134
 } 0

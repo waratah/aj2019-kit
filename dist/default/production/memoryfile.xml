@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production/BreadboardPIC12F1572.X.production.hex">
+  <executable name="dist/default/production\aj2019-kit.production.hex">
     <memory name="program">
       <units>words</units>
       <length>2048</length>
-      <used>480</used>
-      <free>1568</free>
+      <used>533</used>
+      <free>1515</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>256</length>
-      <used>21</used>
-      <free>235</free>
+      <used>19</used>
+      <free>237</free>
     </memory>
   </executable>
 </project>

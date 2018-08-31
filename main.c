@@ -14,7 +14,7 @@
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
-        Device            :  PIC12F1572
+        Device            :  PIC12LF1572
         Driver Version    :  2.00
 */
 
@@ -42,6 +42,8 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+
+//#define ledadc
 
 /*
                          Main application
@@ -91,14 +93,52 @@ void main(void)
     PWM2_Start();
     PWM3_Start();
     
+    uint16_t adc_result = 0;
+    
     while (1)
     {
-        //Read ADC for Button Press
-        uint16_t adc_result = 0;
-        adc_result = ADC1_GetConversion(channel_AN0);
+        int i;
+        //Added for loop to reduce the frequency of serial transmit below
+        //otherwise it slows down the LED cycle.
+        for(i=0 ; i<10 ; i++)
+        {
+            //Read ADC for Button Press
+            adc_result = ADC1_GetConversion(channel_AN0);
+            
+            //LED Control
+            //uncomment #define ledadc at top to control LEDs with Buttons
+            //commant the #define to unconditionally increment LEDs
+#ifdef ledadc
+            if(adc_result >= 0x99C0-10 && adc_result <= 0x99C0+10)LED1+=5;
+            if(adc_result >= 0x8DC0-10 && adc_result <= 0x8DC0+10)LED2+=5;
+            if(adc_result >= 0x7A40-10 && adc_result <= 0x7A40+10)LED3+=5;
+#else
+            LED1+=5;
+            LED2+=5;
+            LED3+=5;
+#endif
+            
+            //Limit LEDs to duty cycle of 300/PERIOD.
+            //In the case PERIOD=2000, 300 gives approx max brightness.
+            if(LED1 > 300) LED1 = 0;
+            if(LED2 > 300) LED2 = 0;
+            if(LED3 > 300) LED3 = 0;
+
+            //Update PWM Modules
+            PWM1_DutyCycleSet(LED1);
+            PWM1_LoadBufferSet();
+            PWM2_DutyCycleSet(LED2);
+            PWM2_LoadBufferSet();
+            PWM3_DutyCycleSet(LED3);
+            PWM3_LoadBufferSet();
+
+            //PWM Update Delay
+            //Set speed of LED cycle
+            __delay_ms(10);
+        }
         
         //Serial Transmit
-        RCSTAbits.SPEN = 1; //Enable UART
+        RCSTAbits.SPEN = 1; //Enable UART (sets RX/TX Pins as digital serial)
         __delay_ms(1); //Wait for High Level before sending
         //Send Serial Data
         EUSART_Write((uint8_t)(adc_result & 0xFF));
@@ -106,32 +146,16 @@ void main(void)
         //Wait for Serial to finish and disable UART (for ADC to work)
         while(!EUSART_is_tx_done());
         
-        uint8_t receive = EUSART_Read();
-        if(receive == (adc_result & 0xFF))
-        {
-            EUSART_Write(0x55);
-        }
-        while(!EUSART_is_tx_done());
-        RCSTAbits.SPEN = 0; //Disable UART
-        
-        //LED Control
-        if(adc_result >= 0x99C0-10 && adc_result <= 0x99C0+10)LED1+=5;
-        if(adc_result >= 0x8DC0-10 && adc_result <= 0x8DC0+10)LED2+=5;
-        if(adc_result >= 0x7A40-10 && adc_result <= 0x7A40+10)LED3+=5;
-        
-        if(LED1 > 300) LED1 = 0;
-        if(LED2 > 300) LED2 = 0;
-        if(LED3 > 300) LED3 = 0;
-        
-        PWM1_DutyCycleSet(LED1);
-        PWM1_LoadBufferSet();
-        PWM2_DutyCycleSet(LED2);
-        PWM2_LoadBufferSet();
-        PWM3_DutyCycleSet(LED3);
-        PWM3_LoadBufferSet();
-        
-        //Main Loop Delay
-        __delay_ms(10);
+        //commented out the receive for testing.
+        //If the same (first) value sent is received, then send a 0x55 ack.
+        //The EUSART_Read and while(!EUSART_is_tx_done) functions are blocking
+//        uint8_t receive = EUSART_Read();
+//        if(receive == (adc_result & 0xFF))
+//        {
+//            EUSART_Write(0x55);
+//        }
+//        while(!EUSART_is_tx_done());
+        RCSTAbits.SPEN = 0; //Disable UART (allows pins to be used by ADC again)
     }
 }
 /**

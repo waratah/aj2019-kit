@@ -14,7 +14,7 @@
     This header file provides implementations for driver APIs for PWM3.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
-        Device            :  PIC12F1572
+        Device            :  PIC12LF1572
         Driver Version    :  2.01
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.45 or later
@@ -89,8 +89,8 @@ void PWM3_Initialize(void)
      //PWM3PRH 0; 
     PWM3PRH = 0x00;
 
-     //PWM3PRL 255; 
-    PWM3PRL = 0xFF;
+     //PWM3PRL 1; 
+    PWM3PRL = 0x01;
 
      //PWM3OFH 0; 
     PWM3OFH = 0x00;
