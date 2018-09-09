@@ -8,7 +8,7 @@
     mcc.c
 
   @Summary:
-    This is the mcc.c file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+    This is the device_config.c file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
@@ -57,7 +57,7 @@
 
 // CONFIG2
 #pragma config WRT = OFF    // Flash Memory Self-Write Protection->Write protection off
-#pragma config PLLEN = ON    // PLL Enable->4x PLL enabled
+#pragma config PLLEN = OFF    // PLL Enable->4x PLL disabled
 #pragma config STVREN = ON    // Stack Overflow/Underflow Reset Enable->Stack Overflow or Underflow will cause a Reset
 #pragma config BORV = LO    // Brown-out Reset Voltage Selection->Brown-out Reset Voltage (Vbor), low trip point selected.
 #pragma config LPBOREN = OFF    // Low Power Brown-out Reset enable bit->LPBOR is disabled

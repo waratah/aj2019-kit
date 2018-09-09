@@ -5130,12 +5130,15 @@ extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
 # 49 "mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/device_config.h" 1
+# 50 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/pin_manager.h" 1
 # 138 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 150 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 50 "mcc_generated_files/mcc.h" 2
+# 51 "mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 3
@@ -5208,10 +5211,10 @@ typedef int32_t int_fast32_t;
 typedef uint32_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 131 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
-# 51 "mcc_generated_files/mcc.h" 2
+# 52 "mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdbool.h" 1 3
-# 52 "mcc_generated_files/mcc.h" 2
+# 53 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pwm2.h" 1
 # 94 "mcc_generated_files/pwm2.h"
@@ -5242,7 +5245,7 @@ _Bool PWM2_IsPhaseMatchOccured(void);
 _Bool PWM2_IsDutyCycleMatchOccured(void);
 # 414 "mcc_generated_files/pwm2.h"
 _Bool PWM2_IsPeriodMatchOccured(void);
-# 53 "mcc_generated_files/mcc.h" 2
+# 54 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pwm1.h" 1
 # 94 "mcc_generated_files/pwm1.h"
@@ -5273,7 +5276,7 @@ _Bool PWM1_IsPhaseMatchOccured(void);
 _Bool PWM1_IsDutyCycleMatchOccured(void);
 # 414 "mcc_generated_files/pwm1.h"
 _Bool PWM1_IsPeriodMatchOccured(void);
-# 54 "mcc_generated_files/mcc.h" 2
+# 55 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pwm3.h" 1
 # 94 "mcc_generated_files/pwm3.h"
@@ -5304,7 +5307,7 @@ _Bool PWM3_IsPhaseMatchOccured(void);
 _Bool PWM3_IsDutyCycleMatchOccured(void);
 # 414 "mcc_generated_files/pwm3.h"
 _Bool PWM3_IsPeriodMatchOccured(void);
-# 55 "mcc_generated_files/mcc.h" 2
+# 56 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/adc1.h" 1
 # 72 "mcc_generated_files/adc1.h"
@@ -5340,7 +5343,7 @@ adc_result_t ADC1_GetConversionResult(void);
 adc_result_t ADC1_GetConversion(adc_channel_t channel);
 # 316 "mcc_generated_files/adc1.h"
 void ADC1_TemperatureAcquisitionDelay(void);
-# 56 "mcc_generated_files/mcc.h" 2
+# 57 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart.h" 1
 # 57 "mcc_generated_files/eusart.h"
@@ -5493,7 +5496,7 @@ _Bool EUSART_is_tx_done(void);
 uint8_t EUSART_Read(void);
 # 281 "mcc_generated_files/eusart.h"
 void EUSART_Write(uint8_t txData);
-# 57 "mcc_generated_files/mcc.h" 2
+# 58 "mcc_generated_files/mcc.h" 2
 # 73 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 # 86 "mcc_generated_files/mcc.h"

@@ -47,6 +47,7 @@
 #ifndef MCC_H
 #define	MCC_H
 #include <xc.h>
+#include "device_config.h"
 #include "pin_manager.h"
 #include <stdint.h>
 #include <stdbool.h>
@@ -56,7 +57,6 @@
 #include "adc1.h"
 #include "eusart.h"
 
-#define _XTAL_FREQ  500000
 
 
 /**

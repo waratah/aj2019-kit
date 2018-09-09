@@ -50,7 +50,7 @@
 
 #include <xc.h>
 #include "adc1.h"
-#include "mcc.h"
+#include "device_config.h"
 
 /**
   Section: Macro Declarations

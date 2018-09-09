@@ -42,6 +42,7 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include "aj_hal.h"
 
 //#define ledadc
 
@@ -53,26 +54,12 @@ void main(void)
     // initialize the device
     SYSTEM_Initialize();
     
-    uint16_t LED1 = 100; //Middle
-    uint16_t LED2 = 200; //Left
-    uint16_t LED3 = 0;   //Right
-    uint16_t PERIOD = 2000;
+    uint16_t LED1 = 100;
+    uint16_t LED2 = 200;
+    uint16_t LED3 = 0;
     
-    PWM1_Stop();
-    PWM2_Stop();
-    PWM3_Stop();
-    
-    PWM1_PhaseSet(0);
-    PWM1_PeriodSet(PERIOD);
-    PWM1_DutyCycleSet(LED1);
-    
-    PWM2_PhaseSet(0);
-    PWM2_PeriodSet(PERIOD);
-    PWM2_DutyCycleSet(LED2);
-    
-    PWM3_PhaseSet(0);
-    PWM3_PeriodSet(PERIOD);
-    PWM3_DutyCycleSet(LED3);
+    setupLEDs(2000);
+    setLEDs(LED1,LED2,LED3);
     
     // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
     // Use the following macros to:
@@ -89,9 +76,7 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
     
-    PWM1_Start();
-    PWM2_Start();
-    PWM3_Start();
+    startLEDs();
     
     uint16_t adc_result = 0;
     
@@ -125,12 +110,7 @@ void main(void)
             if(LED3 > 300) LED3 = 0;
 
             //Update PWM Modules
-            PWM1_DutyCycleSet(LED1);
-            PWM1_LoadBufferSet();
-            PWM2_DutyCycleSet(LED2);
-            PWM2_LoadBufferSet();
-            PWM3_DutyCycleSet(LED3);
-            PWM3_LoadBufferSet();
+            setLEDs(LED1,LED2,LED3);
 
             //PWM Update Delay
             //Set speed of LED cycle
@@ -138,11 +118,10 @@ void main(void)
         }
         
         //Serial Transmit
-        RCSTAbits.SPEN = 1; //Enable UART (sets RX/TX Pins as digital serial)
-        __delay_ms(1); //Wait for High Level before sending
+        enableSerial();
         //Send Serial Data
-        EUSART_Write((uint8_t)(adc_result & 0xFF));
         EUSART_Write((uint8_t)((adc_result >> 8) & 0xFF));
+        EUSART_Write((uint8_t)(adc_result & 0xFF));
         //Wait for Serial to finish and disable UART (for ADC to work)
         while(!EUSART_is_tx_done());
         
@@ -155,7 +134,7 @@ void main(void)
 //            EUSART_Write(0x55);
 //        }
 //        while(!EUSART_is_tx_done());
-        RCSTAbits.SPEN = 0; //Disable UART (allows pins to be used by ADC again)
+        disableSerial();
     }
 }
 /**

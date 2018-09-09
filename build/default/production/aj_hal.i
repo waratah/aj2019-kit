@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/pin_manager.c"
+# 1 "aj_hal.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,90 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/pin_manager.c" 2
-# 49 "mcc_generated_files/pin_manager.c"
+# 1 "aj_hal.c" 2
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdbool.h" 1 3
+# 1 "aj_hal.c" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 1 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 135 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 150 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 166 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
+
+
+
+
+typedef short int16_t;
+
+
+
+
+typedef long int32_t;
+# 189 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef int32_t intmax_t;
+
+
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+
+
+
+
+typedef unsigned long uint32_t;
+# 225 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef uint32_t uintmax_t;
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
+
+
+typedef int8_t int_fast8_t;
+
+
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+typedef int32_t int_least32_t;
+
+
+
+
+typedef uint8_t uint_fast8_t;
+
+
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+typedef uint32_t uint_least32_t;
+# 131 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int32_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint32_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 131 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
+# 2 "aj_hal.c" 2
+
+# 1 "./mcc_generated_files/mcc.h" 1
+# 49 "./mcc_generated_files/mcc.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -21,17 +103,7 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-
-
-
-
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\features.h" 1 3
 # 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 2 3
 # 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
@@ -5126,68 +5198,442 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
-# 49 "mcc_generated_files/pin_manager.c" 2
+# 49 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/pin_manager.h" 1
-# 138 "mcc_generated_files/pin_manager.h"
+# 1 "./mcc_generated_files/device_config.h" 1
+# 50 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/pin_manager.h" 1
+# 138 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 150 "mcc_generated_files/pin_manager.h"
+# 150 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 50 "mcc_generated_files/pin_manager.c" 2
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdbool.h" 1 3
-# 51 "mcc_generated_files/pin_manager.c" 2
+# 51 "./mcc_generated_files/mcc.h" 2
 
 
 
+# 1 "./mcc_generated_files/pwm2.h" 1
+# 94 "./mcc_generated_files/pwm2.h"
+void PWM2_Initialize(void);
+# 123 "./mcc_generated_files/pwm2.h"
+void PWM2_Start(void);
+# 155 "./mcc_generated_files/pwm2.h"
+void PWM2_Stop(void);
+# 180 "./mcc_generated_files/pwm2.h"
+_Bool PWM2_CheckOutputStatus(void);
+# 203 "./mcc_generated_files/pwm2.h"
+void PWM2_LoadBufferSet(void);
+# 226 "./mcc_generated_files/pwm2.h"
+void PWM2_PhaseSet(uint16_t phaseCount);
+# 249 "./mcc_generated_files/pwm2.h"
+void PWM2_DutyCycleSet(uint16_t dutyCycleCount);
+# 272 "./mcc_generated_files/pwm2.h"
+void PWM2_PeriodSet(uint16_t periodCount);
+# 295 "./mcc_generated_files/pwm2.h"
+void PWM2_OffsetSet(uint16_t offsetCount);
+# 318 "./mcc_generated_files/pwm2.h"
+uint16_t PWM2_TimerCountGet(void);
+# 342 "./mcc_generated_files/pwm2.h"
+_Bool PWM2_IsOffsetMatchOccured(void);
+# 366 "./mcc_generated_files/pwm2.h"
+_Bool PWM2_IsPhaseMatchOccured(void);
+# 390 "./mcc_generated_files/pwm2.h"
+_Bool PWM2_IsDutyCycleMatchOccured(void);
+# 414 "./mcc_generated_files/pwm2.h"
+_Bool PWM2_IsPeriodMatchOccured(void);
+# 54 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/pwm1.h" 1
+# 94 "./mcc_generated_files/pwm1.h"
+void PWM1_Initialize(void);
+# 123 "./mcc_generated_files/pwm1.h"
+void PWM1_Start(void);
+# 155 "./mcc_generated_files/pwm1.h"
+void PWM1_Stop(void);
+# 180 "./mcc_generated_files/pwm1.h"
+_Bool PWM1_CheckOutputStatus(void);
+# 203 "./mcc_generated_files/pwm1.h"
+void PWM1_LoadBufferSet(void);
+# 226 "./mcc_generated_files/pwm1.h"
+void PWM1_PhaseSet(uint16_t phaseCount);
+# 249 "./mcc_generated_files/pwm1.h"
+void PWM1_DutyCycleSet(uint16_t dutyCycleCount);
+# 272 "./mcc_generated_files/pwm1.h"
+void PWM1_PeriodSet(uint16_t periodCount);
+# 295 "./mcc_generated_files/pwm1.h"
+void PWM1_OffsetSet(uint16_t offsetCount);
+# 318 "./mcc_generated_files/pwm1.h"
+uint16_t PWM1_TimerCountGet(void);
+# 342 "./mcc_generated_files/pwm1.h"
+_Bool PWM1_IsOffsetMatchOccured(void);
+# 366 "./mcc_generated_files/pwm1.h"
+_Bool PWM1_IsPhaseMatchOccured(void);
+# 390 "./mcc_generated_files/pwm1.h"
+_Bool PWM1_IsDutyCycleMatchOccured(void);
+# 414 "./mcc_generated_files/pwm1.h"
+_Bool PWM1_IsPeriodMatchOccured(void);
+# 55 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/pwm3.h" 1
+# 94 "./mcc_generated_files/pwm3.h"
+void PWM3_Initialize(void);
+# 123 "./mcc_generated_files/pwm3.h"
+void PWM3_Start(void);
+# 155 "./mcc_generated_files/pwm3.h"
+void PWM3_Stop(void);
+# 180 "./mcc_generated_files/pwm3.h"
+_Bool PWM3_CheckOutputStatus(void);
+# 203 "./mcc_generated_files/pwm3.h"
+void PWM3_LoadBufferSet(void);
+# 226 "./mcc_generated_files/pwm3.h"
+void PWM3_PhaseSet(uint16_t phaseCount);
+# 249 "./mcc_generated_files/pwm3.h"
+void PWM3_DutyCycleSet(uint16_t dutyCycleCount);
+# 272 "./mcc_generated_files/pwm3.h"
+void PWM3_PeriodSet(uint16_t periodCount);
+# 295 "./mcc_generated_files/pwm3.h"
+void PWM3_OffsetSet(uint16_t offsetCount);
+# 318 "./mcc_generated_files/pwm3.h"
+uint16_t PWM3_TimerCountGet(void);
+# 342 "./mcc_generated_files/pwm3.h"
+_Bool PWM3_IsOffsetMatchOccured(void);
+# 366 "./mcc_generated_files/pwm3.h"
+_Bool PWM3_IsPhaseMatchOccured(void);
+# 390 "./mcc_generated_files/pwm3.h"
+_Bool PWM3_IsDutyCycleMatchOccured(void);
+# 414 "./mcc_generated_files/pwm3.h"
+_Bool PWM3_IsPeriodMatchOccured(void);
+# 56 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/adc1.h" 1
+# 72 "./mcc_generated_files/adc1.h"
+typedef uint16_t adc_result_t;
 
 
 
-void PIN_MANAGER_Initialize(void)
+
+typedef struct
 {
+    adc_result_t adcResult1;
+    adc_result_t adcResult2;
+} adc_sync_double_result_t;
+# 95 "./mcc_generated_files/adc1.h"
+typedef enum
+{
+    channel_AN0 = 0x0,
+    channel_Temp = 0x1D,
+    channel_DAC = 0x1E,
+    channel_FVR = 0x1F
+} adc_channel_t;
+# 136 "./mcc_generated_files/adc1.h"
+void ADC1_Initialize(void);
+# 166 "./mcc_generated_files/adc1.h"
+void ADC1_SelectChannel(adc_channel_t channel);
+# 193 "./mcc_generated_files/adc1.h"
+void ADC1_StartConversion();
+# 225 "./mcc_generated_files/adc1.h"
+_Bool ADC1_IsConversionDone();
+# 258 "./mcc_generated_files/adc1.h"
+adc_result_t ADC1_GetConversionResult(void);
+# 288 "./mcc_generated_files/adc1.h"
+adc_result_t ADC1_GetConversion(adc_channel_t channel);
+# 316 "./mcc_generated_files/adc1.h"
+void ADC1_TemperatureAcquisitionDelay(void);
+# 57 "./mcc_generated_files/mcc.h" 2
 
-
-
-    LATA = 0x00;
-
-
-
-
-    TRISA = 0x29;
-
-
-
-
-    ANSELA = 0x01;
-
-
-
-
-    WPUA = 0x00;
-    OPTION_REGbits.nWPUEN = 0;
-
-
-
-
-    ODCONA = 0x00;
-
-
-
-
-    SLRCONA = 0x37;
-
-
-
-
-    APFCON = 0x82;
-
+# 1 "./mcc_generated_files/eusart.h" 1
+# 57 "./mcc_generated_files/eusart.h"
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef void * va_list[1];
 
 
 
 
+typedef void * __isoc_va_list[1];
+# 145 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 244 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 397 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
 
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+
+#pragma printf_check(printf) const
+#pragma printf_check(vprintf) const
+#pragma printf_check(sprintf) const
+#pragma printf_check(snprintf) const
+#pragma printf_check(vsprintf) const
+#pragma printf_check(vsnprintf) const
+
+
+int printf(const char *restrict, ...);
+int fprintf(FILE *restrict, const char *restrict, ...);
+int sprintf(char *restrict, const char *restrict, ...);
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+int scanf(const char *restrict, ...);
+int fscanf(FILE *restrict, const char *restrict, ...);
+int sscanf(const char *restrict, const char *restrict, ...);
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 57 "./mcc_generated_files/eusart.h" 2
+# 98 "./mcc_generated_files/eusart.h"
+void EUSART_Initialize(void);
+# 146 "./mcc_generated_files/eusart.h"
+_Bool EUSART_is_tx_ready(void);
+# 194 "./mcc_generated_files/eusart.h"
+_Bool EUSART_is_rx_ready(void);
+# 241 "./mcc_generated_files/eusart.h"
+_Bool EUSART_is_tx_done(void);
+# 261 "./mcc_generated_files/eusart.h"
+uint8_t EUSART_Read(void);
+# 281 "./mcc_generated_files/eusart.h"
+void EUSART_Write(uint8_t txData);
+# 58 "./mcc_generated_files/mcc.h" 2
+# 73 "./mcc_generated_files/mcc.h"
+void SYSTEM_Initialize(void);
+# 86 "./mcc_generated_files/mcc.h"
+void OSCILLATOR_Initialize(void);
+# 98 "./mcc_generated_files/mcc.h"
+void WDT_Initialize(void);
+# 3 "aj_hal.c" 2
+
+
+
+
+
+
+void enableSerial ()
+{
+    RCSTAbits.SPEN = 1;
+    _delay((unsigned long)((1)*(500000/4000.0)));
 }
 
-void PIN_MANAGER_IOC(void)
+
+void disableSerial ()
 {
+    _delay((unsigned long)((1)*(500000/4000.0)));
+    RCSTAbits.SPEN = 0;
+}
+
+
+void checkButtons (_Bool buttons[])
+{
+    disableSerial();
+    uint16_t adc = ADC1_GetConversion(channel_AN0);
+    uint8_t i = 0;
+    for(i = 0; i < 3; i++)
+    {
+        buttons[i] = 0;
+    }
+
+    if(adc <= 23)
+    {
+
+    }
+    else if(adc > 23 && adc <= 63)
+    {
+
+        buttons[2] = 1;
+    }
+    else if(adc > 63 && adc <= 91)
+    {
+
+        buttons[1] = 1;
+    }
+    else if(adc > 91 && adc <= 112)
+    {
+
+        buttons[2] = 1;
+        buttons[1] = 1;
+    }
+    else if(adc > 112 && adc <= 128)
+    {
+
+        buttons[0] = 1;
+    }
+    else if(adc > 128 && adc <= 140)
+    {
+
+        buttons[2] = 1;
+        buttons[0] = 1;
+    }
+    else if(adc > 140 && adc <= 151)
+    {
+
+        buttons[1] = 1;
+        buttons[0] = 1;
+    }
+    else if(adc > 151 && adc <= 200)
+    {
+
+        buttons[2] = 1;
+        buttons[1] = 1;
+        buttons[0] = 1;
+    }
+}
+
+
+void stopLEDs ()
+{
+    PWM1_Stop();
+    PWM2_Stop();
+    PWM3_Stop();
+}
+
+void startLEDs ()
+{
+    PWM1_Start();
+    PWM2_Start();
+    PWM3_Start();
+}
+
+void setLEDs (uint16_t led1, uint16_t led2, uint16_t led3)
+{
+    PWM1_DutyCycleSet(led1);
+    PWM1_LoadBufferSet();
+    PWM2_DutyCycleSet(led2);
+    PWM2_LoadBufferSet();
+    PWM3_DutyCycleSet(led3);
+    PWM3_LoadBufferSet();
+}
+
+void setupLEDs (uint16_t period)
+{
+    const uint16_t initial_duty = 0;
+    const uint16_t initial_phase = 0;
+    stopLEDs();
+
+    PWM1_PhaseSet(initial_phase);
+    PWM1_PeriodSet(period);
+
+    PWM2_PhaseSet(initial_phase);
+    PWM2_PeriodSet(period);
+
+    PWM3_PhaseSet(initial_phase);
+    PWM3_PeriodSet(period);
+
+    setLEDs(initial_duty, initial_duty, initial_duty);
+}
+
+void setLED (uint16_t duty, uint8_t LEDno)
+{
+    if(LEDno == 1)
+    {
+        PWM1_DutyCycleSet(duty);
+        PWM1_LoadBufferSet();
+    }
+    else if(LEDno == 2)
+    {
+        PWM2_DutyCycleSet(duty);
+        PWM2_LoadBufferSet();
+    }
+    else if(LEDno == 3)
+    {
+        PWM3_DutyCycleSet(duty);
+        PWM3_LoadBufferSet();
+    }
 }

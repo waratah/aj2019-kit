@@ -568,7 +568,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ADRESH -> -> 0 `i `uc ]
 "84
 [; ;mcc_generated_files/adc1.c: 84: }
-[e :UE 440 ]
+[e :UE 438 ]
 }
 "86
 [; ;mcc_generated_files/adc1.c: 86: void ADC1_SelectChannel(adc_channel_t channel)
@@ -591,7 +591,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
 "92
 [; ;mcc_generated_files/adc1.c: 92: }
-[e :UE 441 ]
+[e :UE 439 ]
 }
 "94
 [; ;mcc_generated_files/adc1.c: 94: void ADC1_StartConversion()
@@ -606,7 +606,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
 "98
 [; ;mcc_generated_files/adc1.c: 98: }
-[e :UE 442 ]
+[e :UE 440 ]
 }
 "101
 [; ;mcc_generated_files/adc1.c: 101: _Bool ADC1_IsConversionDone()
@@ -619,10 +619,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "104
 [; ;mcc_generated_files/adc1.c: 104:    return ((_Bool)(!ADCON0bits.GO_nDONE));
 [e ) -> -> ! != -> . . _ADCON0bits 0 1 `i -> 0 `i `i `a ]
-[e $UE 443  ]
+[e $UE 441  ]
 "105
 [; ;mcc_generated_files/adc1.c: 105: }
-[e :UE 443 ]
+[e :UE 441 ]
 }
 "107
 [; ;mcc_generated_files/adc1.c: 107: adc_result_t ADC1_GetConversionResult(void)
@@ -635,10 +635,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "110
 [; ;mcc_generated_files/adc1.c: 110:     return ((adc_result_t)((ADRESH << 8) + ADRESL));
 [e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `us ]
-[e $UE 444  ]
+[e $UE 442  ]
 "111
 [; ;mcc_generated_files/adc1.c: 111: }
-[e :UE 444 ]
+[e :UE 442 ]
 }
 "113
 [; ;mcc_generated_files/adc1.c: 113: adc_result_t ADC1_GetConversion(adc_channel_t channel)
@@ -667,26 +667,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _ADCON0bits 0 1 -> -> 1 `i `uc ]
 "128
 [; ;mcc_generated_files/adc1.c: 128:     while (ADCON0bits.GO_nDONE)
-[e $U 446  ]
-[e :U 447 ]
+[e $U 444  ]
+[e :U 445 ]
 "129
 [; ;mcc_generated_files/adc1.c: 129:     {
 {
 "130
 [; ;mcc_generated_files/adc1.c: 130:     }
 }
-[e :U 446 ]
+[e :U 444 ]
 "128
 [; ;mcc_generated_files/adc1.c: 128:     while (ADCON0bits.GO_nDONE)
-[e $ != -> . . _ADCON0bits 0 1 `i -> 0 `i 447  ]
-[e :U 448 ]
+[e $ != -> . . _ADCON0bits 0 1 `i -> 0 `i 445  ]
+[e :U 446 ]
 "133
 [; ;mcc_generated_files/adc1.c: 133:     return ((adc_result_t)((ADRESH << 8) + ADRESL));
 [e ) -> + << -> _ADRESH `i -> 8 `i -> _ADRESL `i `us ]
-[e $UE 445  ]
+[e $UE 443  ]
 "134
 [; ;mcc_generated_files/adc1.c: 134: }
-[e :UE 445 ]
+[e :UE 443 ]
 }
 "136
 [; ;mcc_generated_files/adc1.c: 136: void ADC1_TemperatureAcquisitionDelay(void)
@@ -701,5 +701,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 500000 `l `d .4000000.0 `ul ]
 "139
 [; ;mcc_generated_files/adc1.c: 139: }
-[e :UE 449 ]
+[e :UE 447 ]
 }

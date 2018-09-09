@@ -18,7 +18,7 @@
 
 
 #pragma config WRT = OFF
-#pragma config PLLEN = ON
+#pragma config PLLEN = OFF
 #pragma config STVREN = ON
 #pragma config BORV = LO
 #pragma config LPBOREN = OFF

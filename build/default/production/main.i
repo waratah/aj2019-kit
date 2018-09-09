@@ -5130,12 +5130,15 @@ extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
 # 49 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/device_config.h" 1
+# 50 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/pin_manager.h" 1
 # 138 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 150 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 50 "./mcc_generated_files/mcc.h" 2
+# 51 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 3
@@ -5208,10 +5211,10 @@ typedef int32_t int_fast32_t;
 typedef uint32_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 131 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
-# 51 "./mcc_generated_files/mcc.h" 2
+# 52 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdbool.h" 1 3
-# 52 "./mcc_generated_files/mcc.h" 2
+# 53 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm2.h" 1
 # 94 "./mcc_generated_files/pwm2.h"
@@ -5242,7 +5245,7 @@ _Bool PWM2_IsPhaseMatchOccured(void);
 _Bool PWM2_IsDutyCycleMatchOccured(void);
 # 414 "./mcc_generated_files/pwm2.h"
 _Bool PWM2_IsPeriodMatchOccured(void);
-# 53 "./mcc_generated_files/mcc.h" 2
+# 54 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm1.h" 1
 # 94 "./mcc_generated_files/pwm1.h"
@@ -5273,7 +5276,7 @@ _Bool PWM1_IsPhaseMatchOccured(void);
 _Bool PWM1_IsDutyCycleMatchOccured(void);
 # 414 "./mcc_generated_files/pwm1.h"
 _Bool PWM1_IsPeriodMatchOccured(void);
-# 54 "./mcc_generated_files/mcc.h" 2
+# 55 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm3.h" 1
 # 94 "./mcc_generated_files/pwm3.h"
@@ -5304,7 +5307,7 @@ _Bool PWM3_IsPhaseMatchOccured(void);
 _Bool PWM3_IsDutyCycleMatchOccured(void);
 # 414 "./mcc_generated_files/pwm3.h"
 _Bool PWM3_IsPeriodMatchOccured(void);
-# 55 "./mcc_generated_files/mcc.h" 2
+# 56 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/adc1.h" 1
 # 72 "./mcc_generated_files/adc1.h"
@@ -5340,7 +5343,7 @@ adc_result_t ADC1_GetConversionResult(void);
 adc_result_t ADC1_GetConversion(adc_channel_t channel);
 # 316 "./mcc_generated_files/adc1.h"
 void ADC1_TemperatureAcquisitionDelay(void);
-# 56 "./mcc_generated_files/mcc.h" 2
+# 57 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/eusart.h" 1
 # 57 "./mcc_generated_files/eusart.h"
@@ -5493,7 +5496,7 @@ _Bool EUSART_is_tx_done(void);
 uint8_t EUSART_Read(void);
 # 281 "./mcc_generated_files/eusart.h"
 void EUSART_Write(uint8_t txData);
-# 57 "./mcc_generated_files/mcc.h" 2
+# 58 "./mcc_generated_files/mcc.h" 2
 # 73 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
 # 86 "./mcc_generated_files/mcc.h"
@@ -5501,6 +5504,29 @@ void OSCILLATOR_Initialize(void);
 # 98 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 44 "main.c" 2
+
+# 1 "./aj_hal.h" 1
+# 21 "./aj_hal.h"
+void checkButtons (_Bool buttons[]);
+
+
+
+void setupLEDs (uint16_t period);
+
+void stopLEDs ();
+
+void startLEDs ();
+
+void setLEDs (uint16_t led1, uint16_t led2, uint16_t led3);
+
+void setLED (uint16_t duty, uint8_t LEDno);
+
+
+
+void enableSerial ();
+
+void disableSerial ();
+# 45 "main.c" 2
 
 
 
@@ -5516,81 +5542,51 @@ void main(void)
     uint16_t LED1 = 100;
     uint16_t LED2 = 200;
     uint16_t LED3 = 0;
-    uint16_t PERIOD = 2000;
 
-    PWM1_Stop();
-    PWM2_Stop();
-    PWM3_Stop();
-
-    PWM1_PhaseSet(0);
-    PWM1_PeriodSet(PERIOD);
-    PWM1_DutyCycleSet(LED1);
-
-    PWM2_PhaseSet(0);
-    PWM2_PeriodSet(PERIOD);
-    PWM2_DutyCycleSet(LED2);
-
-    PWM3_PhaseSet(0);
-    PWM3_PeriodSet(PERIOD);
-    PWM3_DutyCycleSet(LED3);
-# 92 "main.c"
-    PWM1_Start();
-    PWM2_Start();
-    PWM3_Start();
+    setupLEDs(2000);
+    setLEDs(LED1,LED2,LED3);
+# 79 "main.c"
+    startLEDs();
 
     uint16_t adc_result = 0;
 
     while (1)
     {
         int i;
+
+
         for(i=0 ; i<10 ; i++)
         {
 
-            PORTAbits.RA0 = 1;
             adc_result = ADC1_GetConversion(channel_AN0);
-            PORTAbits.RA0 = 0;
-
-
-
-
-
-
-
+# 101 "main.c"
             LED1+=5;
             LED2+=5;
             LED3+=5;
+
+
 
 
             if(LED1 > 300) LED1 = 0;
             if(LED2 > 300) LED2 = 0;
             if(LED3 > 300) LED3 = 0;
 
-            PWM1_DutyCycleSet(LED1);
-            PWM1_LoadBufferSet();
-            PWM2_DutyCycleSet(LED2);
-            PWM2_LoadBufferSet();
-            PWM3_DutyCycleSet(LED3);
-            PWM3_LoadBufferSet();
+
+            setLEDs(LED1,LED2,LED3);
+
 
 
             _delay((unsigned long)((10)*(500000/4000.0)));
         }
 
 
-        RCSTAbits.SPEN = 1;
-        _delay((unsigned long)((1)*(500000/4000.0)));
+        enableSerial();
 
-        EUSART_Write((uint8_t)(adc_result & 0xFF));
         EUSART_Write((uint8_t)((adc_result >> 8) & 0xFF));
+        EUSART_Write((uint8_t)(adc_result & 0xFF));
 
         while(!EUSART_is_tx_done());
-
-
-
-
-
-
-
-        RCSTAbits.SPEN = 0;
+# 137 "main.c"
+        disableSerial();
     }
 }

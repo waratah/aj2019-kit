@@ -29,6 +29,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2780
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 2780: extern volatile unsigned char ODCONA __attribute__((address(0x28C)));
 [v _ODCONA `Vuc ~T0 @X0 0 e@652 ]
+"2833
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 2833: extern volatile unsigned char SLRCONA __attribute__((address(0x30C)));
+[v _SLRCONA `Vuc ~T0 @X0 0 e@780 ]
 "2130
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 2130: extern volatile unsigned char APFCON __attribute__((address(0x11D)));
 [v _APFCON `Vuc ~T0 @X0 0 e@285 ]
@@ -548,8 +551,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 72:     ANSELA = 0x01;
 [e = _ANSELA -> -> 1 `i `uc ]
 "77
-[; ;mcc_generated_files/pin_manager.c: 77:     WPUA = 0x01;
-[e = _WPUA -> -> 1 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 77:     WPUA = 0x00;
+[e = _WPUA -> -> 0 `i `uc ]
 "78
 [; ;mcc_generated_files/pin_manager.c: 78:     OPTION_REGbits.nWPUEN = 0;
 [e = . . _OPTION_REGbits 0 7 -> -> 0 `i `uc ]
@@ -557,21 +560,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 83:     ODCONA = 0x00;
 [e = _ODCONA -> -> 0 `i `uc ]
 "88
-[; ;mcc_generated_files/pin_manager.c: 88:     APFCON = 0x82;
+[; ;mcc_generated_files/pin_manager.c: 88:     SLRCONA = 0x37;
+[e = _SLRCONA -> -> 55 `i `uc ]
+"93
+[; ;mcc_generated_files/pin_manager.c: 93:     APFCON = 0x82;
 [e = _APFCON -> -> 130 `i `uc ]
-"95
-[; ;mcc_generated_files/pin_manager.c: 95: }
+"100
+[; ;mcc_generated_files/pin_manager.c: 100: }
 [e :UE 437 ]
 }
-"97
-[; ;mcc_generated_files/pin_manager.c: 97: void PIN_MANAGER_IOC(void)
+"102
+[; ;mcc_generated_files/pin_manager.c: 102: void PIN_MANAGER_IOC(void)
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-"98
-[; ;mcc_generated_files/pin_manager.c: 98: {
+"103
+[; ;mcc_generated_files/pin_manager.c: 103: {
 {
 [e :U _PIN_MANAGER_IOC ]
 [f ]
-"99
-[; ;mcc_generated_files/pin_manager.c: 99: }
+"104
+[; ;mcc_generated_files/pin_manager.c: 104: }
 [e :UE 438 ]
 }

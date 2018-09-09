@@ -15,7 +15,7 @@
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
         Device            :  PIC12LF1572
-        Driver Version    :  2.01
+        Driver Version    :  2.11
     The generated drivers are tested against the following:
         Compiler          :  XC8 1.45
         MPLAB             :  MPLAB X 4.15
@@ -74,13 +74,18 @@ void PIN_MANAGER_Initialize(void)
     /**
     WPUx registers
     */
-    WPUA = 0x01;
+    WPUA = 0x00;
     OPTION_REGbits.nWPUEN = 0;
 
     /**
     ODx registers
     */
     ODCONA = 0x00;
+
+    /**
+    SLRCONx registers
+    */
+    SLRCONA = 0x37;
 
     /**
     APFCONx registers
