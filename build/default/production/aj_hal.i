@@ -5520,10 +5520,16 @@ void disableSerial ()
 }
 
 
+_Bool EUSART_RxCheck ()
+{
+    return PIR1bits.RCIF;
+}
+
+
 void checkButtons (_Bool buttons[])
 {
     disableSerial();
-    uint16_t adc = ADC1_GetConversion(channel_AN0);
+    uint16_t adc = (ADC1_GetConversion(channel_AN0) >> 8) & 0xFF;
     uint8_t i = 0;
     for(i = 0; i < 3; i++)
     {

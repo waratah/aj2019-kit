@@ -12,13 +12,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29
 [; ;./aj_hal.h: 29: void startLEDs ();
 [v _startLEDs `(v ~T0 @X0 0 e? ]
-"91 main.c
-[; ;main.c: 91:             adc_result = ADC1_GetConversion(channel_AN0);
+"70 main.c
+[; ;main.c: 70:             adc_result = ADC1_GetConversion(channel_AN0);
 [c E3081 0 29 30 31 .. ]
 [n E3081 . channel_AN0 channel_Temp channel_DAC channel_FVR  ]
 "288 ./mcc_generated_files/adc1.h
 [; ;./mcc_generated_files/adc1.h: 288: adc_result_t ADC1_GetConversion(adc_channel_t channel);
 [v _ADC1_GetConversion `(us ~T0 @X0 0 ef1`E3081 ]
+"21 ./aj_hal.h
+[; ;./aj_hal.h: 21: void checkButtons (_Bool buttons[]);
+[v _checkButtons `(v ~T0 @X0 0 ef1`*a ]
 [v F2987 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic.h
 [v __delay `JF2987 ~T0 @X0 0 e ]
@@ -32,6 +35,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "241
 [; ;./mcc_generated_files/eusart.h: 241: _Bool EUSART_is_tx_done(void);
 [v _EUSART_is_tx_done `(a ~T0 @X0 0 ef ]
+"41 ./aj_hal.h
+[; ;./aj_hal.h: 41: _Bool EUSART_RxCheck ();
+[v _EUSART_RxCheck `(a ~T0 @X0 0 e? ]
+"261 ./mcc_generated_files/eusart.h
+[; ;./mcc_generated_files/eusart.h: 261: uint8_t EUSART_Read(void);
+[v _EUSART_Read `(uc ~T0 @X0 0 ef ]
 "39 ./aj_hal.h
 [; ;./aj_hal.h: 39: void disableSerial ();
 [v _disableSerial `(v ~T0 @X0 0 e? ]
@@ -534,127 +543,176 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 8220: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
 [v $root$_main `(v ~T0 @X0 0 e ]
-"52 main.c
-[; ;main.c: 52: void main(void)
+"27 main.c
+[; ;main.c: 27: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"53
-[; ;main.c: 53: {
+"28
+[; ;main.c: 28: {
 {
 [e :U _main ]
 [f ]
-"55
-[; ;main.c: 55:     SYSTEM_Initialize();
+"30
+[; ;main.c: 30:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"57
-[; ;main.c: 57:     uint16_t LED1 = 100;
+"33
+[; ;main.c: 33:     uint16_t LED1 = 100;
 [v _LED1 `us ~T0 @X0 1 a ]
 [e = _LED1 -> -> 100 `i `us ]
-"58
-[; ;main.c: 58:     uint16_t LED2 = 200;
+"34
+[; ;main.c: 34:     uint16_t LED2 = 200;
 [v _LED2 `us ~T0 @X0 1 a ]
 [e = _LED2 -> -> 200 `i `us ]
-"59
-[; ;main.c: 59:     uint16_t LED3 = 0;
+"35
+[; ;main.c: 35:     uint16_t LED3 = 0;
 [v _LED3 `us ~T0 @X0 1 a ]
 [e = _LED3 -> -> 0 `i `us ]
-"61
-[; ;main.c: 61:     setupLEDs(2000);
+"38
+[; ;main.c: 38:     setupLEDs(2000);
 [e ( _setupLEDs (1 -> -> 2000 `i `us ]
-"62
-[; ;main.c: 62:     setLEDs(LED1,LED2,LED3);
+"39
+[; ;main.c: 39:     setLEDs(LED1,LED2,LED3);
 [e ( _setLEDs (3 , , _LED1 _LED2 _LED3 ]
-"79
-[; ;main.c: 79:     startLEDs();
+"57
+[; ;main.c: 57:     startLEDs();
 [e ( _startLEDs ..  ]
-"81
-[; ;main.c: 81:     uint16_t adc_result = 0;
+"59
+[; ;main.c: 59:     uint16_t adc_result = 0;
 [v _adc_result `us ~T0 @X0 1 a ]
 [e = _adc_result -> -> 0 `i `us ]
-"83
-[; ;main.c: 83:     while (1)
+[v F3445 `a ~T0 @X0 -> 3 `i s ]
+[i F3445
+:U ..
+"60
+[; ;main.c: 60:     _Bool buttons[3] = {0,0,0};
+-> -> 0 `i `a
+-> -> 0 `i `a
+-> -> 0 `i `a
+..
+]
+[v _buttons `a ~T0 @X0 -> 3 `i a ]
+[e = _buttons F3445 ]
+"62
+[; ;main.c: 62:     while (1)
 [e :U 442 ]
-"84
-[; ;main.c: 84:     {
+"63
+[; ;main.c: 63:     {
 {
-"85
-[; ;main.c: 85:         int i;
+"64
+[; ;main.c: 64:         int i;
 [v _i `i ~T0 @X0 1 a ]
-"88
-[; ;main.c: 88:         for(i=0 ; i<10 ; i++)
+"67
+[; ;main.c: 67:         for(i=0 ; i<10 ; i++)
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 10 `i 444  ]
 [e $U 445  ]
 [e :U 444 ]
-"89
-[; ;main.c: 89:         {
+"68
+[; ;main.c: 68:         {
 {
-"91
-[; ;main.c: 91:             adc_result = ADC1_GetConversion(channel_AN0);
+"70
+[; ;main.c: 70:             adc_result = ADC1_GetConversion(channel_AN0);
 [e = _adc_result ( _ADC1_GetConversion (1 . `E3081 0 ]
-"101
-[; ;main.c: 101:             LED1+=5;
-[e =+ _LED1 -> -> 5 `i `us ]
-"102
-[; ;main.c: 102:             LED2+=5;
-[e =+ _LED2 -> -> 5 `i `us ]
-"103
-[; ;main.c: 103:             LED3+=5;
-[e =+ _LED3 -> -> 5 `i `us ]
-"108
-[; ;main.c: 108:             if(LED1 > 300) LED1 = 0;
+"75
+[; ;main.c: 75:             checkButtons(buttons);
+[e ( _checkButtons (1 &U _buttons ]
+"76
+[; ;main.c: 76:             LED1 += buttons[0] * 5;
+[e =+ _LED1 -> * -> *U + &U _buttons * -> -> -> 0 `i `ui `ux -> -> # *U &U _buttons `ui `ux `i -> 5 `i `us ]
+"77
+[; ;main.c: 77:             LED2 += buttons[1] * 5;
+[e =+ _LED2 -> * -> *U + &U _buttons * -> -> -> 1 `i `ui `ux -> -> # *U &U _buttons `ui `ux `i -> 5 `i `us ]
+"78
+[; ;main.c: 78:             LED3 += buttons[2] * 5;
+[e =+ _LED3 -> * -> *U + &U _buttons * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttons `ui `ux `i -> 5 `i `us ]
+"87
+[; ;main.c: 87:             if(LED1 > 300) LED1 = 0;
 [e $ ! > -> _LED1 `ui -> -> 300 `i `ui 447  ]
 [e = _LED1 -> -> 0 `i `us ]
 [e :U 447 ]
-"109
-[; ;main.c: 109:             if(LED2 > 300) LED2 = 0;
+"88
+[; ;main.c: 88:             if(LED2 > 300) LED2 = 0;
 [e $ ! > -> _LED2 `ui -> -> 300 `i `ui 448  ]
 [e = _LED2 -> -> 0 `i `us ]
 [e :U 448 ]
-"110
-[; ;main.c: 110:             if(LED3 > 300) LED3 = 0;
+"89
+[; ;main.c: 89:             if(LED3 > 300) LED3 = 0;
 [e $ ! > -> _LED3 `ui -> -> 300 `i `ui 449  ]
 [e = _LED3 -> -> 0 `i `us ]
 [e :U 449 ]
-"113
-[; ;main.c: 113:             setLEDs(LED1,LED2,LED3);
+"92
+[; ;main.c: 92:             setLEDs(LED1,LED2,LED3);
 [e ( _setLEDs (3 , , _LED1 _LED2 _LED3 ]
-"117
-[; ;main.c: 117:             _delay((unsigned long)((10)*(500000/4000.0)));
+"96
+[; ;main.c: 96:             _delay((unsigned long)((10)*(500000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"118
-[; ;main.c: 118:         }
+"97
+[; ;main.c: 97:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 10 `i 444  ]
 [e :U 445 ]
 }
-"121
-[; ;main.c: 121:         enableSerial();
+"100
+[; ;main.c: 100:         enableSerial();
 [e ( _enableSerial ..  ]
-"123
-[; ;main.c: 123:         EUSART_Write((uint8_t)((adc_result >> 8) & 0xFF));
+"102
+[; ;main.c: 102:         EUSART_Write((uint8_t)((adc_result >> 8) & 0xFF));
 [e ( _EUSART_Write (1 -> & >> -> _adc_result `ui -> 8 `i -> -> 255 `i `ui `uc ]
-"124
-[; ;main.c: 124:         EUSART_Write((uint8_t)(adc_result & 0xFF));
-[e ( _EUSART_Write (1 -> & -> _adc_result `ui -> -> 255 `i `ui `uc ]
-"126
-[; ;main.c: 126:         while(!EUSART_is_tx_done());
+"103
+[; ;main.c: 103:         EUSART_Write(buttons[0] | buttons[1] << 1 | buttons[2] << 2);
+[e ( _EUSART_Write (1 -> | | -> *U + &U _buttons * -> -> -> 0 `i `ui `ux -> -> # *U &U _buttons `ui `ux `i << -> *U + &U _buttons * -> -> -> 1 `i `ui `ux -> -> # *U &U _buttons `ui `ux `i -> 1 `i << -> *U + &U _buttons * -> -> -> 2 `i `ui `ux -> -> # *U &U _buttons `ui `ux `i -> 2 `i `uc ]
+"106
+[; ;main.c: 106:         while(!EUSART_is_tx_done());
 [e $U 450  ]
 [e :U 451 ]
 [e :U 450 ]
 [e $ ! != -> ( _EUSART_is_tx_done ..  `i -> 0 `i 451  ]
 [e :U 452 ]
-"137
-[; ;main.c: 137:         disableSerial();
+"109
+[; ;main.c: 109:         if(EUSART_RxCheck())
+[e $ ! != -> ( _EUSART_RxCheck ..  `i -> 0 `i 453  ]
+"110
+[; ;main.c: 110:         {
+{
+"111
+[; ;main.c: 111:             uint8_t receive = EUSART_Read();
+[v _receive `uc ~T0 @X0 1 a ]
+[e = _receive ( _EUSART_Read ..  ]
+"112
+[; ;main.c: 112:             if(receive == ((adc_result >> 8) & 0xFF))
+[e $ ! == -> _receive `ui & >> -> _adc_result `ui -> 8 `i -> -> 255 `i `ui 454  ]
+"113
+[; ;main.c: 113:             {
+{
+"114
+[; ;main.c: 114:                 EUSART_Write(0x55);
+[e ( _EUSART_Write (1 -> -> 85 `i `uc ]
+"115
+[; ;main.c: 115:             }
+}
+[e :U 454 ]
+"116
+[; ;main.c: 116:             while(!EUSART_is_tx_done());
+[e $U 455  ]
+[e :U 456 ]
+[e :U 455 ]
+[e $ ! != -> ( _EUSART_is_tx_done ..  `i -> 0 `i 456  ]
+[e :U 457 ]
+"117
+[; ;main.c: 117:         }
+}
+[e :U 453 ]
+"119
+[; ;main.c: 119:         disableSerial();
 [e ( _disableSerial ..  ]
-"138
-[; ;main.c: 138:     }
+"120
+[; ;main.c: 120:     }
 }
 [e :U 441 ]
 [e $U 442  ]
 [e :U 443 ]
-"139
-[; ;main.c: 139: }
+"121
+[; ;main.c: 121: }
 [e :UE 440 ]
 }

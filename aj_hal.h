@@ -37,6 +37,8 @@ void setLED (uint16_t duty, uint8_t LEDno);
 void enableSerial ();
 //disableSerial - Disable RX channel
 void disableSerial ();
+//EUSART_RxCheck - Check for received bytes
+bool EUSART_RxCheck ();
 
 #ifdef	__cplusplus
 }

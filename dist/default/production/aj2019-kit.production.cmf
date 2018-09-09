@@ -12,49 +12,54 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\aj2019-kit.production.o
-cinit CODE 0 7FE 7FE 2 2
-text1 CODE 0 627 627 A 2
-text2 CODE 0 5BE 5BE 3 2
-text3 CODE 0 5BB 5BB 3 2
-text4 CODE 0 5B8 5B8 3 2
-text5 CODE 0 6EE 6EE 55 2
-text6 CODE 0 61D 61D A 2
-text7 CODE 0 5B5 5B5 3 2
-text8 CODE 0 5B2 5B2 3 2
-text9 CODE 0 5AF 5AF 3 2
-text10 CODE 0 6CF 6CF 1F 2
-text11 CODE 0 5AC 5AC 3 2
-text12 CODE 0 5FA 5FA 6 2
-text13 CODE 0 5A9 5A9 3 2
-text14 CODE 0 5F4 5F4 6 2
-text15 CODE 0 5A6 5A6 3 2
-text16 CODE 0 5EE 5EE 6 2
-text17 CODE 0 5E8 5E8 6 2
-text18 CODE 0 5E2 5E2 6 2
-text19 CODE 0 5DC 5DC 6 2
-text20 CODE 0 5D6 5D6 6 2
-text21 CODE 0 5D0 5D0 6 2
-text22 CODE 0 5CA 5CA 6 2
-text23 CODE 0 60E 60E 7 2
-text24 CODE 0 607 607 7 2
-text25 CODE 0 69C 69C 19 2
-text26 CODE 0 5C1 5C1 4 2
-text27 CODE 0 687 687 15 2
-text28 CODE 0 672 672 15 2
-text29 CODE 0 65D 65D 15 2
-text30 CODE 0 648 648 15 2
-text31 CODE 0 600 600 7 2
-text32 CODE 0 631 631 B 2
-text33 CODE 0 615 615 8 2
-text34 CODE 0 5C5 5C5 5 2
-text35 CODE 0 63C 63C C 2
-text36 CODE 0 6B5 6B5 1A 2
-maintext CODE 0 743 743 BB 2
-cstackCOMMON COMMON 1 70 70 B 1
-cstackBANK0 BANK0 1 20 20 A 1
-stringtext1 STRCODE 0 5A4 5A4 2 2
-stringtext2 STRCODE 0 5A2 5A2 2 2
-$C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
+cinit CODE 0 7FA 7FA 6 2
+text1 CODE 0 46D 46D A 2
+text2 CODE 0 3FE 3FE 3 2
+text3 CODE 0 3FB 3FB 3 2
+text4 CODE 0 3F8 3F8 3 2
+text5 CODE 0 567 567 55 2
+text6 CODE 0 463 463 A 2
+text7 CODE 0 3F5 3F5 3 2
+text8 CODE 0 3F2 3F2 3 2
+text9 CODE 0 3EF 3EF 3 2
+text10 CODE 0 526 526 1F 2
+text11 CODE 0 3EC 3EC 3 2
+text12 CODE 0 440 440 6 2
+text13 CODE 0 3E9 3E9 3 2
+text14 CODE 0 43A 43A 6 2
+text15 CODE 0 3E6 3E6 3 2
+text16 CODE 0 434 434 6 2
+text17 CODE 0 42E 42E 6 2
+text18 CODE 0 428 428 6 2
+text19 CODE 0 422 422 6 2
+text20 CODE 0 41C 41C 6 2
+text21 CODE 0 416 416 6 2
+text22 CODE 0 410 410 6 2
+text23 CODE 0 454 454 7 2
+text24 CODE 0 5BC 5BC 109 2
+text25 CODE 0 44D 44D 7 2
+text26 CODE 0 50C 50C 1A 2
+text27 CODE 0 545 545 22 2
+text28 CODE 0 4F3 4F3 19 2
+text29 CODE 0 401 401 4 2
+text30 CODE 0 4DE 4DE 15 2
+text31 CODE 0 4C9 4C9 15 2
+text32 CODE 0 4B4 4B4 15 2
+text33 CODE 0 49F 49F 15 2
+text34 CODE 0 446 446 7 2
+text35 CODE 0 477 477 B 2
+text36 CODE 0 45B 45B 8 2
+text37 CODE 0 405 405 5 2
+text38 CODE 0 482 482 C 2
+text39 CODE 0 40A 40A 6 2
+text40 CODE 0 48E 48E 11 2
+maintext CODE 0 6C5 6C5 135 2
+cstackCOMMON COMMON 1 70 70 A 1
+cstackBANK0 BANK0 1 20 20 14 1
+stringtext1 STRCODE 0 3E4 3E4 2 2
+stringtext2 STRCODE 0 3E2 3E2 2 2
+bssBANK0 BANK0 1 34 34 3 1
+$C:\Users\Lachlan\AppData\Local\Temp\s4as.o
 reset_vec CODE 0 0 0 1 2
 end_init CODE 0 1 1 1 2
 config CONFIG 0 8007 8007 2 2
@@ -64,14 +69,14 @@ config CONFIG 0 8007 8007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 2A-6F 1
+RAM 37-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
-BANK0 2A-6F 1
+BANK0 37-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
-CONST 2-5A1 2
-ENTRY 2-5A1 2
+CONST 2-3E1 2
+ENTRY 2-3E1 2
 IDLOC 8000-8003 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -95,8 +100,8 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 200A-20EF 1
-CODE 2-5A1 2
+STACK 2017-20EF 1
+CODE 2-3E1 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -108,9 +113,9 @@ SFR7 380-3EF 1
 SFR8 400-46F 1
 SFR9 480-4EF 1
 BIGRAM 2000-20EF 1
-COMMON 7B-7D 1
-STRCODE 2-5A1 2
-STRING 2-5A1 2
+COMMON 7A-7D 1
+STRCODE 2-3E1 2
+STRING 2-3E1 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -125,253 +130,325 @@ STRING 2-5A1 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\aj2019-kit.production.o
-7FE cinit CODE >3347:C:\Users\Lachlan\AppData\Local\Temp\s4c4.
-7FE cinit CODE >3350:C:\Users\Lachlan\AppData\Local\Temp\s4c4.
-7FE cinit CODE >3356:C:\Users\Lachlan\AppData\Local\Temp\s4c4.
-7FE cinit CODE >3358:C:\Users\Lachlan\AppData\Local\Temp\s4c4.
-7FF cinit CODE >3359:C:\Users\Lachlan\AppData\Local\Temp\s4c4.
-6B5 text36 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-6B6 text36 CODE >116:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-6C0 text36 CODE >119:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-6C1 text36 CODE >122:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-6C1 text36 CODE >125:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-6C3 text36 CODE >128:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-6C4 text36 CODE >128:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-6C4 text36 CODE >130:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-6C9 text36 CODE >133:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-6CE text36 CODE >134:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-63C text35 CODE >111:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-63D text35 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-63E text35 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-63E text35 CODE >115:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-644 text35 CODE >117:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-647 text35 CODE >118:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-5C5 text34 CODE >88:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-5C5 text34 CODE >90:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-5C9 text34 CODE >91:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-615 text33 CODE >65:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-615 text33 CODE >70:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-618 text33 CODE >73:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-619 text33 CODE >76:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-61A text33 CODE >79:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-61B text33 CODE >82:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-61C text33 CODE >84:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-631 text32 CODE >56:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-631 text32 CODE >61:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-634 text32 CODE >64:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-636 text32 CODE >67:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-638 text32 CODE >70:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-63A text32 CODE >73:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-63B text32 CODE >76:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-600 text31 CODE >63:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-600 text31 CODE >66:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-603 text31 CODE >68:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-604 text31 CODE >70:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-606 text31 CODE >71:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-648 text30 CODE >57:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
-648 text30 CODE >62:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
-64A text30 CODE >67:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
-64D text30 CODE >72:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
-650 text30 CODE >77:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
-652 text30 CODE >78:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
-654 text30 CODE >83:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
-656 text30 CODE >88:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
-659 text30 CODE >93:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
-65C text30 CODE >100:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
-65D text29 CODE >58:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-65D text29 CODE >63:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-65F text29 CODE >66:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-660 text29 CODE >69:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-661 text29 CODE >72:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-662 text29 CODE >75:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-663 text29 CODE >78:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-664 text29 CODE >81:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-665 text29 CODE >84:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-666 text29 CODE >87:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-667 text29 CODE >90:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-668 text29 CODE >93:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-66A text29 CODE >96:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-66B text29 CODE >99:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-66D text29 CODE >102:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-66E text29 CODE >105:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-66F text29 CODE >108:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-671 text29 CODE >110:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-672 text28 CODE >58:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-672 text28 CODE >63:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-674 text28 CODE >66:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-675 text28 CODE >69:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-676 text28 CODE >72:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-677 text28 CODE >75:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-678 text28 CODE >78:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-679 text28 CODE >81:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-67A text28 CODE >84:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-67B text28 CODE >87:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-67C text28 CODE >90:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-67D text28 CODE >93:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-67F text28 CODE >96:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-680 text28 CODE >99:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-682 text28 CODE >102:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-683 text28 CODE >105:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-684 text28 CODE >108:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-686 text28 CODE >110:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-687 text27 CODE >58:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-687 text27 CODE >63:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-689 text27 CODE >66:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-68A text27 CODE >69:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-68B text27 CODE >72:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-68C text27 CODE >75:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-68D text27 CODE >78:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-68E text27 CODE >81:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-68F text27 CODE >84:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-690 text27 CODE >87:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-691 text27 CODE >90:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-692 text27 CODE >93:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-694 text27 CODE >96:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-695 text27 CODE >99:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-697 text27 CODE >102:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-698 text27 CODE >105:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-699 text27 CODE >108:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-69B text27 CODE >110:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5C1 text26 CODE >73:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-5C1 text26 CODE >76:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-5C4 text26 CODE >77:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-69C text25 CODE >50:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-69C text25 CODE >53:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-69F text25 CODE >54:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-6A2 text25 CODE >55:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-6A5 text25 CODE >56:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-6A8 text25 CODE >57:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-6AB text25 CODE >58:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-6AE text25 CODE >59:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-6B1 text25 CODE >60:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-6B4 text25 CODE >61:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
-607 text24 CODE >16:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-607 text24 CODE >18:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-60B text24 CODE >19:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-60D text24 CODE >20:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-60E text23 CODE >9:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-60E text23 CODE >11:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-610 text23 CODE >12:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-614 text23 CODE >13:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-5CA text22 CODE >145:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5CA text22 CODE >147:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5CD text22 CODE >148:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5CF text22 CODE >149:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5D0 text21 CODE >133:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5D0 text21 CODE >135:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5D3 text21 CODE >136:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5D5 text21 CODE >137:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5D6 text20 CODE >145:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5D6 text20 CODE >147:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5D9 text20 CODE >148:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5DB text20 CODE >149:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5DC text19 CODE >133:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5DC text19 CODE >135:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5DF text19 CODE >136:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5E1 text19 CODE >137:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5E2 text18 CODE >145:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5E2 text18 CODE >147:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5E5 text18 CODE >148:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5E7 text18 CODE >149:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5E8 text17 CODE >133:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5E8 text17 CODE >135:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5EB text17 CODE >136:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5ED text17 CODE >137:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5EE text16 CODE >139:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5EE text16 CODE >141:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5F1 text16 CODE >142:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5F3 text16 CODE >143:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5A6 text15 CODE >128:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5A6 text15 CODE >130:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5A8 text15 CODE >131:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5F4 text14 CODE >139:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5F4 text14 CODE >141:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5F7 text14 CODE >142:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5F9 text14 CODE >143:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5A9 text13 CODE >128:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5A9 text13 CODE >130:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5AB text13 CODE >131:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5FA text12 CODE >139:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5FA text12 CODE >141:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5FD text12 CODE >142:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5FF text12 CODE >143:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5AC text11 CODE >128:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5AC text11 CODE >130:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5AE text11 CODE >131:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-6CF text10 CODE >94:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-6CF text10 CODE >96:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-6D6 text10 CODE >97:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-6D9 text10 CODE >98:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-6E0 text10 CODE >99:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-6E3 text10 CODE >100:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-6EA text10 CODE >101:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-6ED text10 CODE >102:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-5AF text9 CODE >118:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5AF text9 CODE >120:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5B1 text9 CODE >121:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5B2 text8 CODE >118:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5B2 text8 CODE >120:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5B4 text8 CODE >121:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5B5 text7 CODE >118:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5B5 text7 CODE >120:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5B7 text7 CODE >121:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-61D text6 CODE >80:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-61D text6 CODE >82:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-620 text6 CODE >83:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-623 text6 CODE >84:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-626 text6 CODE >85:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-6EE text5 CODE >104:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-6EE text5 CODE >108:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-6F1 text5 CODE >110:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-6FC text5 CODE >111:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-703 text5 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-70E text5 CODE >114:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-715 text5 CODE >116:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-720 text5 CODE >117:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-727 text5 CODE >119:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-742 text5 CODE >120:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-5B8 text4 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5B8 text4 CODE >115:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5BA text4 CODE >116:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-5BB text3 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5BB text3 CODE >115:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5BD text3 CODE >116:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-5BE text2 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5BE text2 CODE >115:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-5C0 text2 CODE >116:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-627 text1 CODE >87:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-627 text1 CODE >89:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-62A text1 CODE >90:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-62D text1 CODE >91:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-630 text1 CODE >92:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-743 maintext CODE >52:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-743 maintext CODE >55:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-746 maintext CODE >57:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-74B maintext CODE >58:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-74F maintext CODE >59:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-751 maintext CODE >61:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-758 maintext CODE >62:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-768 maintext CODE >79:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-76B maintext CODE >81:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-76F maintext CODE >83:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-76F maintext CODE >88:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-781 maintext CODE >91:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-78A maintext CODE >101:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-78E maintext CODE >102:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-792 maintext CODE >103:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-796 maintext CODE >108:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7A2 maintext CODE >109:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7AE maintext CODE >110:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7BA maintext CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7C9 maintext CODE >117:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7CD maintext CODE >118:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7E0 maintext CODE >121:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7E3 maintext CODE >123:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7E8 maintext CODE >124:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7ED maintext CODE >126:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7F8 maintext CODE >137:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7FC maintext CODE >138:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-7FD maintext CODE >139:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7FA cinit CODE >3354:C:\Users\Lachlan\AppData\Local\Temp\s4as.
+7FA cinit CODE >3357:C:\Users\Lachlan\AppData\Local\Temp\s4as.
+7FA cinit CODE >3369:C:\Users\Lachlan\AppData\Local\Temp\s4as.
+7FB cinit CODE >3370:C:\Users\Lachlan\AppData\Local\Temp\s4as.
+7FC cinit CODE >3371:C:\Users\Lachlan\AppData\Local\Temp\s4as.
+7FD cinit CODE >3372:C:\Users\Lachlan\AppData\Local\Temp\s4as.
+7FE cinit CODE >3378:C:\Users\Lachlan\AppData\Local\Temp\s4as.
+7FE cinit CODE >3380:C:\Users\Lachlan\AppData\Local\Temp\s4as.
+7FF cinit CODE >3381:C:\Users\Lachlan\AppData\Local\Temp\s4as.
+48E text40 CODE >93:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+48E text40 CODE >95:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+48F text40 CODE >95:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+48F text40 CODE >97:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+494 text40 CODE >100:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+499 text40 CODE >104:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+49A text40 CODE >105:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+49C text40 CODE >106:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+49C text40 CODE >108:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+49E text40 CODE >109:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+40A text39 CODE >23:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+40A text39 CODE >25:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+40F text39 CODE >26:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+482 text38 CODE >111:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+483 text38 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+484 text38 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+484 text38 CODE >115:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+48A text38 CODE >117:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+48D text38 CODE >118:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+405 text37 CODE >88:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+405 text37 CODE >90:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+409 text37 CODE >91:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+45B text36 CODE >65:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+45B text36 CODE >70:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+45E text36 CODE >73:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+45F text36 CODE >76:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+460 text36 CODE >79:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+461 text36 CODE >82:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+462 text36 CODE >84:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+477 text35 CODE >56:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+477 text35 CODE >61:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+47A text35 CODE >64:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+47C text35 CODE >67:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+47E text35 CODE >70:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+480 text35 CODE >73:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+481 text35 CODE >76:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+446 text34 CODE >63:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+446 text34 CODE >66:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+449 text34 CODE >68:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+44A text34 CODE >70:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+44C text34 CODE >71:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+49F text33 CODE >57:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+49F text33 CODE >62:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+4A1 text33 CODE >67:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+4A4 text33 CODE >72:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+4A7 text33 CODE >77:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+4A9 text33 CODE >78:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+4AB text33 CODE >83:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+4AD text33 CODE >88:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+4B0 text33 CODE >93:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+4B3 text33 CODE >100:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+4B4 text32 CODE >58:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4B4 text32 CODE >63:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4B6 text32 CODE >66:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4B7 text32 CODE >69:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4B8 text32 CODE >72:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4B9 text32 CODE >75:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4BA text32 CODE >78:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4BB text32 CODE >81:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4BC text32 CODE >84:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4BD text32 CODE >87:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4BE text32 CODE >90:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4BF text32 CODE >93:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4C1 text32 CODE >96:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4C2 text32 CODE >99:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4C4 text32 CODE >102:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4C5 text32 CODE >105:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4C6 text32 CODE >108:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4C8 text32 CODE >110:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+4C9 text31 CODE >58:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4C9 text31 CODE >63:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4CB text31 CODE >66:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4CC text31 CODE >69:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4CD text31 CODE >72:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4CE text31 CODE >75:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4CF text31 CODE >78:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4D0 text31 CODE >81:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4D1 text31 CODE >84:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4D2 text31 CODE >87:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4D3 text31 CODE >90:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4D4 text31 CODE >93:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4D6 text31 CODE >96:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4D7 text31 CODE >99:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4D9 text31 CODE >102:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4DA text31 CODE >105:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4DB text31 CODE >108:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4DD text31 CODE >110:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+4DE text30 CODE >58:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4DE text30 CODE >63:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4E0 text30 CODE >66:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4E1 text30 CODE >69:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4E2 text30 CODE >72:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4E3 text30 CODE >75:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4E4 text30 CODE >78:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4E5 text30 CODE >81:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4E6 text30 CODE >84:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4E7 text30 CODE >87:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4E8 text30 CODE >90:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4E9 text30 CODE >93:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4EB text30 CODE >96:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4EC text30 CODE >99:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4EE text30 CODE >102:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4EF text30 CODE >105:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4F0 text30 CODE >108:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+4F2 text30 CODE >110:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+401 text29 CODE >73:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+401 text29 CODE >76:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+404 text29 CODE >77:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+4F3 text28 CODE >50:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+4F3 text28 CODE >53:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+4F6 text28 CODE >54:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+4F9 text28 CODE >55:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+4FC text28 CODE >56:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+4FF text28 CODE >57:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+502 text28 CODE >58:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+505 text28 CODE >59:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+508 text28 CODE >60:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+50B text28 CODE >61:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
+545 text27 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+545 text27 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+548 text27 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+548 text27 CODE >45:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+54C text27 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+550 text27 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+555 text27 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+55A text27 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+561 text27 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+566 text27 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+50C text26 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+50D text26 CODE >116:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+517 text26 CODE >119:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+518 text26 CODE >122:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+518 text26 CODE >125:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+51A text26 CODE >128:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+51B text26 CODE >128:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+51B text26 CODE >130:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+520 text26 CODE >133:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+525 text26 CODE >134:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+44D text25 CODE >16:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+44D text25 CODE >18:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+451 text25 CODE >19:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+453 text25 CODE >20:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5BC text24 CODE >29:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5BD text24 CODE >31:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5C0 text24 CODE >32:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5D1 text24 CODE >33:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5D2 text24 CODE >34:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5DB text24 CODE >36:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5E2 text24 CODE >37:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5ED text24 CODE >39:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5F7 text24 CODE >42:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5F8 text24 CODE >43:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+60A text24 CODE >46:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+610 text24 CODE >47:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+611 text24 CODE >48:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+623 text24 CODE >51:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+628 text24 CODE >52:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+629 text24 CODE >53:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+63B text24 CODE >56:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+641 text24 CODE >57:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+646 text24 CODE >58:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+647 text24 CODE >59:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+659 text24 CODE >62:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+65E text24 CODE >63:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+65F text24 CODE >64:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+671 text24 CODE >67:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+677 text24 CODE >68:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+67C text24 CODE >69:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+67D text24 CODE >70:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+68F text24 CODE >73:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+694 text24 CODE >74:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+699 text24 CODE >75:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+69A text24 CODE >76:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+6AC text24 CODE >79:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+6B2 text24 CODE >80:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+6B7 text24 CODE >81:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+6BD text24 CODE >82:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+6C4 text24 CODE >83:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+454 text23 CODE >9:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+454 text23 CODE >11:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+456 text23 CODE >12:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+45A text23 CODE >13:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+410 text22 CODE >145:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+410 text22 CODE >147:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+413 text22 CODE >148:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+415 text22 CODE >149:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+416 text21 CODE >133:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+416 text21 CODE >135:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+419 text21 CODE >136:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+41B text21 CODE >137:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+41C text20 CODE >145:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+41C text20 CODE >147:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+41F text20 CODE >148:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+421 text20 CODE >149:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+422 text19 CODE >133:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+422 text19 CODE >135:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+425 text19 CODE >136:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+427 text19 CODE >137:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+428 text18 CODE >145:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+428 text18 CODE >147:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+42B text18 CODE >148:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+42D text18 CODE >149:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+42E text17 CODE >133:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+42E text17 CODE >135:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+431 text17 CODE >136:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+433 text17 CODE >137:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+434 text16 CODE >139:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+434 text16 CODE >141:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+437 text16 CODE >142:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+439 text16 CODE >143:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+3E6 text15 CODE >128:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+3E6 text15 CODE >130:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+3E8 text15 CODE >131:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+43A text14 CODE >139:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+43A text14 CODE >141:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+43D text14 CODE >142:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+43F text14 CODE >143:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+3E9 text13 CODE >128:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+3E9 text13 CODE >130:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+3EB text13 CODE >131:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+440 text12 CODE >139:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+440 text12 CODE >141:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+443 text12 CODE >142:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+445 text12 CODE >143:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+3EC text11 CODE >128:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+3EC text11 CODE >130:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+3EE text11 CODE >131:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+526 text10 CODE >100:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+526 text10 CODE >102:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+52D text10 CODE >103:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+530 text10 CODE >104:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+537 text10 CODE >105:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+53A text10 CODE >106:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+541 text10 CODE >107:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+544 text10 CODE >108:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+3EF text9 CODE >118:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+3EF text9 CODE >120:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+3F1 text9 CODE >121:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+3F2 text8 CODE >118:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+3F2 text8 CODE >120:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+3F4 text8 CODE >121:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+3F5 text7 CODE >118:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+3F5 text7 CODE >120:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+3F7 text7 CODE >121:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+463 text6 CODE >86:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+463 text6 CODE >88:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+466 text6 CODE >89:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+469 text6 CODE >90:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+46C text6 CODE >91:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+567 text5 CODE >110:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+567 text5 CODE >114:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+56A text5 CODE >116:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+575 text5 CODE >117:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+57C text5 CODE >119:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+587 text5 CODE >120:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+58E text5 CODE >122:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+599 text5 CODE >123:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5A0 text5 CODE >125:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+5BB text5 CODE >126:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+3F8 text4 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+3F8 text4 CODE >115:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+3FA text4 CODE >116:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+3FB text3 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+3FB text3 CODE >115:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+3FD text3 CODE >116:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+3FE text2 CODE >113:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+3FE text2 CODE >115:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+400 text2 CODE >116:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+46D text1 CODE >93:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+46D text1 CODE >95:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+470 text1 CODE >96:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+473 text1 CODE >97:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+476 text1 CODE >98:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+6C5 maintext CODE >27:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+6C5 maintext CODE >30:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+6C8 maintext CODE >33:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+6CD maintext CODE >34:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+6D1 maintext CODE >35:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+6D3 maintext CODE >38:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+6DA maintext CODE >39:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+6EA maintext CODE >57:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+6ED maintext CODE >59:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+6F0 maintext CODE >60:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+6F7 maintext CODE >62:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+6F7 maintext CODE >67:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+709 maintext CODE >70:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+712 maintext CODE >75:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+716 maintext CODE >76:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+72A maintext CODE >77:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+73D maintext CODE >78:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+750 maintext CODE >87:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+75C maintext CODE >88:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+768 maintext CODE >89:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+774 maintext CODE >92:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+783 maintext CODE >96:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+787 maintext CODE >97:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+79A maintext CODE >100:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+79D maintext CODE >102:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7A2 maintext CODE >103:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7AF maintext CODE >106:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7BA maintext CODE >109:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7C2 maintext CODE >111:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7C9 maintext CODE >112:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7E3 maintext CODE >114:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7E8 maintext CODE >115:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7E8 maintext CODE >116:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7F4 maintext CODE >117:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7F4 maintext CODE >119:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7F8 maintext CODE >120:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+7F9 maintext CODE >121:C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -385,12 +462,13 @@ $dist/default/production\aj2019-kit.production.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
+_EUSART_Read 91C 0 CODE 0 text40 dist/default/production\aj2019-kit.production.o
 __Hspace_0 8009 0 ABS 0 - -
-__Hspace_1 7B 0 ABS 0 - -
+__Hspace_1 7A 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 PWM2_DutyCycleSet@dutyCycleCount 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
-__end_of_PWM1_Initialize CE4 0 CODE 0 text29 dist/default/production\aj2019-kit.production.o
+__end_of_PWM1_Initialize 992 0 CODE 0 text32 dist/default/production\aj2019-kit.production.o
 _PWM1LDCON D9F 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM1OFCON DA0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM1CON D9B 0 ABS 0 - dist/default/production\aj2019-kit.production.o
@@ -420,53 +498,57 @@ _PWM3PHH DB2 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM3PHL DB1 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM3PRH DB6 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM3PRL DB5 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_PWM1_Stop B5E 0 CODE 0 text9 dist/default/production\aj2019-kit.production.o
+_PWM1_Stop 7DE 0 CODE 0 text9 dist/default/production\aj2019-kit.production.o
 _PWM2LDCON DAF 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM2OFCON DB0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_PWM2_Stop B64 0 CODE 0 text8 dist/default/production\aj2019-kit.production.o
+_PWM2_Stop 7E4 0 CODE 0 text8 dist/default/production\aj2019-kit.production.o
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM3LDCON DBF 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM3OFCON DC0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_PWM3_Stop B6A 0 CODE 0 text7 dist/default/production\aj2019-kit.production.o
-__end_of_WDT_Initialize B8A 0 CODE 0 text26 dist/default/production\aj2019-kit.production.o
-main@i 22 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
+_PWM3_Stop 7EA 0 CODE 0 text7 dist/default/production\aj2019-kit.production.o
+__end_of_WDT_Initialize 80A 0 CODE 0 text29 dist/default/production\aj2019-kit.production.o
+main@i 29 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
 __Hstrings 0 0 ABS 0 strings -
 _LATA 10C 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _WPUA 20C 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-___sp 0 0 STACK 2 stack C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
-_main E86 0 CODE 0 maintext dist/default/production\aj2019-kit.production.o
+___sp 0 0 STACK 2 stack C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+_main D8A 0 CODE 0 maintext dist/default/production\aj2019-kit.production.o
 btemp 7E 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-start 2 0 CODE 0 init C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
-_EUSART_Write C78 0 CODE 0 text35 dist/default/production\aj2019-kit.production.o
+main@buttons 31 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
+start 2 0 CODE 0 init C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+_EUSART_Write 904 0 CODE 0 text38 dist/default/production\aj2019-kit.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_ADC1_Initialize C2A 0 CODE 0 text33 dist/default/production\aj2019-kit.production.o
+_ADC1_Initialize 8B6 0 CODE 0 text36 dist/default/production\aj2019-kit.production.o
 _PWM2INTFbits DAD 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__end_of_PWM1_Start B76 0 CODE 0 text4 dist/default/production\aj2019-kit.production.o
+__end_of_PWM1_Start 7F6 0 CODE 0 text4 dist/default/production\aj2019-kit.production.o
+?___wmul 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__end_of_EUSART_Initialize C78 0 CODE 0 text32 dist/default/production\aj2019-kit.production.o
+__end_of_EUSART_Initialize 904 0 CODE 0 text35 dist/default/production\aj2019-kit.production.o
 __size_of_stopLEDs 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-_PWM3_DutyCycleSet BF4 0 CODE 0 text12 dist/default/production\aj2019-kit.production.o
+checkButtons@buttons 77 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
+_PWM3_DutyCycleSet 880 0 CODE 0 text12 dist/default/production\aj2019-kit.production.o
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
-_PWM1_Initialize CBA 0 CODE 0 text29 dist/default/production\aj2019-kit.production.o
-__end_of_PWM2_LoadBufferSet B58 0 CODE 0 text13 dist/default/production\aj2019-kit.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+_PWM1_Initialize 968 0 CODE 0 text32 dist/default/production\aj2019-kit.production.o
+__end_of_PWM2_LoadBufferSet 7D8 0 CODE 0 text13 dist/default/production\aj2019-kit.production.o
 __size_of_setLEDs 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __size_of_EUSART_Write 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 PWM3_PhaseSet@phaseCount 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
-__end_of_setupLEDs E86 0 CODE 0 text5 dist/default/production\aj2019-kit.production.o
+__end_of_setupLEDs B78 0 CODE 0 text5 dist/default/production\aj2019-kit.production.o
 __size_of_disableSerial 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 PWM1_DutyCycleSet@dutyCycleCount 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
 __size_of_setupLEDs 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
+___wmul@multiplicand 72 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
 _ADCON0 9D 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _ADCON1 9E 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _ADCON2 9F 0 ABS 0 - dist/default/production\aj2019-kit.production.o
@@ -475,45 +557,50 @@ _ADRESL 9B 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _ANSELA 18C 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _APFCON 11D 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _BORCON 116 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__end_of_PWM2_Initialize D0E 0 CODE 0 text28 dist/default/production\aj2019-kit.production.o
+_EUSART_RxCheck 814 0 CODE 0 text39 dist/default/production\aj2019-kit.production.o
+__end_of_PWM2_Initialize 9BC 0 CODE 0 text31 dist/default/production\aj2019-kit.production.o
+__end_of___wmul ACE 0 CODE 0 text27 dist/default/production\aj2019-kit.production.o
 __size_of_PWM3_LoadBufferSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_PWM2_LoadBufferSet B52 0 CODE 0 text13 dist/default/production\aj2019-kit.production.o
-__end_of_EUSART_Write C90 0 CODE 0 text35 dist/default/production\aj2019-kit.production.o
-_setupLEDs DDC 0 CODE 0 text5 dist/default/production\aj2019-kit.production.o
-_stopLEDs C3A 0 CODE 0 text6 dist/default/production\aj2019-kit.production.o
-setupLEDs@initial_phase B48 0 STRCODE 0 stringtext1 dist/default/production\aj2019-kit.production.o
+_PWM2_LoadBufferSet 7D2 0 CODE 0 text13 dist/default/production\aj2019-kit.production.o
+__end_of_EUSART_Write 91C 0 CODE 0 text38 dist/default/production\aj2019-kit.production.o
+_setupLEDs ACE 0 CODE 0 text5 dist/default/production\aj2019-kit.production.o
+_stopLEDs 8C6 0 CODE 0 text6 dist/default/production\aj2019-kit.production.o
+setupLEDs@initial_phase 7C8 0 STRCODE 0 stringtext1 dist/default/production\aj2019-kit.production.o
 setupLEDs@period 78 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-_PWM2_Start B76 0 CODE 0 text3 dist/default/production\aj2019-kit.production.o
+_PWM2_Start 7F6 0 CODE 0 text3 dist/default/production\aj2019-kit.production.o
 __size_of_PWM1_DutyCycleSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__end_of_disableSerial C1C 0 CODE 0 text24 dist/default/production\aj2019-kit.production.o
-__end_of_stopLEDs C4E 0 CODE 0 text6 dist/default/production\aj2019-kit.production.o
+__end_of_disableSerial 8A8 0 CODE 0 text25 dist/default/production\aj2019-kit.production.o
+__end_of_stopLEDs 8DA 0 CODE 0 text6 dist/default/production\aj2019-kit.production.o
 __size_of_ADC1_Initialize 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__end_of_startLEDs C62 0 CODE 0 text1 dist/default/production\aj2019-kit.production.o
+__end_of_startLEDs 8EE 0 CODE 0 text1 dist/default/production\aj2019-kit.production.o
 __size_of_startLEDs 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_EUSART_Initialize C62 0 CODE 0 text32 dist/default/production\aj2019-kit.production.o
+_EUSART_Initialize 8EE 0 CODE 0 text35 dist/default/production\aj2019-kit.production.o
 _PWM3CLKCON DBE 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_PWM1_PeriodSet B94 0 CODE 0 text22 dist/default/production\aj2019-kit.production.o
-_PIN_MANAGER_Initialize C90 0 CODE 0 text30 dist/default/production\aj2019-kit.production.o
-start_initialization FFC 0 CODE 0 cinit dist/default/production\aj2019-kit.production.o
+_PWM1_PeriodSet 820 0 CODE 0 text22 dist/default/production\aj2019-kit.production.o
+_PIN_MANAGER_Initialize 93E 0 CODE 0 text33 dist/default/production\aj2019-kit.production.o
+start_initialization FF4 0 CODE 0 cinit dist/default/production\aj2019-kit.production.o
 _ODCONA 28C 0 ABS 0 - dist/default/production\aj2019-kit.production.o
+_checkButtons B78 0 CODE 0 text24 dist/default/production\aj2019-kit.production.o
+__end_of_EUSART_RxCheck 820 0 CODE 0 text39 dist/default/production\aj2019-kit.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __size_of_PWM1_Initialize 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__end_of_setLEDs DDC 0 CODE 0 text10 dist/default/production\aj2019-kit.production.o
-_PWM2_Initialize CE4 0 CODE 0 text28 dist/default/production\aj2019-kit.production.o
-_startLEDs C4E 0 CODE 0 text1 dist/default/production\aj2019-kit.production.o
-_PWM3_PeriodSet BC4 0 CODE 0 text18 dist/default/production\aj2019-kit.production.o
-__end_of_SYSTEM_Initialize D6A 0 CODE 0 text25 dist/default/production\aj2019-kit.production.o
+__end_of_setLEDs A8A 0 CODE 0 text10 dist/default/production\aj2019-kit.production.o
+_PWM2_Initialize 992 0 CODE 0 text31 dist/default/production\aj2019-kit.production.o
+_startLEDs 8DA 0 CODE 0 text1 dist/default/production\aj2019-kit.production.o
+_PWM3_PeriodSet 850 0 CODE 0 text18 dist/default/production\aj2019-kit.production.o
+__end_of_SYSTEM_Initialize A18 0 CODE 0 text28 dist/default/production\aj2019-kit.production.o
 __size_of_ADC1_GetConversion 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _SPBRGH 19C 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _SPBRGL 19B 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
-__end_of_PWM2_Start B7C 0 CODE 0 text3 dist/default/production\aj2019-kit.production.o
+__end_of_PWM2_Start 7FC 0 CODE 0 text3 dist/default/production\aj2019-kit.production.o
 __size_of_PWM2_PeriodSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __size_of_PWM1_Start 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
-__end_of_PWM3_Initialize D38 0 CODE 0 text27 dist/default/production\aj2019-kit.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+__end_of_EUSART_Read 93E 0 CODE 0 text40 dist/default/production\aj2019-kit.production.o
+__end_of_PWM3_Initialize 9E6 0 CODE 0 text30 dist/default/production\aj2019-kit.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -573,8 +660,9 @@ __Hbank29 0 0 BANK29 1 bank29 -
 __Hbank30 0 0 BANK30 1 bank30 -
 __Hbank31 0 0 BANK31 1 bank31 -
 __Hbigram 0 0 ABS 0 bigram -
+__size_of_checkButtons 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Hmaintext 0 0 ABS 0 maintext -
-__end_of_PWM1_PeriodSet BA0 0 CODE 0 text22 dist/default/production\aj2019-kit.production.o
+__end_of_PWM1_PeriodSet 82C 0 CODE 0 text22 dist/default/production\aj2019-kit.production.o
 __CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 0 config -
@@ -588,9 +676,9 @@ __Lbank6 0 0 BANK6 1 bank6 -
 __Lbank7 0 0 BANK7 1 bank7 -
 __Lbank8 0 0 BANK8 1 bank8 -
 __Lbank9 0 0 BANK9 1 bank9 -
-__Lcinit FFC 0 CODE 0 cinit -
+__Lcinit FF4 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 0 idloc -
-_enableSerial C1C 0 CODE 0 text23 dist/default/production\aj2019-kit.production.o
+_enableSerial 8A8 0 CODE 0 text23 dist/default/production\aj2019-kit.production.o
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
 __Lsfr12 0 0 ABS 0 sfr12 -
@@ -643,27 +731,29 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-__end_of_PWM3_PeriodSet BD0 0 CODE 0 text18 dist/default/production\aj2019-kit.production.o
-__pstringtext1 B48 0 STRCODE 0 stringtext1 dist/default/production\aj2019-kit.production.o
-__pstringtext2 B44 0 STRCODE 0 stringtext2 dist/default/production\aj2019-kit.production.o
-__end_of_PWM1_DutyCycleSet BE8 0 CODE 0 text16 dist/default/production\aj2019-kit.production.o
+__end_of_PWM3_PeriodSet 85C 0 CODE 0 text18 dist/default/production\aj2019-kit.production.o
+__pstringtext1 7C8 0 STRCODE 0 stringtext1 dist/default/production\aj2019-kit.production.o
+__pstringtext2 7C4 0 STRCODE 0 stringtext2 dist/default/production\aj2019-kit.production.o
+___wmul A8A 0 CODE 0 text27 dist/default/production\aj2019-kit.production.o
+__end_of_PWM1_DutyCycleSet 874 0 CODE 0 text16 dist/default/production\aj2019-kit.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __size_of_PWM2_DutyCycleSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__end_of_checkButtons D8A 0 CODE 0 text24 dist/default/production\aj2019-kit.production.o
 __size_of_WDT_Initialize 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __S0 8009 0 ABS 0 - -
-__S1 7B 0 ABS 0 - -
+__S1 7A 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
-__end_of_PWM1_LoadBufferSet B52 0 CODE 0 text15 dist/default/production\aj2019-kit.production.o
+__end_of_PWM1_LoadBufferSet 7D2 0 CODE 0 text15 dist/default/production\aj2019-kit.production.o
 __size_of_PWM2_Initialize 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_PWM3_Initialize D0E 0 CODE 0 text27 dist/default/production\aj2019-kit.production.o
-main@adc_result 20 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
+_PWM3_Initialize 9BC 0 CODE 0 text30 dist/default/production\aj2019-kit.production.o
+main@adc_result 27 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
 _PWM3INTFbits DBD 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 PWM1_PhaseSet@phaseCount 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
-__end_ofsetupLEDs@initial_phase B4C 0 STRCODE 0 stringtext1 dist/default/production\aj2019-kit.production.o
-_SYSTEM_Initialize D38 0 CODE 0 text25 dist/default/production\aj2019-kit.production.o
+__end_ofsetupLEDs@initial_phase 7CC 0 STRCODE 0 stringtext1 dist/default/production\aj2019-kit.production.o
+_SYSTEM_Initialize 9E6 0 CODE 0 text28 dist/default/production\aj2019-kit.production.o
 __size_of_enableSerial 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_PWM3_Start B7C 0 CODE 0 text2 dist/default/production\aj2019-kit.production.o
+_PWM3_Start 7FC 0 CODE 0 text2 dist/default/production\aj2019-kit.production.o
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM3CONbits DBB 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Lintentry 2 0 CODE 0 intentry -
@@ -671,44 +761,50 @@ setLEDs@led1 72 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.produ
 setLEDs@led2 74 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
 setLEDs@led3 76 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
 __size_of_EUSART_is_tx_done 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+__size_of___wmul 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
 __size_of_PWM2_LoadBufferSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
-_PWM1_LoadBufferSet B4C 0 CODE 0 text15 dist/default/production\aj2019-kit.production.o
+_PWM1_LoadBufferSet 7CC 0 CODE 0 text15 dist/default/production\aj2019-kit.production.o
 _PWM1LDCONbits D9F 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _RCSTAbits 19D 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM2LDCONbits DAF 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__end_of_enableSerial C2A 0 CODE 0 text23 dist/default/production\aj2019-kit.production.o
-_PWM1_PhaseSet BA0 0 CODE 0 text21 dist/default/production\aj2019-kit.production.o
-__ptext10 D9E 0 CODE 0 text10 dist/default/production\aj2019-kit.production.o
-__ptext11 B58 0 CODE 0 text11 dist/default/production\aj2019-kit.production.o
-__ptext12 BF4 0 CODE 0 text12 dist/default/production\aj2019-kit.production.o
-__ptext13 B52 0 CODE 0 text13 dist/default/production\aj2019-kit.production.o
-__ptext14 BE8 0 CODE 0 text14 dist/default/production\aj2019-kit.production.o
-__ptext15 B4C 0 CODE 0 text15 dist/default/production\aj2019-kit.production.o
-__ptext16 BDC 0 CODE 0 text16 dist/default/production\aj2019-kit.production.o
-__ptext17 BD0 0 CODE 0 text17 dist/default/production\aj2019-kit.production.o
-__ptext18 BC4 0 CODE 0 text18 dist/default/production\aj2019-kit.production.o
-__ptext19 BB8 0 CODE 0 text19 dist/default/production\aj2019-kit.production.o
-__ptext20 BAC 0 CODE 0 text20 dist/default/production\aj2019-kit.production.o
-__ptext21 BA0 0 CODE 0 text21 dist/default/production\aj2019-kit.production.o
-__ptext22 B94 0 CODE 0 text22 dist/default/production\aj2019-kit.production.o
-__ptext23 C1C 0 CODE 0 text23 dist/default/production\aj2019-kit.production.o
-__ptext24 C0E 0 CODE 0 text24 dist/default/production\aj2019-kit.production.o
-__ptext25 D38 0 CODE 0 text25 dist/default/production\aj2019-kit.production.o
-__ptext26 B82 0 CODE 0 text26 dist/default/production\aj2019-kit.production.o
-__ptext27 D0E 0 CODE 0 text27 dist/default/production\aj2019-kit.production.o
-__ptext28 CE4 0 CODE 0 text28 dist/default/production\aj2019-kit.production.o
-__ptext29 CBA 0 CODE 0 text29 dist/default/production\aj2019-kit.production.o
-__ptext30 C90 0 CODE 0 text30 dist/default/production\aj2019-kit.production.o
-__ptext31 C00 0 CODE 0 text31 dist/default/production\aj2019-kit.production.o
-__ptext32 C62 0 CODE 0 text32 dist/default/production\aj2019-kit.production.o
-__ptext33 C2A 0 CODE 0 text33 dist/default/production\aj2019-kit.production.o
-__ptext34 B8A 0 CODE 0 text34 dist/default/production\aj2019-kit.production.o
-__ptext35 C78 0 CODE 0 text35 dist/default/production\aj2019-kit.production.o
-__ptext36 D6A 0 CODE 0 text36 dist/default/production\aj2019-kit.production.o
-__end_of_PIN_MANAGER_Initialize CBA 0 CODE 0 text30 dist/default/production\aj2019-kit.production.o
+__end_of_enableSerial 8B6 0 CODE 0 text23 dist/default/production\aj2019-kit.production.o
+_PWM1_PhaseSet 82C 0 CODE 0 text21 dist/default/production\aj2019-kit.production.o
+__ptext10 A4C 0 CODE 0 text10 dist/default/production\aj2019-kit.production.o
+__ptext11 7D8 0 CODE 0 text11 dist/default/production\aj2019-kit.production.o
+__ptext12 880 0 CODE 0 text12 dist/default/production\aj2019-kit.production.o
+__ptext13 7D2 0 CODE 0 text13 dist/default/production\aj2019-kit.production.o
+__ptext14 874 0 CODE 0 text14 dist/default/production\aj2019-kit.production.o
+__ptext15 7CC 0 CODE 0 text15 dist/default/production\aj2019-kit.production.o
+__ptext16 868 0 CODE 0 text16 dist/default/production\aj2019-kit.production.o
+__ptext17 85C 0 CODE 0 text17 dist/default/production\aj2019-kit.production.o
+__ptext18 850 0 CODE 0 text18 dist/default/production\aj2019-kit.production.o
+__ptext19 844 0 CODE 0 text19 dist/default/production\aj2019-kit.production.o
+__ptext20 838 0 CODE 0 text20 dist/default/production\aj2019-kit.production.o
+__ptext21 82C 0 CODE 0 text21 dist/default/production\aj2019-kit.production.o
+__ptext22 820 0 CODE 0 text22 dist/default/production\aj2019-kit.production.o
+__ptext23 8A8 0 CODE 0 text23 dist/default/production\aj2019-kit.production.o
+__ptext24 B78 0 CODE 0 text24 dist/default/production\aj2019-kit.production.o
+__ptext25 89A 0 CODE 0 text25 dist/default/production\aj2019-kit.production.o
+__ptext26 A18 0 CODE 0 text26 dist/default/production\aj2019-kit.production.o
+__ptext27 A8A 0 CODE 0 text27 dist/default/production\aj2019-kit.production.o
+__ptext28 9E6 0 CODE 0 text28 dist/default/production\aj2019-kit.production.o
+__ptext29 802 0 CODE 0 text29 dist/default/production\aj2019-kit.production.o
+__ptext30 9BC 0 CODE 0 text30 dist/default/production\aj2019-kit.production.o
+__ptext31 992 0 CODE 0 text31 dist/default/production\aj2019-kit.production.o
+__ptext32 968 0 CODE 0 text32 dist/default/production\aj2019-kit.production.o
+__ptext33 93E 0 CODE 0 text33 dist/default/production\aj2019-kit.production.o
+__ptext34 88C 0 CODE 0 text34 dist/default/production\aj2019-kit.production.o
+__ptext35 8EE 0 CODE 0 text35 dist/default/production\aj2019-kit.production.o
+__ptext36 8B6 0 CODE 0 text36 dist/default/production\aj2019-kit.production.o
+__ptext37 80A 0 CODE 0 text37 dist/default/production\aj2019-kit.production.o
+__ptext38 904 0 CODE 0 text38 dist/default/production\aj2019-kit.production.o
+__ptext39 814 0 CODE 0 text39 dist/default/production\aj2019-kit.production.o
+__ptext40 91C 0 CODE 0 text40 dist/default/production\aj2019-kit.production.o
+__end_of_PIN_MANAGER_Initialize 968 0 CODE 0 text33 dist/default/production\aj2019-kit.production.o
 _BAUDCON 19F 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM3LDCONbits DBF 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Lbank10 0 0 BANK10 1 bank10 -
@@ -734,28 +830,31 @@ __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
 _PWM1INTFbits D9D 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__pmaintext E86 0 CODE 0 maintext dist/default/production\aj2019-kit.production.o
+__pmaintext D8A 0 CODE 0 maintext dist/default/production\aj2019-kit.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_PWM2_PhaseSet BB8 0 CODE 0 text19 dist/default/production\aj2019-kit.production.o
+_PWM2_PhaseSet 844 0 CODE 0 text19 dist/default/production\aj2019-kit.production.o
 _PWM2CONbits DAB 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_PWM3_PhaseSet BD0 0 CODE 0 text17 dist/default/production\aj2019-kit.production.o
-main@LED1 24 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
-main@LED2 26 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
-main@LED3 28 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
-_PWM1_DutyCycleSet BDC 0 CODE 0 text16 dist/default/production\aj2019-kit.production.o
-stackhi 20EF 0 ABS 0 - C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
-stacklo 200A 0 ABS 0 - C:\Users\Lachlan\AppData\Local\Temp\s4c4.o
-__end_of_PWM3_Start B82 0 CODE 0 text2 dist/default/production\aj2019-kit.production.o
+_PWM3_PhaseSet 85C 0 CODE 0 text17 dist/default/production\aj2019-kit.production.o
+___wmul@multiplier 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
+main@F3445 34 0 BANK0 1 bssBANK0 dist/default/production\aj2019-kit.production.o
+main@LED1 2B 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
+main@LED2 2D 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
+main@LED3 2F 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
+_PWM1_DutyCycleSet 868 0 CODE 0 text16 dist/default/production\aj2019-kit.production.o
+__size_of_EUSART_Read 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
+stackhi 20EF 0 ABS 0 - C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+stacklo 2017 0 ABS 0 - C:\Users\Lachlan\AppData\Local\Temp\s4as.o
+__end_of_PWM3_Start 802 0 CODE 0 text2 dist/default/production\aj2019-kit.production.o
 ?_ADC1_GetConversion 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
 PWM2_PeriodSet@periodCount 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
 _OSCTUNE 98 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM1CLKCON D9E 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_setLEDs D9E 0 CODE 0 text10 dist/default/production\aj2019-kit.production.o
+_setLEDs A4C 0 CODE 0 text10 dist/default/production\aj2019-kit.production.o
 _ADCON0bits 9D 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __size_of_PWM2_Start 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 ADC1_GetConversion@channel 73 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
@@ -764,7 +863,7 @@ __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __CFG_LPBOREN$OFF 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__end_of_PWM2_DutyCycleSet BF4 0 CODE 0 text14 dist/default/production\aj2019-kit.production.o
+__end_of_PWM2_DutyCycleSet 880 0 CODE 0 text14 dist/default/production\aj2019-kit.production.o
 _PWM1CONbits D9B 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __size_of_PWM3_Initialize 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __size_of_PWM3_DutyCycleSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
@@ -773,31 +872,36 @@ _PIR1bits 11 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Lend_init 2 0 CODE 0 end_init -
 __CFG_LVP$ON 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+main@receive 26 0 BANK0 1 cstackBANK0 dist/default/production\aj2019-kit.production.o
 end_of_initialization FFC 0 CODE 0 cinit dist/default/production\aj2019-kit.production.o
 __Hintentry 2 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 2 0 CODE 0 reset_vec -
-__ptext1 C4E 0 CODE 0 text1 dist/default/production\aj2019-kit.production.o
-__ptext2 B7C 0 CODE 0 text2 dist/default/production\aj2019-kit.production.o
-__ptext3 B76 0 CODE 0 text3 dist/default/production\aj2019-kit.production.o
-__ptext4 B70 0 CODE 0 text4 dist/default/production\aj2019-kit.production.o
-__ptext5 DDC 0 CODE 0 text5 dist/default/production\aj2019-kit.production.o
-__ptext6 C3A 0 CODE 0 text6 dist/default/production\aj2019-kit.production.o
-__ptext7 B6A 0 CODE 0 text7 dist/default/production\aj2019-kit.production.o
-__ptext8 B64 0 CODE 0 text8 dist/default/production\aj2019-kit.production.o
-__ptext9 B5E 0 CODE 0 text9 dist/default/production\aj2019-kit.production.o
-__end_of_PWM3_LoadBufferSet B5E 0 CODE 0 text11 dist/default/production\aj2019-kit.production.o
-__end_of_EUSART_is_tx_done B94 0 CODE 0 text34 dist/default/production\aj2019-kit.production.o
+__size_of_EUSART_RxCheck 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
+checkButtons@i 76 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__ptext1 8DA 0 CODE 0 text1 dist/default/production\aj2019-kit.production.o
+__ptext2 7FC 0 CODE 0 text2 dist/default/production\aj2019-kit.production.o
+__ptext3 7F6 0 CODE 0 text3 dist/default/production\aj2019-kit.production.o
+__ptext4 7F0 0 CODE 0 text4 dist/default/production\aj2019-kit.production.o
+__ptext5 ACE 0 CODE 0 text5 dist/default/production\aj2019-kit.production.o
+__ptext6 8C6 0 CODE 0 text6 dist/default/production\aj2019-kit.production.o
+__ptext7 7EA 0 CODE 0 text7 dist/default/production\aj2019-kit.production.o
+__ptext8 7E4 0 CODE 0 text8 dist/default/production\aj2019-kit.production.o
+__ptext9 7DE 0 CODE 0 text9 dist/default/production\aj2019-kit.production.o
+__end_of_PWM3_LoadBufferSet 7DE 0 CODE 0 text11 dist/default/production\aj2019-kit.production.o
+__end_of_EUSART_is_tx_done 814 0 CODE 0 text37 dist/default/production\aj2019-kit.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
+checkButtons@adc 78 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
 __size_of_PWM1_PhaseSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
 __size_of_PWM2_PhaseSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _SLRCONA 30C 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_PWM2_PeriodSet BAC 0 CODE 0 text20 dist/default/production\aj2019-kit.production.o
+_PWM2_PeriodSet 838 0 CODE 0 text20 dist/default/production\aj2019-kit.production.o
 __CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __size_of_PWM3_PhaseSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 EUSART_Write@txData 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
@@ -807,8 +911,8 @@ PWM2_PhaseSet@phaseCount 70 0 COMMON 1 cstackCOMMON dist/default/production\aj20
 PWM3_DutyCycleSet@dutyCycleCount 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
 __size_of_PWM1_PeriodSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
-_PWM3_LoadBufferSet B58 0 CODE 0 text11 dist/default/production\aj2019-kit.production.o
-__end_ofsetupLEDs@initial_duty B48 0 STRCODE 0 stringtext2 dist/default/production\aj2019-kit.production.o
+_PWM3_LoadBufferSet 7D8 0 CODE 0 text11 dist/default/production\aj2019-kit.production.o
+__end_ofsetupLEDs@initial_duty 7C8 0 STRCODE 0 stringtext2 dist/default/production\aj2019-kit.production.o
 __CFG_PLLEN$OFF 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __size_of_EUSART_Initialize 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM1INTE D9C 0 ABS 0 - dist/default/production\aj2019-kit.production.o
@@ -824,17 +928,17 @@ _PWM3INTF DBD 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM3TMRH DBA 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM3TMRL DB9 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
-__end_of_PWM1_PhaseSet BAC 0 CODE 0 text21 dist/default/production\aj2019-kit.production.o
+__end_of_PWM1_PhaseSet 838 0 CODE 0 text21 dist/default/production\aj2019-kit.production.o
 _TXSTAbits 19E 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_PWM2_DutyCycleSet BE8 0 CODE 0 text14 dist/default/production\aj2019-kit.production.o
+_PWM2_DutyCycleSet 874 0 CODE 0 text14 dist/default/production\aj2019-kit.production.o
 __Hend_init 4 0 CODE 0 end_init -
-__end_of_PWM2_PhaseSet BC4 0 CODE 0 text19 dist/default/production\aj2019-kit.production.o
+__end_of_PWM2_PhaseSet 850 0 CODE 0 text19 dist/default/production\aj2019-kit.production.o
 __size_of_PWM3_PeriodSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 PWM1_PeriodSet@periodCount 70 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
-__end_of_main FFC 0 CODE 0 maintext dist/default/production\aj2019-kit.production.o
-__end_of_ADC1_GetConversion D9E 0 CODE 0 text36 dist/default/production\aj2019-kit.production.o
-__end_of_PWM3_PhaseSet BDC 0 CODE 0 text17 dist/default/production\aj2019-kit.production.o
-setupLEDs@initial_duty B44 0 STRCODE 0 stringtext2 dist/default/production\aj2019-kit.production.o
+__end_of_main FF4 0 CODE 0 maintext dist/default/production\aj2019-kit.production.o
+__end_of_ADC1_GetConversion A4C 0 CODE 0 text26 dist/default/production\aj2019-kit.production.o
+__end_of_PWM3_PhaseSet 868 0 CODE 0 text17 dist/default/production\aj2019-kit.production.o
+setupLEDs@initial_duty 7C4 0 STRCODE 0 stringtext2 dist/default/production\aj2019-kit.production.o
 _RCREG 199 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _RCSTA 19D 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _TRISA 8C 0 ABS 0 - dist/default/production\aj2019-kit.production.o
@@ -843,27 +947,29 @@ _TXSTA 19E 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_WDT_Initialize B82 0 CODE 0 text26 dist/default/production\aj2019-kit.production.o
-__end_of_PWM3_DutyCycleSet C00 0 CODE 0 text12 dist/default/production\aj2019-kit.production.o
-_PWM1_Start B70 0 CODE 0 text4 dist/default/production\aj2019-kit.production.o
-__end_of_OSCILLATOR_Initialize C0E 0 CODE 0 text31 dist/default/production\aj2019-kit.production.o
+_WDT_Initialize 802 0 CODE 0 text29 dist/default/production\aj2019-kit.production.o
+__end_of_PWM3_DutyCycleSet 88C 0 CODE 0 text12 dist/default/production\aj2019-kit.production.o
+_PWM1_Start 7F0 0 CODE 0 text4 dist/default/production\aj2019-kit.production.o
+__end_of_OSCILLATOR_Initialize 89A 0 CODE 0 text34 dist/default/production\aj2019-kit.production.o
 __size_of_PWM1_LoadBufferSet 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__end_of_PWM2_PeriodSet BB8 0 CODE 0 text20 dist/default/production\aj2019-kit.production.o
-__initialization FFC 0 CODE 0 cinit dist/default/production\aj2019-kit.production.o
-__end_of_ADC1_Initialize C3A 0 CODE 0 text33 dist/default/production\aj2019-kit.production.o
+__end_of_PWM2_PeriodSet 844 0 CODE 0 text20 dist/default/production\aj2019-kit.production.o
+__initialization FF4 0 CODE 0 cinit dist/default/production\aj2019-kit.production.o
+__end_of_ADC1_Initialize 8C6 0 CODE 0 text36 dist/default/production\aj2019-kit.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
+__pbssBANK0 34 0 BANK0 1 bssBANK0 dist/default/production\aj2019-kit.production.o
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__end_of_PWM1_Stop B64 0 CODE 0 text9 dist/default/production\aj2019-kit.production.o
-_EUSART_is_tx_done B8A 0 CODE 0 text34 dist/default/production\aj2019-kit.production.o
-_disableSerial C0E 0 CODE 0 text24 dist/default/production\aj2019-kit.production.o
-__end_of_PWM2_Stop B6A 0 CODE 0 text8 dist/default/production\aj2019-kit.production.o
+___wmul@product 74 0 COMMON 1 cstackCOMMON dist/default/production\aj2019-kit.production.o
+__end_of_PWM1_Stop 7E4 0 CODE 0 text9 dist/default/production\aj2019-kit.production.o
+_EUSART_is_tx_done 80A 0 CODE 0 text37 dist/default/production\aj2019-kit.production.o
+_disableSerial 89A 0 CODE 0 text25 dist/default/production\aj2019-kit.production.o
+__end_of_PWM2_Stop 7EA 0 CODE 0 text8 dist/default/production\aj2019-kit.production.o
 __size_of_PWM1_Stop 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 _PWM2CLKCON DAE 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-__end_of_PWM3_Stop B70 0 CODE 0 text7 dist/default/production\aj2019-kit.production.o
+__end_of_PWM3_Stop 7F0 0 CODE 0 text7 dist/default/production\aj2019-kit.production.o
 __size_of_PWM3_Start 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 __size_of_PWM2_Stop 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
-_ADC1_GetConversion D6A 0 CODE 0 text36 dist/default/production\aj2019-kit.production.o
-_OSCILLATOR_Initialize C00 0 CODE 0 text31 dist/default/production\aj2019-kit.production.o
+_ADC1_GetConversion A18 0 CODE 0 text26 dist/default/production\aj2019-kit.production.o
+_OSCILLATOR_Initialize 88C 0 CODE 0 text34 dist/default/production\aj2019-kit.production.o
 __size_of_PWM3_Stop 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
@@ -890,47 +996,51 @@ __size_of_PWM3_Stop 0 0 ABS 0 - dist/default/production\aj2019-kit.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7FE FFC 2 2
-text1 0 627 C4E A 2
-text2 0 5BE B7C 3 2
-text3 0 5BB B76 3 2
-text4 0 5B8 B70 3 2
-text5 0 6EE DDC 55 2
-text6 0 61D C3A A 2
-text7 0 5B5 B6A 3 2
-text8 0 5B2 B64 3 2
-text9 0 5AF B5E 3 2
-text10 0 6CF D9E 1F 2
-text11 0 5AC B58 3 2
-text12 0 5FA BF4 6 2
-text13 0 5A9 B52 3 2
-text14 0 5F4 BE8 6 2
-text15 0 5A6 B4C 3 2
-text16 0 5EE BDC 6 2
-text17 0 5E8 BD0 6 2
-text18 0 5E2 BC4 6 2
-text19 0 5DC BB8 6 2
-text20 0 5D6 BAC 6 2
-text21 0 5D0 BA0 6 2
-text22 0 5CA B94 6 2
-text23 0 60E C1C 7 2
-text24 0 607 C0E 7 2
-text25 0 69C D38 19 2
-text26 0 5C1 B82 4 2
-text27 0 687 D0E 15 2
-text28 0 672 CE4 15 2
-text29 0 65D CBA 15 2
-text30 0 648 C90 15 2
-text31 0 600 C00 7 2
-text32 0 631 C62 B 2
-text33 0 615 C2A 8 2
-text34 0 5C5 B8A 5 2
-text35 0 63C C78 C 2
-text36 0 6B5 D6A 1A 2
-maintext 0 743 E86 BB 2
-cstackCOMMON 1 70 70 B 1
-cstackBANK0 1 20 20 A 1
-stringtext1 0 5A4 B48 2 2
-stringtext2 0 5A2 B44 2 2
+cinit 0 7FA FF4 6 2
+text1 0 46D 8DA A 2
+text2 0 3FE 7FC 3 2
+text3 0 3FB 7F6 3 2
+text4 0 3F8 7F0 3 2
+text5 0 567 ACE 55 2
+text6 0 463 8C6 A 2
+text7 0 3F5 7EA 3 2
+text8 0 3F2 7E4 3 2
+text9 0 3EF 7DE 3 2
+text10 0 526 A4C 1F 2
+text11 0 3EC 7D8 3 2
+text12 0 440 880 6 2
+text13 0 3E9 7D2 3 2
+text14 0 43A 874 6 2
+text15 0 3E6 7CC 3 2
+text16 0 434 868 6 2
+text17 0 42E 85C 6 2
+text18 0 428 850 6 2
+text19 0 422 844 6 2
+text20 0 41C 838 6 2
+text21 0 416 82C 6 2
+text22 0 410 820 6 2
+text23 0 454 8A8 7 2
+text24 0 5BC B78 109 2
+text25 0 44D 89A 7 2
+text26 0 50C A18 1A 2
+text27 0 545 A8A 22 2
+text28 0 4F3 9E6 19 2
+text29 0 401 802 4 2
+text30 0 4DE 9BC 15 2
+text31 0 4C9 992 15 2
+text32 0 4B4 968 15 2
+text33 0 49F 93E 15 2
+text34 0 446 88C 7 2
+text35 0 477 8EE B 2
+text36 0 45B 8B6 8 2
+text37 0 405 80A 5 2
+text38 0 482 904 C 2
+text39 0 40A 814 6 2
+text40 0 48E 91C 11 2
+maintext 0 6C5 D8A 135 2
+cstackCOMMON 1 70 70 A 1
+cstackBANK0 1 20 20 17 1
+stringtext1 0 3E4 7C8 2 2
+stringtext2 0 3E2 7C4 2 2
 reset_vec 0 0 0 2 2
 config 0 8007 1000E 2 2

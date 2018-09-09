@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 44 "main.c"
+# 21 "main.c"
 # 1 "./mcc_generated_files/mcc.h" 1
 # 49 "./mcc_generated_files/mcc.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
@@ -5503,7 +5503,7 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 98 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 44 "main.c" 2
+# 21 "main.c" 2
 
 # 1 "./aj_hal.h" 1
 # 21 "./aj_hal.h"
@@ -5526,9 +5526,9 @@ void setLED (uint16_t duty, uint8_t LEDno);
 void enableSerial ();
 
 void disableSerial ();
-# 45 "main.c" 2
 
-
+_Bool EUSART_RxCheck ();
+# 22 "main.c" 2
 
 
 
@@ -5539,16 +5539,19 @@ void main(void)
 
     SYSTEM_Initialize();
 
+
     uint16_t LED1 = 100;
     uint16_t LED2 = 200;
     uint16_t LED3 = 0;
 
+
     setupLEDs(2000);
     setLEDs(LED1,LED2,LED3);
-# 79 "main.c"
+# 57 "main.c"
     startLEDs();
 
     uint16_t adc_result = 0;
+    _Bool buttons[3] = {0,0,0};
 
     while (1)
     {
@@ -5559,14 +5562,15 @@ void main(void)
         {
 
             adc_result = ADC1_GetConversion(channel_AN0);
-# 101 "main.c"
-            LED1+=5;
-            LED2+=5;
-            LED3+=5;
 
 
 
 
+            checkButtons(buttons);
+            LED1 += buttons[0] * 5;
+            LED2 += buttons[1] * 5;
+            LED3 += buttons[2] * 5;
+# 87 "main.c"
             if(LED1 > 300) LED1 = 0;
             if(LED2 > 300) LED2 = 0;
             if(LED3 > 300) LED3 = 0;
@@ -5583,10 +5587,22 @@ void main(void)
         enableSerial();
 
         EUSART_Write((uint8_t)((adc_result >> 8) & 0xFF));
-        EUSART_Write((uint8_t)(adc_result & 0xFF));
+        EUSART_Write(buttons[0] | buttons[1] << 1 | buttons[2] << 2);
+
 
         while(!EUSART_is_tx_done());
-# 137 "main.c"
+
+
+        if(EUSART_RxCheck())
+        {
+            uint8_t receive = EUSART_Read();
+            if(receive == ((adc_result >> 8) & 0xFF))
+            {
+                EUSART_Write(0x55);
+            }
+            while(!EUSART_is_tx_done());
+        }
+
         disableSerial();
     }
 }

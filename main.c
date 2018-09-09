@@ -18,46 +18,23 @@
         Driver Version    :  2.00
 */
 
-/*
-    (c) 2018 Microchip Technology Inc. and its subsidiaries. 
-    
-    Subject to your compliance with these terms, you may use Microchip software and any 
-    derivatives exclusively with Microchip products. It is your responsibility to comply with third party 
-    license terms applicable to your use of third party software (including open source software) that 
-    may accompany Microchip software.
-    
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY 
-    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS 
-    FOR A PARTICULAR PURPOSE.
-    
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP 
-    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO 
-    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL 
-    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
-    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
-    SOFTWARE.
-*/
-
 #include "mcc_generated_files/mcc.h"
 #include "aj_hal.h"
 
-//#define ledadc
+#define ledadc
 
-/*
-                         Main application
- */
+
 void main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
     
+    //Set initial LED Values
     uint16_t LED1 = 100;
     uint16_t LED2 = 200;
     uint16_t LED3 = 0;
     
+    //Setup PWM Channels and set initial values
     setupLEDs(2000);
     setLEDs(LED1,LED2,LED3);
     
@@ -76,14 +53,16 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
     
+    //Start PWM Channels
     startLEDs();
     
     uint16_t adc_result = 0;
+    bool buttons[3] = {0,0,0};
     
     while (1)
     {
         int i;
-        //Added for loop to reduce the frequency of serial transmit below
+        //For loop to reduce the frequency of serial transmit below
         //otherwise it slows down the LED cycle.
         for(i=0 ; i<10 ; i++)
         {
@@ -91,12 +70,12 @@ void main(void)
             adc_result = ADC1_GetConversion(channel_AN0);
             
             //LED Control
-            //uncomment #define ledadc at top to control LEDs with Buttons
-            //commant the #define to unconditionally increment LEDs
+            //#define ledadc to control LEDs with Buttons
 #ifdef ledadc
-            if(adc_result >= 0x99C0-10 && adc_result <= 0x99C0+10)LED1+=5;
-            if(adc_result >= 0x8DC0-10 && adc_result <= 0x8DC0+10)LED2+=5;
-            if(adc_result >= 0x7A40-10 && adc_result <= 0x7A40+10)LED3+=5;
+            checkButtons(buttons);
+            LED1 += buttons[0] * 5;
+            LED2 += buttons[1] * 5;
+            LED3 += buttons[2] * 5;
 #else
             LED1+=5;
             LED2+=5;
@@ -121,19 +100,22 @@ void main(void)
         enableSerial();
         //Send Serial Data
         EUSART_Write((uint8_t)((adc_result >> 8) & 0xFF));
-        EUSART_Write((uint8_t)(adc_result & 0xFF));
-        //Wait for Serial to finish and disable UART (for ADC to work)
+        EUSART_Write(buttons[0] | buttons[1] << 1 | buttons[2] << 2);
+        //EUSART_Write((uint8_t)(adc_result & 0xFF //Additional 8-bits
+        //Wait for Serial TX to finish
         while(!EUSART_is_tx_done());
         
-        //commented out the receive for testing.
-        //If the same (first) value sent is received, then send a 0x55 ack.
-        //The EUSART_Read and while(!EUSART_is_tx_done) functions are blocking
-//        uint8_t receive = EUSART_Read();
-//        if(receive == (adc_result & 0xFF))
-//        {
-//            EUSART_Write(0x55);
-//        }
-//        while(!EUSART_is_tx_done());
+        //If the same value sent is received, then send a 0x55 ack.
+        if(EUSART_RxCheck())
+        {
+            uint8_t receive = EUSART_Read();
+            if(receive == ((adc_result >> 8) & 0xFF))
+            {
+                EUSART_Write(0x55);
+            }
+            while(!EUSART_is_tx_done());
+        }
+        //Disable UART (for ADC to work)
         disableSerial();
     }
 }

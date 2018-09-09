@@ -10,14 +10,14 @@ channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"91 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+"70 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
 [e E3081 . `uc
 channel_AN0 0
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"26 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+"32 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
 [e E3081 . `uc
 channel_AN0 0
 channel_Temp 29
@@ -28,19 +28,25 @@ channel_FVR 31
 [v _enableSerial enableSerial `(v  1 e 1 0 ]
 "16
 [v _disableSerial disableSerial `(v  1 e 1 0 ]
-"80
+"23
+[v _EUSART_RxCheck EUSART_RxCheck `(a  1 e 1 0 ]
+"29
+[v _checkButtons checkButtons `(v  1 e 1 0 ]
+"86
 [v _stopLEDs stopLEDs `(v  1 e 1 0 ]
-"87
+"93
 [v _startLEDs startLEDs `(v  1 e 1 0 ]
-"94
+"100
 [v _setLEDs setLEDs `(v  1 e 1 0 ]
-"104
+"110
 [v _setupLEDs setupLEDs `(v  1 e 1 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"52 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+"27 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
 [v _main main `(v  1 e 1 0 ]
 "65 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
 [v _ADC1_Initialize ADC1_Initialize `(v  1 e 1 0 ]
@@ -442,25 +448,30 @@ channel_FVR 31
 [v _PWM3LDCONbits PWM3LDCONbits `VES691  1 e 1 @3519 ]
 "7877
 [v _PWM3OFCON PWM3OFCON `VEuc  1 e 1 @3520 ]
-"52 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+"27 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"85
-[v main@i i `i  1 a 2 2 ]
+"111
+[v main@receive receive `uc  1 a 1 6 ]
+"64
+[v main@i i `i  1 a 2 9 ]
+"60
+[v main@buttons buttons `[3]a  1 a 3 17 ]
+"35
+[v main@LED3 LED3 `us  1 a 2 15 ]
+"34
+[v main@LED2 LED2 `us  1 a 2 13 ]
+"33
+[v main@LED1 LED1 `us  1 a 2 11 ]
 "59
-[v main@LED3 LED3 `us  1 a 2 8 ]
-"58
-[v main@LED2 LED2 `us  1 a 2 6 ]
-"57
-[v main@LED1 LED1 `us  1 a 2 4 ]
-"81
-[v main@adc_result adc_result `us  1 a 2 0 ]
-"139
+[v main@adc_result adc_result `us  1 a 2 7 ]
+[v main@F3445 F3445 `[3]a  1 s 3 F3445 ]
+"121
 } 0
-"87 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+"93 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
 [v _startLEDs startLEDs `(v  1 e 1 0 ]
 {
-"92
+"98
 } 0
 "113 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
 [v _PWM3_Start PWM3_Start `(v  1 e 1 0 ]
@@ -477,20 +488,20 @@ channel_FVR 31
 {
 "116
 } 0
-"104 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+"110 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
 [v _setupLEDs setupLEDs `(v  1 e 1 0 ]
 {
 [v setupLEDs@period period `us  1 p 2 8 ]
-"106
+"112
 [v setupLEDs@initial_duty initial_duty `DCus  1 s 2 initial_duty ]
-"107
+"113
 [v setupLEDs@initial_phase initial_phase `DCus  1 s 2 initial_phase ]
-"120
+"126
 } 0
-"80
+"86
 [v _stopLEDs stopLEDs `(v  1 e 1 0 ]
 {
-"85
+"91
 } 0
 "118 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
 [v _PWM3_Stop PWM3_Stop `(v  1 e 1 0 ]
@@ -507,13 +518,13 @@ channel_FVR 31
 {
 "121
 } 0
-"94 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+"100 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
 [v _setLEDs setLEDs `(v  1 e 1 0 ]
 {
 [v setLEDs@led1 led1 `us  1 p 2 2 ]
 [v setLEDs@led2 led2 `us  1 p 2 4 ]
 [v setLEDs@led3 led3 `us  1 p 2 6 ]
-"102
+"108
 } 0
 "128 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
 [v _PWM3_LoadBufferSet PWM3_LoadBufferSet `(v  1 e 1 0 ]
@@ -589,10 +600,43 @@ channel_FVR 31
 {
 "13
 } 0
+"29
+[v _checkButtons checkButtons `(v  1 e 1 0 ]
+{
+[v checkButtons@buttons buttons `*.4a  1 a 1 wreg ]
+"32
+[v checkButtons@adc adc `us  1 a 2 8 ]
+"33
+[v checkButtons@i i `uc  1 a 1 6 ]
+"29
+[v checkButtons@buttons buttons `*.4a  1 a 1 wreg ]
+"31
+[v checkButtons@buttons buttons `*.4a  1 a 1 7 ]
+"83
+} 0
 "16
 [v _disableSerial disableSerial `(v  1 e 1 0 ]
 {
 "20
+} 0
+"113 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
+[v _ADC1_GetConversion ADC1_GetConversion `(us  1 e 2 0 ]
+{
+[v ADC1_GetConversion@channel channel `E3025  1 a 1 wreg ]
+[v ADC1_GetConversion@channel channel `E3025  1 a 1 wreg ]
+"116
+[v ADC1_GetConversion@channel channel `E3025  1 a 1 3 ]
+"134
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
 } 0
 "50 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -652,12 +696,13 @@ channel_FVR 31
 [v EUSART_Write@txData txData `uc  1 a 1 0 ]
 "118
 } 0
-"113 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-[v _ADC1_GetConversion ADC1_GetConversion `(us  1 e 2 0 ]
+"23 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+[v _EUSART_RxCheck EUSART_RxCheck `(a  1 e 1 0 ]
 {
-[v ADC1_GetConversion@channel channel `E3025  1 a 1 wreg ]
-[v ADC1_GetConversion@channel channel `E3025  1 a 1 wreg ]
-"116
-[v ADC1_GetConversion@channel channel `E3025  1 a 1 3 ]
-"134
+"26
+} 0
+"93 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+{
+"109
 } 0

@@ -14,8 +14,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic.h
 [v __delay `JF3009 ~T0 @X0 0 e ]
 [p i __delay ]
-"26 aj_hal.c
-[; ;aj_hal.c: 26:     uint16_t adc = ADC1_GetConversion(channel_AN0);
+"493 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 493:     struct {
+[s S37 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . TMR1IF TMR2IF . TXIF RCIF ADIF TMR1GIF ]
+"492
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 492: typedef union {
+[u S36 `S37 1 ]
+[n S36 . . ]
+"503
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 503: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
+[v _PIR1bits `VS36 ~T0 @X0 0 e@17 ]
+"32 aj_hal.c
+[; ;aj_hal.c: 32:     uint16_t adc = (ADC1_GetConversion(channel_AN0) >> 8) & 0xFF;
 [c E3081 0 29 30 31 .. ]
 [n E3081 . channel_AN0 channel_Temp channel_DAC channel_FVR  ]
 "288 ./mcc_generated_files/adc1.h
@@ -610,382 +621,398 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 441 ]
 }
 "23
-[; ;aj_hal.c: 23: void checkButtons (_Bool buttons[])
-[v _checkButtons `(v ~T0 @X0 1 ef1`*a ]
+[; ;aj_hal.c: 23: _Bool EUSART_RxCheck ()
+[v _EUSART_RxCheck `(a ~T0 @X0 1 ef ]
 "24
 [; ;aj_hal.c: 24: {
 {
-[e :U _checkButtons ]
-"23
-[; ;aj_hal.c: 23: void checkButtons (_Bool buttons[])
-[v _buttons `*a ~T0 @X0 1 r1 ]
-"24
-[; ;aj_hal.c: 24: {
+[e :U _EUSART_RxCheck ]
 [f ]
 "25
-[; ;aj_hal.c: 25:     disableSerial();
-[e ( _disableSerial ..  ]
+[; ;aj_hal.c: 25:     return PIR1bits.RCIF;
+[e ) -> . . _PIR1bits 0 4 `a ]
+[e $UE 442  ]
 "26
-[; ;aj_hal.c: 26:     uint16_t adc = ADC1_GetConversion(channel_AN0);
+[; ;aj_hal.c: 26: }
+[e :UE 442 ]
+}
+"29
+[; ;aj_hal.c: 29: void checkButtons (_Bool buttons[])
+[v _checkButtons `(v ~T0 @X0 1 ef1`*a ]
+"30
+[; ;aj_hal.c: 30: {
+{
+[e :U _checkButtons ]
+"29
+[; ;aj_hal.c: 29: void checkButtons (_Bool buttons[])
+[v _buttons `*a ~T0 @X0 1 r1 ]
+"30
+[; ;aj_hal.c: 30: {
+[f ]
+"31
+[; ;aj_hal.c: 31:     disableSerial();
+[e ( _disableSerial ..  ]
+"32
+[; ;aj_hal.c: 32:     uint16_t adc = (ADC1_GetConversion(channel_AN0) >> 8) & 0xFF;
 [v _adc `us ~T0 @X0 1 a ]
-[e = _adc ( _ADC1_GetConversion (1 . `E3081 0 ]
-"27
-[; ;aj_hal.c: 27:     uint8_t i = 0;
+[e = _adc -> & >> -> ( _ADC1_GetConversion (1 . `E3081 0 `ui -> 8 `i -> -> 255 `i `ui `us ]
+"33
+[; ;aj_hal.c: 33:     uint8_t i = 0;
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-"28
-[; ;aj_hal.c: 28:     for(i = 0; i < 3; i++)
+"34
+[; ;aj_hal.c: 34:     for(i = 0; i < 3; i++)
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 3 `i 443  ]
-[e $U 444  ]
-[e :U 443 ]
-"29
-[; ;aj_hal.c: 29:     {
-{
-"30
-[; ;aj_hal.c: 30:         buttons[i] = 0;
-[e = *U + _buttons * -> _i `ux -> -> # *U _buttons `ui `ux -> -> 0 `i `a ]
-"31
-[; ;aj_hal.c: 31:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 3 `i 443  ]
+[e $ < -> _i `i -> 3 `i 444  ]
+[e $U 445  ]
 [e :U 444 ]
-}
-"33
-[; ;aj_hal.c: 33:     if(adc <= 23)
-[e $ ! <= -> _adc `ui -> -> 23 `i `ui 446  ]
-"34
-[; ;aj_hal.c: 34:     {
+"35
+[; ;aj_hal.c: 35:     {
 {
 "36
-[; ;aj_hal.c: 36:     }
-}
-[e $U 447  ]
+[; ;aj_hal.c: 36:         buttons[i] = 0;
+[e = *U + _buttons * -> _i `ux -> -> # *U _buttons `ui `ux -> -> 0 `i `a ]
 "37
-[; ;aj_hal.c: 37:     else if(adc > 23 && adc <= 63)
-[e :U 446 ]
-[e $ ! && > -> _adc `ui -> -> 23 `i `ui <= -> _adc `ui -> -> 63 `i `ui 448  ]
-"38
-[; ;aj_hal.c: 38:     {
-{
+[; ;aj_hal.c: 37:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 3 `i 444  ]
+[e :U 445 ]
+}
+"39
+[; ;aj_hal.c: 39:     if(adc <= 23)
+[e $ ! <= -> _adc `ui -> -> 23 `i `ui 447  ]
 "40
-[; ;aj_hal.c: 40:         buttons[2] = 1;
-[e = *U + _buttons * -> -> 2 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
-"41
-[; ;aj_hal.c: 41:     }
-}
-[e $U 449  ]
+[; ;aj_hal.c: 40:     {
+{
 "42
-[; ;aj_hal.c: 42:     else if(adc > 63 && adc <= 91)
-[e :U 448 ]
-[e $ ! && > -> _adc `ui -> -> 63 `i `ui <= -> _adc `ui -> -> 91 `i `ui 450  ]
-"43
-[; ;aj_hal.c: 43:     {
-{
-"45
-[; ;aj_hal.c: 45:         buttons[1] = 1;
-[e = *U + _buttons * -> -> 1 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
-"46
-[; ;aj_hal.c: 46:     }
+[; ;aj_hal.c: 42:     }
 }
-[e $U 451  ]
-"47
-[; ;aj_hal.c: 47:     else if(adc > 91 && adc <= 112)
-[e :U 450 ]
-[e $ ! && > -> _adc `ui -> -> 91 `i `ui <= -> _adc `ui -> -> 112 `i `ui 452  ]
-"48
-[; ;aj_hal.c: 48:     {
+[e $U 448  ]
+"43
+[; ;aj_hal.c: 43:     else if(adc > 23 && adc <= 63)
+[e :U 447 ]
+[e $ ! && > -> _adc `ui -> -> 23 `i `ui <= -> _adc `ui -> -> 63 `i `ui 449  ]
+"44
+[; ;aj_hal.c: 44:     {
 {
-"50
-[; ;aj_hal.c: 50:         buttons[2] = 1;
+"46
+[; ;aj_hal.c: 46:         buttons[2] = 1;
 [e = *U + _buttons * -> -> 2 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
+"47
+[; ;aj_hal.c: 47:     }
+}
+[e $U 450  ]
+"48
+[; ;aj_hal.c: 48:     else if(adc > 63 && adc <= 91)
+[e :U 449 ]
+[e $ ! && > -> _adc `ui -> -> 63 `i `ui <= -> _adc `ui -> -> 91 `i `ui 451  ]
+"49
+[; ;aj_hal.c: 49:     {
+{
 "51
 [; ;aj_hal.c: 51:         buttons[1] = 1;
 [e = *U + _buttons * -> -> 1 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
 "52
 [; ;aj_hal.c: 52:     }
 }
-[e $U 453  ]
+[e $U 452  ]
 "53
-[; ;aj_hal.c: 53:     else if(adc > 112 && adc <= 128)
-[e :U 452 ]
-[e $ ! && > -> _adc `ui -> -> 112 `i `ui <= -> _adc `ui -> -> 128 `i `ui 454  ]
+[; ;aj_hal.c: 53:     else if(adc > 91 && adc <= 112)
+[e :U 451 ]
+[e $ ! && > -> _adc `ui -> -> 91 `i `ui <= -> _adc `ui -> -> 112 `i `ui 453  ]
 "54
 [; ;aj_hal.c: 54:     {
 {
 "56
-[; ;aj_hal.c: 56:         buttons[0] = 1;
-[e = *U + _buttons * -> -> 0 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
-"57
-[; ;aj_hal.c: 57:     }
-}
-[e $U 455  ]
-"58
-[; ;aj_hal.c: 58:     else if(adc > 128 && adc <= 140)
-[e :U 454 ]
-[e $ ! && > -> _adc `ui -> -> 128 `i `ui <= -> _adc `ui -> -> 140 `i `ui 456  ]
-"59
-[; ;aj_hal.c: 59:     {
-{
-"61
-[; ;aj_hal.c: 61:         buttons[2] = 1;
+[; ;aj_hal.c: 56:         buttons[2] = 1;
 [e = *U + _buttons * -> -> 2 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
+"57
+[; ;aj_hal.c: 57:         buttons[1] = 1;
+[e = *U + _buttons * -> -> 1 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
+"58
+[; ;aj_hal.c: 58:     }
+}
+[e $U 454  ]
+"59
+[; ;aj_hal.c: 59:     else if(adc > 112 && adc <= 128)
+[e :U 453 ]
+[e $ ! && > -> _adc `ui -> -> 112 `i `ui <= -> _adc `ui -> -> 128 `i `ui 455  ]
+"60
+[; ;aj_hal.c: 60:     {
+{
 "62
 [; ;aj_hal.c: 62:         buttons[0] = 1;
 [e = *U + _buttons * -> -> 0 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
 "63
 [; ;aj_hal.c: 63:     }
 }
-[e $U 457  ]
+[e $U 456  ]
 "64
-[; ;aj_hal.c: 64:     else if(adc > 140 && adc <= 151)
-[e :U 456 ]
-[e $ ! && > -> _adc `ui -> -> 140 `i `ui <= -> _adc `ui -> -> 151 `i `ui 458  ]
+[; ;aj_hal.c: 64:     else if(adc > 128 && adc <= 140)
+[e :U 455 ]
+[e $ ! && > -> _adc `ui -> -> 128 `i `ui <= -> _adc `ui -> -> 140 `i `ui 457  ]
 "65
 [; ;aj_hal.c: 65:     {
 {
 "67
-[; ;aj_hal.c: 67:         buttons[1] = 1;
-[e = *U + _buttons * -> -> 1 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
+[; ;aj_hal.c: 67:         buttons[2] = 1;
+[e = *U + _buttons * -> -> 2 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
 "68
 [; ;aj_hal.c: 68:         buttons[0] = 1;
 [e = *U + _buttons * -> -> 0 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
 "69
 [; ;aj_hal.c: 69:     }
 }
-[e $U 459  ]
+[e $U 458  ]
 "70
-[; ;aj_hal.c: 70:     else if(adc > 151 && adc <= 200)
-[e :U 458 ]
-[e $ ! && > -> _adc `ui -> -> 151 `i `ui <= -> _adc `ui -> -> 200 `i `ui 460  ]
+[; ;aj_hal.c: 70:     else if(adc > 140 && adc <= 151)
+[e :U 457 ]
+[e $ ! && > -> _adc `ui -> -> 140 `i `ui <= -> _adc `ui -> -> 151 `i `ui 459  ]
 "71
 [; ;aj_hal.c: 71:     {
 {
 "73
-[; ;aj_hal.c: 73:         buttons[2] = 1;
-[e = *U + _buttons * -> -> 2 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
-"74
-[; ;aj_hal.c: 74:         buttons[1] = 1;
+[; ;aj_hal.c: 73:         buttons[1] = 1;
 [e = *U + _buttons * -> -> 1 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
-"75
-[; ;aj_hal.c: 75:         buttons[0] = 1;
+"74
+[; ;aj_hal.c: 74:         buttons[0] = 1;
 [e = *U + _buttons * -> -> 0 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
+"75
+[; ;aj_hal.c: 75:     }
+}
+[e $U 460  ]
 "76
-[; ;aj_hal.c: 76:     }
-}
-[e :U 460 ]
+[; ;aj_hal.c: 76:     else if(adc > 151 && adc <= 200)
 [e :U 459 ]
-[e :U 457 ]
-[e :U 455 ]
-[e :U 453 ]
-[e :U 451 ]
-[e :U 449 ]
-[e :U 447 ]
+[e $ ! && > -> _adc `ui -> -> 151 `i `ui <= -> _adc `ui -> -> 200 `i `ui 461  ]
 "77
-[; ;aj_hal.c: 77: }
-[e :UE 442 ]
-}
+[; ;aj_hal.c: 77:     {
+{
+"79
+[; ;aj_hal.c: 79:         buttons[2] = 1;
+[e = *U + _buttons * -> -> 2 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
 "80
-[; ;aj_hal.c: 80: void stopLEDs ()
-[v _stopLEDs `(v ~T0 @X0 1 ef ]
+[; ;aj_hal.c: 80:         buttons[1] = 1;
+[e = *U + _buttons * -> -> 1 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
 "81
-[; ;aj_hal.c: 81: {
+[; ;aj_hal.c: 81:         buttons[0] = 1;
+[e = *U + _buttons * -> -> 0 `i `x -> -> # *U _buttons `i `x -> -> 1 `i `a ]
+"82
+[; ;aj_hal.c: 82:     }
+}
+[e :U 461 ]
+[e :U 460 ]
+[e :U 458 ]
+[e :U 456 ]
+[e :U 454 ]
+[e :U 452 ]
+[e :U 450 ]
+[e :U 448 ]
+"83
+[; ;aj_hal.c: 83: }
+[e :UE 443 ]
+}
+"86
+[; ;aj_hal.c: 86: void stopLEDs ()
+[v _stopLEDs `(v ~T0 @X0 1 ef ]
+"87
+[; ;aj_hal.c: 87: {
 {
 [e :U _stopLEDs ]
 [f ]
-"82
-[; ;aj_hal.c: 82:     PWM1_Stop();
-[e ( _PWM1_Stop ..  ]
-"83
-[; ;aj_hal.c: 83:     PWM2_Stop();
-[e ( _PWM2_Stop ..  ]
-"84
-[; ;aj_hal.c: 84:     PWM3_Stop();
-[e ( _PWM3_Stop ..  ]
-"85
-[; ;aj_hal.c: 85: }
-[e :UE 461 ]
-}
-"87
-[; ;aj_hal.c: 87: void startLEDs ()
-[v _startLEDs `(v ~T0 @X0 1 ef ]
 "88
-[; ;aj_hal.c: 88: {
+[; ;aj_hal.c: 88:     PWM1_Stop();
+[e ( _PWM1_Stop ..  ]
+"89
+[; ;aj_hal.c: 89:     PWM2_Stop();
+[e ( _PWM2_Stop ..  ]
+"90
+[; ;aj_hal.c: 90:     PWM3_Stop();
+[e ( _PWM3_Stop ..  ]
+"91
+[; ;aj_hal.c: 91: }
+[e :UE 462 ]
+}
+"93
+[; ;aj_hal.c: 93: void startLEDs ()
+[v _startLEDs `(v ~T0 @X0 1 ef ]
+"94
+[; ;aj_hal.c: 94: {
 {
 [e :U _startLEDs ]
 [f ]
-"89
-[; ;aj_hal.c: 89:     PWM1_Start();
-[e ( _PWM1_Start ..  ]
-"90
-[; ;aj_hal.c: 90:     PWM2_Start();
-[e ( _PWM2_Start ..  ]
-"91
-[; ;aj_hal.c: 91:     PWM3_Start();
-[e ( _PWM3_Start ..  ]
-"92
-[; ;aj_hal.c: 92: }
-[e :UE 462 ]
-}
-"94
-[; ;aj_hal.c: 94: void setLEDs (uint16_t led1, uint16_t led2, uint16_t led3)
-[v _setLEDs `(v ~T0 @X0 1 ef3`us`us`us ]
 "95
-[; ;aj_hal.c: 95: {
+[; ;aj_hal.c: 95:     PWM1_Start();
+[e ( _PWM1_Start ..  ]
+"96
+[; ;aj_hal.c: 96:     PWM2_Start();
+[e ( _PWM2_Start ..  ]
+"97
+[; ;aj_hal.c: 97:     PWM3_Start();
+[e ( _PWM3_Start ..  ]
+"98
+[; ;aj_hal.c: 98: }
+[e :UE 463 ]
+}
+"100
+[; ;aj_hal.c: 100: void setLEDs (uint16_t led1, uint16_t led2, uint16_t led3)
+[v _setLEDs `(v ~T0 @X0 1 ef3`us`us`us ]
+"101
+[; ;aj_hal.c: 101: {
 {
 [e :U _setLEDs ]
-"94
-[; ;aj_hal.c: 94: void setLEDs (uint16_t led1, uint16_t led2, uint16_t led3)
+"100
+[; ;aj_hal.c: 100: void setLEDs (uint16_t led1, uint16_t led2, uint16_t led3)
 [v _led1 `us ~T0 @X0 1 r1 ]
 [v _led2 `us ~T0 @X0 1 r2 ]
 [v _led3 `us ~T0 @X0 1 r3 ]
-"95
-[; ;aj_hal.c: 95: {
-[f ]
-"96
-[; ;aj_hal.c: 96:     PWM1_DutyCycleSet(led1);
-[e ( _PWM1_DutyCycleSet (1 _led1 ]
-"97
-[; ;aj_hal.c: 97:     PWM1_LoadBufferSet();
-[e ( _PWM1_LoadBufferSet ..  ]
-"98
-[; ;aj_hal.c: 98:     PWM2_DutyCycleSet(led2);
-[e ( _PWM2_DutyCycleSet (1 _led2 ]
-"99
-[; ;aj_hal.c: 99:     PWM2_LoadBufferSet();
-[e ( _PWM2_LoadBufferSet ..  ]
-"100
-[; ;aj_hal.c: 100:     PWM3_DutyCycleSet(led3);
-[e ( _PWM3_DutyCycleSet (1 _led3 ]
 "101
-[; ;aj_hal.c: 101:     PWM3_LoadBufferSet();
-[e ( _PWM3_LoadBufferSet ..  ]
+[; ;aj_hal.c: 101: {
+[f ]
 "102
-[; ;aj_hal.c: 102: }
-[e :UE 463 ]
-}
+[; ;aj_hal.c: 102:     PWM1_DutyCycleSet(led1);
+[e ( _PWM1_DutyCycleSet (1 _led1 ]
+"103
+[; ;aj_hal.c: 103:     PWM1_LoadBufferSet();
+[e ( _PWM1_LoadBufferSet ..  ]
 "104
-[; ;aj_hal.c: 104: void setupLEDs (uint16_t period)
-[v _setupLEDs `(v ~T0 @X0 1 ef1`us ]
+[; ;aj_hal.c: 104:     PWM2_DutyCycleSet(led2);
+[e ( _PWM2_DutyCycleSet (1 _led2 ]
 "105
-[; ;aj_hal.c: 105: {
+[; ;aj_hal.c: 105:     PWM2_LoadBufferSet();
+[e ( _PWM2_LoadBufferSet ..  ]
+"106
+[; ;aj_hal.c: 106:     PWM3_DutyCycleSet(led3);
+[e ( _PWM3_DutyCycleSet (1 _led3 ]
+"107
+[; ;aj_hal.c: 107:     PWM3_LoadBufferSet();
+[e ( _PWM3_LoadBufferSet ..  ]
+"108
+[; ;aj_hal.c: 108: }
+[e :UE 464 ]
+}
+"110
+[; ;aj_hal.c: 110: void setupLEDs (uint16_t period)
+[v _setupLEDs `(v ~T0 @X0 1 ef1`us ]
+"111
+[; ;aj_hal.c: 111: {
 {
 [e :U _setupLEDs ]
-"104
-[; ;aj_hal.c: 104: void setupLEDs (uint16_t period)
+"110
+[; ;aj_hal.c: 110: void setupLEDs (uint16_t period)
 [v _period `us ~T0 @X0 1 r1 ]
-"105
-[; ;aj_hal.c: 105: {
+"111
+[; ;aj_hal.c: 111: {
 [f ]
-"106
-[; ;aj_hal.c: 106:     const uint16_t initial_duty = 0;
-[v F3438 `Cus ~T0 @X0 1 s initial_duty ]
-[i F3438
--> -> 0 `i `us
-]
-"107
-[; ;aj_hal.c: 107:     const uint16_t initial_phase = 0;
-[v F3439 `Cus ~T0 @X0 1 s initial_phase ]
+"112
+[; ;aj_hal.c: 112:     const uint16_t initial_duty = 0;
+[v F3439 `Cus ~T0 @X0 1 s initial_duty ]
 [i F3439
 -> -> 0 `i `us
 ]
-"108
-[; ;aj_hal.c: 108:     stopLEDs();
-[e ( _stopLEDs ..  ]
-"110
-[; ;aj_hal.c: 110:     PWM1_PhaseSet(initial_phase);
-[e ( _PWM1_PhaseSet (1 F3439 ]
-"111
-[; ;aj_hal.c: 111:     PWM1_PeriodSet(period);
-[e ( _PWM1_PeriodSet (1 _period ]
 "113
-[; ;aj_hal.c: 113:     PWM2_PhaseSet(initial_phase);
-[e ( _PWM2_PhaseSet (1 F3439 ]
+[; ;aj_hal.c: 113:     const uint16_t initial_phase = 0;
+[v F3440 `Cus ~T0 @X0 1 s initial_phase ]
+[i F3440
+-> -> 0 `i `us
+]
 "114
-[; ;aj_hal.c: 114:     PWM2_PeriodSet(period);
-[e ( _PWM2_PeriodSet (1 _period ]
+[; ;aj_hal.c: 114:     stopLEDs();
+[e ( _stopLEDs ..  ]
 "116
-[; ;aj_hal.c: 116:     PWM3_PhaseSet(initial_phase);
-[e ( _PWM3_PhaseSet (1 F3439 ]
+[; ;aj_hal.c: 116:     PWM1_PhaseSet(initial_phase);
+[e ( _PWM1_PhaseSet (1 F3440 ]
 "117
-[; ;aj_hal.c: 117:     PWM3_PeriodSet(period);
-[e ( _PWM3_PeriodSet (1 _period ]
+[; ;aj_hal.c: 117:     PWM1_PeriodSet(period);
+[e ( _PWM1_PeriodSet (1 _period ]
 "119
-[; ;aj_hal.c: 119:     setLEDs(initial_duty, initial_duty, initial_duty);
-[e ( _setLEDs (3 , , F3438 F3438 F3438 ]
+[; ;aj_hal.c: 119:     PWM2_PhaseSet(initial_phase);
+[e ( _PWM2_PhaseSet (1 F3440 ]
 "120
-[; ;aj_hal.c: 120: }
-[e :UE 464 ]
-}
+[; ;aj_hal.c: 120:     PWM2_PeriodSet(period);
+[e ( _PWM2_PeriodSet (1 _period ]
 "122
-[; ;aj_hal.c: 122: void setLED (uint16_t duty, uint8_t LEDno)
-[v _setLED `(v ~T0 @X0 1 ef2`us`uc ]
+[; ;aj_hal.c: 122:     PWM3_PhaseSet(initial_phase);
+[e ( _PWM3_PhaseSet (1 F3440 ]
 "123
-[; ;aj_hal.c: 123: {
+[; ;aj_hal.c: 123:     PWM3_PeriodSet(period);
+[e ( _PWM3_PeriodSet (1 _period ]
+"125
+[; ;aj_hal.c: 125:     setLEDs(initial_duty, initial_duty, initial_duty);
+[e ( _setLEDs (3 , , F3439 F3439 F3439 ]
+"126
+[; ;aj_hal.c: 126: }
+[e :UE 465 ]
+}
+"128
+[; ;aj_hal.c: 128: void setLED (uint16_t duty, uint8_t LEDno)
+[v _setLED `(v ~T0 @X0 1 ef2`us`uc ]
+"129
+[; ;aj_hal.c: 129: {
 {
 [e :U _setLED ]
-"122
-[; ;aj_hal.c: 122: void setLED (uint16_t duty, uint8_t LEDno)
+"128
+[; ;aj_hal.c: 128: void setLED (uint16_t duty, uint8_t LEDno)
 [v _duty `us ~T0 @X0 1 r1 ]
 [v _LEDno `uc ~T0 @X0 1 r2 ]
-"123
-[; ;aj_hal.c: 123: {
-[f ]
-"124
-[; ;aj_hal.c: 124:     if(LEDno == 1)
-[e $ ! == -> _LEDno `i -> 1 `i 466  ]
-"125
-[; ;aj_hal.c: 125:     {
-{
-"126
-[; ;aj_hal.c: 126:         PWM1_DutyCycleSet(duty);
-[e ( _PWM1_DutyCycleSet (1 _duty ]
-"127
-[; ;aj_hal.c: 127:         PWM1_LoadBufferSet();
-[e ( _PWM1_LoadBufferSet ..  ]
-"128
-[; ;aj_hal.c: 128:     }
-}
-[e $U 467  ]
 "129
-[; ;aj_hal.c: 129:     else if(LEDno == 2)
-[e :U 466 ]
-[e $ ! == -> _LEDno `i -> 2 `i 468  ]
+[; ;aj_hal.c: 129: {
+[f ]
 "130
-[; ;aj_hal.c: 130:     {
-{
+[; ;aj_hal.c: 130:     if(LEDno == 1)
+[e $ ! == -> _LEDno `i -> 1 `i 467  ]
 "131
-[; ;aj_hal.c: 131:         PWM2_DutyCycleSet(duty);
-[e ( _PWM2_DutyCycleSet (1 _duty ]
-"132
-[; ;aj_hal.c: 132:         PWM2_LoadBufferSet();
-[e ( _PWM2_LoadBufferSet ..  ]
-"133
-[; ;aj_hal.c: 133:     }
-}
-[e $U 469  ]
-"134
-[; ;aj_hal.c: 134:     else if(LEDno == 3)
-[e :U 468 ]
-[e $ ! == -> _LEDno `i -> 3 `i 470  ]
-"135
-[; ;aj_hal.c: 135:     {
+[; ;aj_hal.c: 131:     {
 {
-"136
-[; ;aj_hal.c: 136:         PWM3_DutyCycleSet(duty);
-[e ( _PWM3_DutyCycleSet (1 _duty ]
-"137
-[; ;aj_hal.c: 137:         PWM3_LoadBufferSet();
-[e ( _PWM3_LoadBufferSet ..  ]
-"138
-[; ;aj_hal.c: 138:     }
+"132
+[; ;aj_hal.c: 132:         PWM1_DutyCycleSet(duty);
+[e ( _PWM1_DutyCycleSet (1 _duty ]
+"133
+[; ;aj_hal.c: 133:         PWM1_LoadBufferSet();
+[e ( _PWM1_LoadBufferSet ..  ]
+"134
+[; ;aj_hal.c: 134:     }
 }
-[e :U 470 ]
-[e :U 469 ]
+[e $U 468  ]
+"135
+[; ;aj_hal.c: 135:     else if(LEDno == 2)
 [e :U 467 ]
+[e $ ! == -> _LEDno `i -> 2 `i 469  ]
+"136
+[; ;aj_hal.c: 136:     {
+{
+"137
+[; ;aj_hal.c: 137:         PWM2_DutyCycleSet(duty);
+[e ( _PWM2_DutyCycleSet (1 _duty ]
+"138
+[; ;aj_hal.c: 138:         PWM2_LoadBufferSet();
+[e ( _PWM2_LoadBufferSet ..  ]
 "139
-[; ;aj_hal.c: 139: }
-[e :UE 465 ]
+[; ;aj_hal.c: 139:     }
+}
+[e $U 470  ]
+"140
+[; ;aj_hal.c: 140:     else if(LEDno == 3)
+[e :U 469 ]
+[e $ ! == -> _LEDno `i -> 3 `i 471  ]
+"141
+[; ;aj_hal.c: 141:     {
+{
+"142
+[; ;aj_hal.c: 142:         PWM3_DutyCycleSet(duty);
+[e ( _PWM3_DutyCycleSet (1 _duty ]
+"143
+[; ;aj_hal.c: 143:         PWM3_LoadBufferSet();
+[e ( _PWM3_LoadBufferSet ..  ]
+"144
+[; ;aj_hal.c: 144:     }
+}
+[e :U 471 ]
+[e :U 470 ]
+[e :U 468 ]
+"145
+[; ;aj_hal.c: 145: }
+[e :UE 466 ]
 }
