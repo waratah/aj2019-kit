@@ -27,11 +27,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _PIR1bits `VS36 ~T0 @X0 0 e@17 ]
 "32 aj_hal.c
 [; ;aj_hal.c: 32:     uint16_t adc = (ADC1_GetConversion(channel_AN0) >> 8) & 0xFF;
-[c E3081 0 29 30 31 .. ]
-[n E3081 . channel_AN0 channel_Temp channel_DAC channel_FVR  ]
+[c E3089 0 29 30 31 .. ]
+[n E3089 . channel_AN0 channel_Temp channel_DAC channel_FVR  ]
 "288 ./mcc_generated_files/adc1.h
 [; ;./mcc_generated_files/adc1.h: 288: adc_result_t ADC1_GetConversion(adc_channel_t channel);
-[v _ADC1_GetConversion `(us ~T0 @X0 0 ef1`E3081 ]
+[v _ADC1_GetConversion `(us ~T0 @X0 0 ef1`E3089 ]
 "155 ./mcc_generated_files/pwm1.h
 [; ;./mcc_generated_files/pwm1.h: 155: void PWM1_Stop(void);
 [v _PWM1_Stop `(v ~T0 @X0 0 ef ]
@@ -86,6 +86,82 @@ Version 4.0 HI-TECH Software Intermediate Code
 "272
 [; ;./mcc_generated_files/pwm3.h: 272: void PWM3_PeriodSet(uint16_t periodCount);
 [v _PWM3_PeriodSet `(v ~T0 @X0 0 ef1`us ]
+[v F3024 `(v ~T0 @X0 0 tf ]
+"186 ./mcc_generated_files/pin_manager.h
+[; ;./mcc_generated_files/pin_manager.h: 186: void IOCAF0_SetInterruptHandler(void (* InterruptHandler)(void));
+[v _IOCAF0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F3024 ]
+[v F3454 `(v ~T0 @X0 0 tf ]
+"357 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 357:     struct {
+[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
+"367
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 367:     struct {
+[s S32 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S32 . . T0IF . T0IE ]
+"356
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 356: typedef union {
+[u S30 `S31 1 `S32 1 ]
+[n S30 . . . ]
+"374
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"1515
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 1515:     struct {
+[s S91 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S91 . ADON GO_nDONE CHS0 CHS1 CHS2 CHS3 CHS4 ]
+"1524
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 1524:     struct {
+[s S92 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S92 . . ADGO CHS ]
+"1529
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 1529:     struct {
+[s S93 :1 `uc 1 :1 `uc 1 ]
+[n S93 . . GO ]
+"1533
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 1533:     struct {
+[s S94 :1 `uc 1 :1 `uc 1 ]
+[n S94 . . nDONE ]
+"1514
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 1514: typedef union {
+[u S90 `S91 1 `S92 1 `S93 1 `S94 1 ]
+[n S90 . . . . . ]
+"1538
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 1538: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x09D)));
+[v _ADCON0bits `VS90 ~T0 @X0 0 e@157 ]
+"2248
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 2248:     struct {
+[s S127 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S127 . ANSA0 ANSA1 ANSA2 . ANSA4 ]
+"2255
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 2255:     struct {
+[s S128 :5 `uc 1 ]
+[n S128 . ANSELA ]
+"2247
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 2247: typedef union {
+[u S126 `S127 1 `S128 1 ]
+[n S126 . . . ]
+"2259
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 2259: extern volatile ANSELAbits_t ANSELAbits __attribute__((address(0x18C)));
+[v _ANSELAbits `VS126 ~T0 @X0 0 e@396 ]
+"920
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 920:     struct {
+[s S62 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S62 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 ]
+"928
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 928:     struct {
+[s S63 :6 `uc 1 ]
+[n S63 . TRISA ]
+"919
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 919: typedef union {
+[u S61 `S62 1 `S63 1 ]
+[n S61 . . . ]
+"932
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 932: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x08C)));
+[v _TRISAbits `VS61 ~T0 @X0 0 e@140 ]
+"31 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic.h
+[v ___nop `(v ~T0 @X0 0 ef ]
+[p i ___nop ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -655,7 +731,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32
 [; ;aj_hal.c: 32:     uint16_t adc = (ADC1_GetConversion(channel_AN0) >> 8) & 0xFF;
 [v _adc `us ~T0 @X0 1 a ]
-[e = _adc -> & >> -> ( _ADC1_GetConversion (1 . `E3081 0 `ui -> 8 `i -> -> 255 `i `ui `us ]
+[e = _adc -> & >> -> ( _ADC1_GetConversion (1 . `E3089 0 `ui -> 8 `i -> -> 255 `i `ui `us ]
 "33
 [; ;aj_hal.c: 33:     uint8_t i = 0;
 [v _i `uc ~T0 @X0 1 a ]
@@ -908,14 +984,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "112
 [; ;aj_hal.c: 112:     const uint16_t initial_duty = 0;
-[v F3439 `Cus ~T0 @X0 1 s initial_duty ]
-[i F3439
+[v F3447 `Cus ~T0 @X0 1 s initial_duty ]
+[i F3447
 -> -> 0 `i `us
 ]
 "113
 [; ;aj_hal.c: 113:     const uint16_t initial_phase = 0;
-[v F3440 `Cus ~T0 @X0 1 s initial_phase ]
-[i F3440
+[v F3448 `Cus ~T0 @X0 1 s initial_phase ]
+[i F3448
 -> -> 0 `i `us
 ]
 "114
@@ -923,25 +999,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _stopLEDs ..  ]
 "116
 [; ;aj_hal.c: 116:     PWM1_PhaseSet(initial_phase);
-[e ( _PWM1_PhaseSet (1 F3440 ]
+[e ( _PWM1_PhaseSet (1 F3448 ]
 "117
 [; ;aj_hal.c: 117:     PWM1_PeriodSet(period);
 [e ( _PWM1_PeriodSet (1 _period ]
 "119
 [; ;aj_hal.c: 119:     PWM2_PhaseSet(initial_phase);
-[e ( _PWM2_PhaseSet (1 F3440 ]
+[e ( _PWM2_PhaseSet (1 F3448 ]
 "120
 [; ;aj_hal.c: 120:     PWM2_PeriodSet(period);
 [e ( _PWM2_PeriodSet (1 _period ]
 "122
 [; ;aj_hal.c: 122:     PWM3_PhaseSet(initial_phase);
-[e ( _PWM3_PhaseSet (1 F3440 ]
+[e ( _PWM3_PhaseSet (1 F3448 ]
 "123
 [; ;aj_hal.c: 123:     PWM3_PeriodSet(period);
 [e ( _PWM3_PeriodSet (1 _period ]
 "125
 [; ;aj_hal.c: 125:     setLEDs(initial_duty, initial_duty, initial_duty);
-[e ( _setLEDs (3 , , F3439 F3439 F3439 ]
+[e ( _setLEDs (3 , , F3447 F3447 F3447 ]
 "126
 [; ;aj_hal.c: 126: }
 [e :UE 465 ]
@@ -1015,4 +1091,79 @@ Version 4.0 HI-TECH Software Intermediate Code
 "145
 [; ;aj_hal.c: 145: }
 [e :UE 466 ]
+}
+"149
+[; ;aj_hal.c: 149: void wakeHandler ()
+[v _wakeHandler `(v ~T0 @X0 1 ef ]
+"150
+[; ;aj_hal.c: 150: {
+{
+[e :U _wakeHandler ]
+[f ]
+"152
+[; ;aj_hal.c: 152: }
+[e :UE 472 ]
+}
+"154
+[; ;aj_hal.c: 154: void setupButtonInterrupt ()
+[v _setupButtonInterrupt `(v ~T0 @X0 1 ef ]
+"155
+[; ;aj_hal.c: 155: {
+{
+[e :U _setupButtonInterrupt ]
+[f ]
+"156
+[; ;aj_hal.c: 156:     IOCAF0_SetInterruptHandler(wakeHandler);
+[e ( _IOCAF0_SetInterruptHandler (1 -> &U _wakeHandler `*F3454 ]
+"157
+[; ;aj_hal.c: 157:     (INTCONbits.GIE = 1);
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"158
+[; ;aj_hal.c: 158:     (INTCONbits.PEIE = 1);
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"159
+[; ;aj_hal.c: 159: }
+[e :UE 473 ]
+}
+"161
+[; ;aj_hal.c: 161: void goToSleep ()
+[v _goToSleep `(v ~T0 @X0 1 ef ]
+"162
+[; ;aj_hal.c: 162: {
+{
+[e :U _goToSleep ]
+[f ]
+"164
+[; ;aj_hal.c: 164:     disableSerial();
+[e ( _disableSerial ..  ]
+"165
+[; ;aj_hal.c: 165:     ADCON0bits.ADON = 0;
+[e = . . _ADCON0bits 0 0 -> -> 0 `i `uc ]
+"166
+[; ;aj_hal.c: 166:     ANSELAbits.ANSA0 = 0;
+[e = . . _ANSELAbits 0 0 -> -> 0 `i `uc ]
+"167
+[; ;aj_hal.c: 167:     TRISAbits.TRISA0 = 1;
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+"170
+[; ;aj_hal.c: 170:     setLEDs(0,0,0);
+[e ( _setLEDs (3 , , -> -> 0 `i `us -> -> 0 `i `us -> -> 0 `i `us ]
+"173
+[; ;aj_hal.c: 173:     __asm("sleep");
+[; <" sleep ;# ">
+"178
+[; ;aj_hal.c: 178:     __nop();
+[e ( ___nop ..  ]
+"182
+[; ;aj_hal.c: 182:     TRISAbits.TRISA0 = 1;
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
+"183
+[; ;aj_hal.c: 183:     ANSELAbits.ANSA0 = 0;
+[e = . . _ANSELAbits 0 0 -> -> 0 `i `uc ]
+"184
+[; ;aj_hal.c: 184:     ADCON0bits.ADON = 0;
+[e = . . _ADCON0bits 0 0 -> -> 0 `i `uc ]
+"185
+[; ;aj_hal.c: 185: }
+[e :UE 474 ]
 }

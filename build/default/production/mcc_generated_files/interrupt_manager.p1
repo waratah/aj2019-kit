@@ -1,17 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"74 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 74: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"47 ./aj_hal.h
-[; ;./aj_hal.h: 47: void setupButtonInterrupt ();
-[v _setupButtonInterrupt `(v ~T0 @X0 0 e? ]
-"25
-[; ;./aj_hal.h: 25: void setupLEDs (uint16_t period);
-[v _setupLEDs `(v ~T0 @X0 0 ef1`us ]
-"31
-[; ;./aj_hal.h: 31: void setLEDs (uint16_t led1, uint16_t led2, uint16_t led3);
-[v _setLEDs `(v ~T0 @X0 0 ef3`us`us`us ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
 "357 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 357:     struct {
 [s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -27,16 +16,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "374
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"29 ./aj_hal.h
-[; ;./aj_hal.h: 29: void startLEDs ();
-[v _startLEDs `(v ~T0 @X0 0 e? ]
-[v F2987 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic.h
-[v __delay `JF2987 ~T0 @X0 0 e ]
-[p i __delay ]
-"49 ./aj_hal.h
-[; ;./aj_hal.h: 49: void goToSleep ();
-[v _goToSleep `(v ~T0 @X0 0 e? ]
+"150 mcc_generated_files/pin_manager.h
+[; ;mcc_generated_files/pin_manager.h: 150: void PIN_MANAGER_IOC(void);
+[v _PIN_MANAGER_IOC `(v ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -535,151 +517,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8220
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h: 8220: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"27 main.c
-[; ;main.c: 27:     uint16_t LED1 = 100;
-[v _LED1 `us ~T0 @X0 1 e ]
-[i _LED1
--> -> 100 `i `us
-]
-"28
-[; ;main.c: 28:     uint16_t LED2 = 200;
-[v _LED2 `us ~T0 @X0 1 e ]
-[i _LED2
--> -> 200 `i `us
-]
-"29
-[; ;main.c: 29:     uint16_t LED3 = 0;
-[v _LED3 `us ~T0 @X0 1 e ]
-[i _LED3
--> -> 0 `i `us
-]
-"31
-[; ;main.c: 31: void A0_InterruptHandler()
-[v _A0_InterruptHandler `(v ~T0 @X0 1 ef ]
-"32
-[; ;main.c: 32: {
+[v $root$_INTERRUPT_InterruptManager `(v ~T0 @X0 0 e ]
+"52 mcc_generated_files/interrupt_manager.c
+[; ;mcc_generated_files/interrupt_manager.c: 52: void __attribute__((picinterrupt(""))) INTERRUPT_InterruptManager (void)
+[v _INTERRUPT_InterruptManager `(v ~T1 @X0 1 ef ]
+"53
+[; ;mcc_generated_files/interrupt_manager.c: 53: {
 {
-[e :U _A0_InterruptHandler ]
+[e :U _INTERRUPT_InterruptManager ]
 [f ]
-"34
-[; ;main.c: 34: }
-[e :UE 440 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"36
-[; ;main.c: 36: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"37
-[; ;main.c: 37: {
+"55
+[; ;mcc_generated_files/interrupt_manager.c: 55:     if(INTCONbits.IOCIE == 1 && INTCONbits.IOCIF == 1)
+[e $ ! && == -> . . _INTCONbits 0 3 `i -> 1 `i == -> . . _INTCONbits 0 0 `i -> 1 `i 441  ]
+"56
+[; ;mcc_generated_files/interrupt_manager.c: 56:     {
 {
-[e :U _main ]
-[f ]
-"39
-[; ;main.c: 39:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"40
-[; ;main.c: 40:     setupButtonInterrupt();
-[e ( _setupButtonInterrupt ..  ]
-"44
-[; ;main.c: 44:     setupButtonInterrupt();
-[e ( _setupButtonInterrupt ..  ]
-"51
-[; ;main.c: 51:     setupLEDs(2000);
-[e ( _setupLEDs (1 -> -> 2000 `i `us ]
-"52
-[; ;main.c: 52:     setLEDs(LED1,LED2,LED3);
-[e ( _setLEDs (3 , , _LED1 _LED2 _LED3 ]
+"57
+[; ;mcc_generated_files/interrupt_manager.c: 57:         PIN_MANAGER_IOC();
+[e ( _PIN_MANAGER_IOC ..  ]
 "58
-[; ;main.c: 58:     (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"61
-[; ;main.c: 61:     (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"70
-[; ;main.c: 70:     startLEDs();
-[e ( _startLEDs ..  ]
-"72
-[; ;main.c: 72:     uint16_t adc_result = 0;
-[v _adc_result `us ~T0 @X0 1 a ]
-[e = _adc_result -> -> 0 `i `us ]
-[v F3457 `a ~T0 @X0 -> 3 `i s ]
-[i F3457
-:U ..
-"73
-[; ;main.c: 73:     _Bool buttons[3] = {0,0,0};
--> -> 0 `i `a
--> -> 0 `i `a
--> -> 0 `i `a
-..
-]
-[v _buttons `a ~T0 @X0 -> 3 `i a ]
-[e = _buttons F3457 ]
-"75
-[; ;main.c: 75:     while (1)
-[e :U 443 ]
-"76
-[; ;main.c: 76:     {
-{
-"77
-[; ;main.c: 77:         int i;
-[v _i `i ~T0 @X0 1 a ]
-"80
-[; ;main.c: 80:         for(i=0 ; i<10 ; i++)
-{
-[e = _i -> 0 `i ]
-[e $ < _i -> 10 `i 445  ]
-[e $U 446  ]
-[e :U 445 ]
-"81
-[; ;main.c: 81:         {
-{
-"93
-[; ;main.c: 93:             LED1+=5;
-[e =+ _LED1 -> -> 5 `i `us ]
-"94
-[; ;main.c: 94:             LED2+=5;
-[e =+ _LED2 -> -> 5 `i `us ]
-"95
-[; ;main.c: 95:             LED3+=5;
-[e =+ _LED3 -> -> 5 `i `us ]
-"100
-[; ;main.c: 100:             if(LED1 >= 300) LED1 = 0;
-[e $ ! >= -> _LED1 `ui -> -> 300 `i `ui 448  ]
-[e = _LED1 -> -> 0 `i `us ]
-[e :U 448 ]
-"101
-[; ;main.c: 101:             if(LED2 >= 300) LED2 = 0;
-[e $ ! >= -> _LED2 `ui -> -> 300 `i `ui 449  ]
-[e = _LED2 -> -> 0 `i `us ]
-[e :U 449 ]
-"102
-[; ;main.c: 102:             if(LED3 >= 300) LED3 = 0;
-[e $ ! >= -> _LED3 `ui -> -> 300 `i `ui 450  ]
-[e = _LED3 -> -> 0 `i `us ]
-[e :U 450 ]
-"105
-[; ;main.c: 105:             setLEDs(LED1,LED2,LED3);
-[e ( _setLEDs (3 , , _LED1 _LED2 _LED3 ]
-"109
-[; ;main.c: 109:             _delay((unsigned long)((100)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"110
-[; ;main.c: 110:         }
+[; ;mcc_generated_files/interrupt_manager.c: 58:     }
 }
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 10 `i 445  ]
-[e :U 446 ]
-}
-"113
-[; ;main.c: 113:         goToSleep();
-[e ( _goToSleep ..  ]
-"140
-[; ;main.c: 140:     }
+[e $U 442  ]
+"59
+[; ;mcc_generated_files/interrupt_manager.c: 59:     else
+[e :U 441 ]
+"60
+[; ;mcc_generated_files/interrupt_manager.c: 60:     {
+{
+"62
+[; ;mcc_generated_files/interrupt_manager.c: 62:     }
 }
 [e :U 442 ]
-[e $U 443  ]
-[e :U 444 ]
-"141
-[; ;main.c: 141: }
-[e :UE 441 ]
+"63
+[; ;mcc_generated_files/interrupt_manager.c: 63: }
+[e :UE 440 ]
 }

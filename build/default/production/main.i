@@ -5138,6 +5138,14 @@ extern __bank0 __bit __timeout;
 void PIN_MANAGER_Initialize (void);
 # 150 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
+# 163 "./mcc_generated_files/pin_manager.h"
+void IOCAF0_ISR(void);
+# 186 "./mcc_generated_files/pin_manager.h"
+void IOCAF0_SetInterruptHandler(void (* InterruptHandler)(void));
+# 210 "./mcc_generated_files/pin_manager.h"
+extern void (*IOCAF0_InterruptHandler)(void);
+# 234 "./mcc_generated_files/pin_manager.h"
+void IOCAF0_DefaultInterruptHandler(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 1 3
@@ -5216,6 +5224,9 @@ typedef uint32_t uint_fast32_t;
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdbool.h" 1 3
 # 53 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/interrupt_manager.h" 1
+# 54 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/pwm2.h" 1
 # 94 "./mcc_generated_files/pwm2.h"
 void PWM2_Initialize(void);
@@ -5245,7 +5256,7 @@ _Bool PWM2_IsPhaseMatchOccured(void);
 _Bool PWM2_IsDutyCycleMatchOccured(void);
 # 414 "./mcc_generated_files/pwm2.h"
 _Bool PWM2_IsPeriodMatchOccured(void);
-# 54 "./mcc_generated_files/mcc.h" 2
+# 55 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm1.h" 1
 # 94 "./mcc_generated_files/pwm1.h"
@@ -5276,7 +5287,7 @@ _Bool PWM1_IsPhaseMatchOccured(void);
 _Bool PWM1_IsDutyCycleMatchOccured(void);
 # 414 "./mcc_generated_files/pwm1.h"
 _Bool PWM1_IsPeriodMatchOccured(void);
-# 55 "./mcc_generated_files/mcc.h" 2
+# 56 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm3.h" 1
 # 94 "./mcc_generated_files/pwm3.h"
@@ -5307,7 +5318,7 @@ _Bool PWM3_IsPhaseMatchOccured(void);
 _Bool PWM3_IsDutyCycleMatchOccured(void);
 # 414 "./mcc_generated_files/pwm3.h"
 _Bool PWM3_IsPeriodMatchOccured(void);
-# 56 "./mcc_generated_files/mcc.h" 2
+# 57 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/adc1.h" 1
 # 72 "./mcc_generated_files/adc1.h"
@@ -5343,7 +5354,7 @@ adc_result_t ADC1_GetConversionResult(void);
 adc_result_t ADC1_GetConversion(adc_channel_t channel);
 # 316 "./mcc_generated_files/adc1.h"
 void ADC1_TemperatureAcquisitionDelay(void);
-# 57 "./mcc_generated_files/mcc.h" 2
+# 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/eusart.h" 1
 # 57 "./mcc_generated_files/eusart.h"
@@ -5496,12 +5507,12 @@ _Bool EUSART_is_tx_done(void);
 uint8_t EUSART_Read(void);
 # 281 "./mcc_generated_files/eusart.h"
 void EUSART_Write(uint8_t txData);
-# 58 "./mcc_generated_files/mcc.h" 2
-# 73 "./mcc_generated_files/mcc.h"
+# 59 "./mcc_generated_files/mcc.h" 2
+# 74 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 86 "./mcc_generated_files/mcc.h"
+# 87 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 98 "./mcc_generated_files/mcc.h"
+# 99 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 21 "main.c" 2
 
@@ -5528,26 +5539,56 @@ void enableSerial ();
 void disableSerial ();
 
 _Bool EUSART_RxCheck ();
+
+
+
+void wakeHandler ();
+
+void setupButtonInterrupt ();
+
+void goToSleep ();
 # 22 "main.c" 2
 
 
 
 
 
-void main(void)
-{
-
-    SYSTEM_Initialize();
-
-
     uint16_t LED1 = 100;
     uint16_t LED2 = 200;
     uint16_t LED3 = 0;
 
+void A0_InterruptHandler()
+{
+
+}
+
+void main(void)
+{
+
+    SYSTEM_Initialize();
+    setupButtonInterrupt();
+
+
+
+    setupButtonInterrupt();
+
+
+
+
+
 
     setupLEDs(2000);
     setLEDs(LED1,LED2,LED3);
-# 57 "main.c"
+
+
+
+
+
+    (INTCONbits.GIE = 1);
+
+
+    (INTCONbits.PEIE = 1);
+# 70 "main.c"
     startLEDs();
 
     uint16_t adc_result = 0;
@@ -5560,49 +5601,28 @@ void main(void)
 
         for(i=0 ; i<10 ; i++)
         {
+# 93 "main.c"
+            LED1+=5;
+            LED2+=5;
+            LED3+=5;
 
-            adc_result = ADC1_GetConversion(channel_AN0);
 
 
 
-
-            checkButtons(buttons);
-            LED1 += buttons[0] * 5;
-            LED2 += buttons[1] * 5;
-            LED3 += buttons[2] * 5;
-# 87 "main.c"
-            if(LED1 > 300) LED1 = 0;
-            if(LED2 > 300) LED2 = 0;
-            if(LED3 > 300) LED3 = 0;
+            if(LED1 >= 300) LED1 = 0;
+            if(LED2 >= 300) LED2 = 0;
+            if(LED3 >= 300) LED3 = 0;
 
 
             setLEDs(LED1,LED2,LED3);
 
 
 
-            _delay((unsigned long)((10)*(500000/4000.0)));
+            _delay((unsigned long)((100)*(500000/4000.0)));
         }
 
 
-        enableSerial();
-
-        EUSART_Write((uint8_t)((adc_result >> 8) & 0xFF));
-        EUSART_Write(buttons[0] | buttons[1] << 1 | buttons[2] << 2);
-
-
-        while(!EUSART_is_tx_done());
-
-
-        if(EUSART_RxCheck())
-        {
-            uint8_t receive = EUSART_Read();
-            if(receive == ((adc_result >> 8) & 0xFF))
-            {
-                EUSART_Write(0x55);
-            }
-            while(!EUSART_is_tx_done());
-        }
-
-        disableSerial();
+        goToSleep();
+# 140 "main.c"
     }
 }

@@ -144,3 +144,42 @@ void setLED (uint16_t duty, uint8_t LEDno)
     }
 }
 
+//#################### SLEEP #####################
+//wakeHandler - interrupt handler for Button, checks for reset/wake
+void wakeHandler ()
+{
+    
+}
+//setupButtonInterrupt - sets wakeHandler as interrupt handler, set GIE, PIE
+void setupButtonInterrupt ()
+{
+    IOCAF0_SetInterruptHandler(wakeHandler);
+    INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
+}
+//goToSleep - Sets RA0 digital in, Turn off LEDs, Serial off, sleep, wake-up nop
+void goToSleep ()
+{
+    //Set RA0 for IOC
+    disableSerial(); //Not at all necessary, can be enabled.
+    ADCON0bits.ADON = 0; //Turn off ADC0 - Not necessary
+    ANSELAbits.ANSA0 = 0; //Set RA0 as digital - IS necessary
+    TRISAbits.TRISA0 = 1; //Set RA0 as input (already set)
+    
+    //Disable Peripherals for minimum Power
+    setLEDs(0,0,0);
+    
+    //Sleep
+    SLEEP();
+    
+    //Sleeping...
+    
+    //Wake Up NOP
+    NOP();
+    
+    //Execute wakeHandler (IOC Interrupt Handler)
+    
+    TRISAbits.TRISA0 = 1; //Set RA0 as input (already set)
+    ANSELAbits.ANSA0 = 0; //Set RA0 as digital - IS necessary
+    ADCON0bits.ADON = 0; //Turn off ADC0 - Not necessary
+}

@@ -5133,6 +5133,14 @@ extern __bank0 __bit __timeout;
 void PIN_MANAGER_Initialize (void);
 # 150 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
+# 163 "mcc_generated_files/pin_manager.h"
+void IOCAF0_ISR(void);
+# 186 "mcc_generated_files/pin_manager.h"
+void IOCAF0_SetInterruptHandler(void (* InterruptHandler)(void));
+# 210 "mcc_generated_files/pin_manager.h"
+extern void (*IOCAF0_InterruptHandler)(void);
+# 234 "mcc_generated_files/pin_manager.h"
+void IOCAF0_DefaultInterruptHandler(void);
 # 50 "mcc_generated_files/pin_manager.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdbool.h" 1 3
@@ -5141,6 +5149,8 @@ void PIN_MANAGER_IOC(void);
 
 
 
+
+void (*IOCAF0_InterruptHandler)(void);
 
 
 void PIN_MANAGER_Initialize(void)
@@ -5185,9 +5195,57 @@ void PIN_MANAGER_Initialize(void)
 
 
 
+    IOCAFbits.IOCAF0 = 0;
+
+    IOCANbits.IOCAN0 = 0;
+
+    IOCAPbits.IOCAP0 = 1;
+
+
+
+
+    IOCAF0_SetInterruptHandler(IOCAF0_DefaultInterruptHandler);
+
+
+    INTCONbits.IOCIE = 1;
 
 }
 
 void PIN_MANAGER_IOC(void)
 {
+
+    if(IOCAFbits.IOCAF0 == 1)
+    {
+        IOCAF0_ISR();
+    }
+}
+
+
+
+
+void IOCAF0_ISR(void) {
+
+
+
+
+    if(IOCAF0_InterruptHandler)
+    {
+        IOCAF0_InterruptHandler();
+    }
+    IOCAFbits.IOCAF0 = 0;
+}
+
+
+
+
+void IOCAF0_SetInterruptHandler(void (* InterruptHandler)(void)){
+    IOCAF0_InterruptHandler = InterruptHandler;
+}
+
+
+
+
+void IOCAF0_DefaultInterruptHandler(void){
+
+
 }

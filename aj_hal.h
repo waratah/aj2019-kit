@@ -40,6 +40,14 @@ void disableSerial ();
 //EUSART_RxCheck - Check for received bytes
 bool EUSART_RxCheck ();
 
+//#################### SLEEP #####################
+//wakeHandler - interrupt handler for Button, checks for reset/wake
+void wakeHandler ();
+//setupButtonInterrupt - sets wakeHandler as interrupt handler, set GIE, PIE
+void setupButtonInterrupt ();
+//goToSleep - Sets RA0 digital in, Turn off LEDs, Serial off, sleep, wake-up nop
+void goToSleep ();
+
 #ifdef	__cplusplus
 }
 #endif

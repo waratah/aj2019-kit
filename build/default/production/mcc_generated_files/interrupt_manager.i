@@ -1,4 +1,4 @@
-# 1 "aj_hal.c"
+# 1 "mcc_generated_files/interrupt_manager.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,90 +6,13 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "aj_hal.c" 2
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdbool.h" 1 3
-# 1 "aj_hal.c" 2
+# 1 "mcc_generated_files/interrupt_manager.c" 2
+# 49 "mcc_generated_files/interrupt_manager.c"
+# 1 "mcc_generated_files/interrupt_manager.h" 1
+# 49 "mcc_generated_files/interrupt_manager.c" 2
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 135 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 150 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long intptr_t;
-# 166 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
-
-
-
-
-typedef short int16_t;
-
-
-
-
-typedef long int32_t;
-# 189 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef int32_t intmax_t;
-
-
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-
-
-
-
-typedef unsigned long uint32_t;
-# 225 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef uint32_t uintmax_t;
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
-
-
-typedef int8_t int_fast8_t;
-
-
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-typedef int32_t int_least32_t;
-
-
-
-
-typedef uint8_t uint_fast8_t;
-
-
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-typedef uint32_t uint_least32_t;
-# 131 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int32_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint32_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 131 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
-# 2 "aj_hal.c" 2
-
-# 1 "./mcc_generated_files/mcc.h" 1
-# 49 "./mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/mcc.h" 1
+# 49 "mcc_generated_files/mcc.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -103,7 +26,17 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 1 3
-# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+
+
+
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\features.h" 1 3
 # 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 2 3
 # 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdlib.h" 3
@@ -5198,126 +5131,198 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\xc.h" 2 3
-# 49 "./mcc_generated_files/mcc.h" 2
+# 49 "mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/device_config.h" 1
-# 50 "./mcc_generated_files/mcc.h" 2
+# 1 "mcc_generated_files/device_config.h" 1
+# 50 "mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/pin_manager.h" 1
-# 138 "./mcc_generated_files/pin_manager.h"
+# 1 "mcc_generated_files/pin_manager.h" 1
+# 138 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 150 "./mcc_generated_files/pin_manager.h"
+# 150 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 163 "./mcc_generated_files/pin_manager.h"
+# 163 "mcc_generated_files/pin_manager.h"
 void IOCAF0_ISR(void);
-# 186 "./mcc_generated_files/pin_manager.h"
+# 186 "mcc_generated_files/pin_manager.h"
 void IOCAF0_SetInterruptHandler(void (* InterruptHandler)(void));
-# 210 "./mcc_generated_files/pin_manager.h"
+# 210 "mcc_generated_files/pin_manager.h"
 extern void (*IOCAF0_InterruptHandler)(void);
-# 234 "./mcc_generated_files/pin_manager.h"
+# 234 "mcc_generated_files/pin_manager.h"
 void IOCAF0_DefaultInterruptHandler(void);
-# 51 "./mcc_generated_files/mcc.h" 2
+# 51 "mcc_generated_files/mcc.h" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 1 3
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 135 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned long uintptr_t;
+# 150 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long intptr_t;
+# 166 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef signed char int8_t;
 
 
 
-# 1 "./mcc_generated_files/interrupt_manager.h" 1
-# 54 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/pwm2.h" 1
-# 94 "./mcc_generated_files/pwm2.h"
+typedef short int16_t;
+
+
+
+
+typedef long int32_t;
+# 189 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef int32_t intmax_t;
+
+
+
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+
+
+
+
+typedef unsigned long uint32_t;
+# 225 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef uint32_t uintmax_t;
+# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
+
+
+typedef int8_t int_fast8_t;
+
+
+
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+typedef int32_t int_least32_t;
+
+
+
+
+typedef uint8_t uint_fast8_t;
+
+
+
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+typedef uint32_t uint_least32_t;
+# 131 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/stdint.h" 1 3
+typedef int32_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint32_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 131 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdint.h" 2 3
+# 52 "mcc_generated_files/mcc.h" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdbool.h" 1 3
+# 53 "mcc_generated_files/mcc.h" 2
+
+
+# 1 "mcc_generated_files/pwm2.h" 1
+# 94 "mcc_generated_files/pwm2.h"
 void PWM2_Initialize(void);
-# 123 "./mcc_generated_files/pwm2.h"
+# 123 "mcc_generated_files/pwm2.h"
 void PWM2_Start(void);
-# 155 "./mcc_generated_files/pwm2.h"
+# 155 "mcc_generated_files/pwm2.h"
 void PWM2_Stop(void);
-# 180 "./mcc_generated_files/pwm2.h"
+# 180 "mcc_generated_files/pwm2.h"
 _Bool PWM2_CheckOutputStatus(void);
-# 203 "./mcc_generated_files/pwm2.h"
+# 203 "mcc_generated_files/pwm2.h"
 void PWM2_LoadBufferSet(void);
-# 226 "./mcc_generated_files/pwm2.h"
+# 226 "mcc_generated_files/pwm2.h"
 void PWM2_PhaseSet(uint16_t phaseCount);
-# 249 "./mcc_generated_files/pwm2.h"
+# 249 "mcc_generated_files/pwm2.h"
 void PWM2_DutyCycleSet(uint16_t dutyCycleCount);
-# 272 "./mcc_generated_files/pwm2.h"
+# 272 "mcc_generated_files/pwm2.h"
 void PWM2_PeriodSet(uint16_t periodCount);
-# 295 "./mcc_generated_files/pwm2.h"
+# 295 "mcc_generated_files/pwm2.h"
 void PWM2_OffsetSet(uint16_t offsetCount);
-# 318 "./mcc_generated_files/pwm2.h"
+# 318 "mcc_generated_files/pwm2.h"
 uint16_t PWM2_TimerCountGet(void);
-# 342 "./mcc_generated_files/pwm2.h"
+# 342 "mcc_generated_files/pwm2.h"
 _Bool PWM2_IsOffsetMatchOccured(void);
-# 366 "./mcc_generated_files/pwm2.h"
+# 366 "mcc_generated_files/pwm2.h"
 _Bool PWM2_IsPhaseMatchOccured(void);
-# 390 "./mcc_generated_files/pwm2.h"
+# 390 "mcc_generated_files/pwm2.h"
 _Bool PWM2_IsDutyCycleMatchOccured(void);
-# 414 "./mcc_generated_files/pwm2.h"
+# 414 "mcc_generated_files/pwm2.h"
 _Bool PWM2_IsPeriodMatchOccured(void);
-# 55 "./mcc_generated_files/mcc.h" 2
+# 55 "mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/pwm1.h" 1
-# 94 "./mcc_generated_files/pwm1.h"
+# 1 "mcc_generated_files/pwm1.h" 1
+# 94 "mcc_generated_files/pwm1.h"
 void PWM1_Initialize(void);
-# 123 "./mcc_generated_files/pwm1.h"
+# 123 "mcc_generated_files/pwm1.h"
 void PWM1_Start(void);
-# 155 "./mcc_generated_files/pwm1.h"
+# 155 "mcc_generated_files/pwm1.h"
 void PWM1_Stop(void);
-# 180 "./mcc_generated_files/pwm1.h"
+# 180 "mcc_generated_files/pwm1.h"
 _Bool PWM1_CheckOutputStatus(void);
-# 203 "./mcc_generated_files/pwm1.h"
+# 203 "mcc_generated_files/pwm1.h"
 void PWM1_LoadBufferSet(void);
-# 226 "./mcc_generated_files/pwm1.h"
+# 226 "mcc_generated_files/pwm1.h"
 void PWM1_PhaseSet(uint16_t phaseCount);
-# 249 "./mcc_generated_files/pwm1.h"
+# 249 "mcc_generated_files/pwm1.h"
 void PWM1_DutyCycleSet(uint16_t dutyCycleCount);
-# 272 "./mcc_generated_files/pwm1.h"
+# 272 "mcc_generated_files/pwm1.h"
 void PWM1_PeriodSet(uint16_t periodCount);
-# 295 "./mcc_generated_files/pwm1.h"
+# 295 "mcc_generated_files/pwm1.h"
 void PWM1_OffsetSet(uint16_t offsetCount);
-# 318 "./mcc_generated_files/pwm1.h"
+# 318 "mcc_generated_files/pwm1.h"
 uint16_t PWM1_TimerCountGet(void);
-# 342 "./mcc_generated_files/pwm1.h"
+# 342 "mcc_generated_files/pwm1.h"
 _Bool PWM1_IsOffsetMatchOccured(void);
-# 366 "./mcc_generated_files/pwm1.h"
+# 366 "mcc_generated_files/pwm1.h"
 _Bool PWM1_IsPhaseMatchOccured(void);
-# 390 "./mcc_generated_files/pwm1.h"
+# 390 "mcc_generated_files/pwm1.h"
 _Bool PWM1_IsDutyCycleMatchOccured(void);
-# 414 "./mcc_generated_files/pwm1.h"
+# 414 "mcc_generated_files/pwm1.h"
 _Bool PWM1_IsPeriodMatchOccured(void);
-# 56 "./mcc_generated_files/mcc.h" 2
+# 56 "mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/pwm3.h" 1
-# 94 "./mcc_generated_files/pwm3.h"
+# 1 "mcc_generated_files/pwm3.h" 1
+# 94 "mcc_generated_files/pwm3.h"
 void PWM3_Initialize(void);
-# 123 "./mcc_generated_files/pwm3.h"
+# 123 "mcc_generated_files/pwm3.h"
 void PWM3_Start(void);
-# 155 "./mcc_generated_files/pwm3.h"
+# 155 "mcc_generated_files/pwm3.h"
 void PWM3_Stop(void);
-# 180 "./mcc_generated_files/pwm3.h"
+# 180 "mcc_generated_files/pwm3.h"
 _Bool PWM3_CheckOutputStatus(void);
-# 203 "./mcc_generated_files/pwm3.h"
+# 203 "mcc_generated_files/pwm3.h"
 void PWM3_LoadBufferSet(void);
-# 226 "./mcc_generated_files/pwm3.h"
+# 226 "mcc_generated_files/pwm3.h"
 void PWM3_PhaseSet(uint16_t phaseCount);
-# 249 "./mcc_generated_files/pwm3.h"
+# 249 "mcc_generated_files/pwm3.h"
 void PWM3_DutyCycleSet(uint16_t dutyCycleCount);
-# 272 "./mcc_generated_files/pwm3.h"
+# 272 "mcc_generated_files/pwm3.h"
 void PWM3_PeriodSet(uint16_t periodCount);
-# 295 "./mcc_generated_files/pwm3.h"
+# 295 "mcc_generated_files/pwm3.h"
 void PWM3_OffsetSet(uint16_t offsetCount);
-# 318 "./mcc_generated_files/pwm3.h"
+# 318 "mcc_generated_files/pwm3.h"
 uint16_t PWM3_TimerCountGet(void);
-# 342 "./mcc_generated_files/pwm3.h"
+# 342 "mcc_generated_files/pwm3.h"
 _Bool PWM3_IsOffsetMatchOccured(void);
-# 366 "./mcc_generated_files/pwm3.h"
+# 366 "mcc_generated_files/pwm3.h"
 _Bool PWM3_IsPhaseMatchOccured(void);
-# 390 "./mcc_generated_files/pwm3.h"
+# 390 "mcc_generated_files/pwm3.h"
 _Bool PWM3_IsDutyCycleMatchOccured(void);
-# 414 "./mcc_generated_files/pwm3.h"
+# 414 "mcc_generated_files/pwm3.h"
 _Bool PWM3_IsPeriodMatchOccured(void);
-# 57 "./mcc_generated_files/mcc.h" 2
+# 57 "mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/adc1.h" 1
-# 72 "./mcc_generated_files/adc1.h"
+# 1 "mcc_generated_files/adc1.h" 1
+# 72 "mcc_generated_files/adc1.h"
 typedef uint16_t adc_result_t;
 
 
@@ -5328,7 +5333,7 @@ typedef struct
     adc_result_t adcResult1;
     adc_result_t adcResult2;
 } adc_sync_double_result_t;
-# 95 "./mcc_generated_files/adc1.h"
+# 95 "mcc_generated_files/adc1.h"
 typedef enum
 {
     channel_AN0 = 0x0,
@@ -5336,24 +5341,24 @@ typedef enum
     channel_DAC = 0x1E,
     channel_FVR = 0x1F
 } adc_channel_t;
-# 136 "./mcc_generated_files/adc1.h"
+# 136 "mcc_generated_files/adc1.h"
 void ADC1_Initialize(void);
-# 166 "./mcc_generated_files/adc1.h"
+# 166 "mcc_generated_files/adc1.h"
 void ADC1_SelectChannel(adc_channel_t channel);
-# 193 "./mcc_generated_files/adc1.h"
+# 193 "mcc_generated_files/adc1.h"
 void ADC1_StartConversion();
-# 225 "./mcc_generated_files/adc1.h"
+# 225 "mcc_generated_files/adc1.h"
 _Bool ADC1_IsConversionDone();
-# 258 "./mcc_generated_files/adc1.h"
+# 258 "mcc_generated_files/adc1.h"
 adc_result_t ADC1_GetConversionResult(void);
-# 288 "./mcc_generated_files/adc1.h"
+# 288 "mcc_generated_files/adc1.h"
 adc_result_t ADC1_GetConversion(adc_channel_t channel);
-# 316 "./mcc_generated_files/adc1.h"
+# 316 "mcc_generated_files/adc1.h"
 void ADC1_TemperatureAcquisitionDelay(void);
-# 58 "./mcc_generated_files/mcc.h" 2
+# 58 "mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/eusart.h" 1
-# 57 "./mcc_generated_files/eusart.h"
+# 1 "mcc_generated_files/eusart.h" 1
+# 57 "mcc_generated_files/eusart.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\stdio.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.00\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -5490,207 +5495,38 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 57 "./mcc_generated_files/eusart.h" 2
-# 98 "./mcc_generated_files/eusart.h"
+# 57 "mcc_generated_files/eusart.h" 2
+# 98 "mcc_generated_files/eusart.h"
 void EUSART_Initialize(void);
-# 146 "./mcc_generated_files/eusart.h"
+# 146 "mcc_generated_files/eusart.h"
 _Bool EUSART_is_tx_ready(void);
-# 194 "./mcc_generated_files/eusart.h"
+# 194 "mcc_generated_files/eusart.h"
 _Bool EUSART_is_rx_ready(void);
-# 241 "./mcc_generated_files/eusart.h"
+# 241 "mcc_generated_files/eusart.h"
 _Bool EUSART_is_tx_done(void);
-# 261 "./mcc_generated_files/eusart.h"
+# 261 "mcc_generated_files/eusart.h"
 uint8_t EUSART_Read(void);
-# 281 "./mcc_generated_files/eusart.h"
+# 281 "mcc_generated_files/eusart.h"
 void EUSART_Write(uint8_t txData);
-# 59 "./mcc_generated_files/mcc.h" 2
-# 74 "./mcc_generated_files/mcc.h"
+# 59 "mcc_generated_files/mcc.h" 2
+# 74 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 87 "./mcc_generated_files/mcc.h"
+# 87 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 99 "./mcc_generated_files/mcc.h"
+# 99 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
-# 3 "aj_hal.c" 2
+# 50 "mcc_generated_files/interrupt_manager.c" 2
 
 
-
-
-
-
-void enableSerial ()
+void __attribute__((picinterrupt(""))) INTERRUPT_InterruptManager (void)
 {
-    RCSTAbits.SPEN = 1;
-    _delay((unsigned long)((1)*(500000/4000.0)));
-}
 
-
-void disableSerial ()
-{
-    _delay((unsigned long)((1)*(500000/4000.0)));
-    RCSTAbits.SPEN = 0;
-}
-
-
-_Bool EUSART_RxCheck ()
-{
-    return PIR1bits.RCIF;
-}
-
-
-void checkButtons (_Bool buttons[])
-{
-    disableSerial();
-    uint16_t adc = (ADC1_GetConversion(channel_AN0) >> 8) & 0xFF;
-    uint8_t i = 0;
-    for(i = 0; i < 3; i++)
+    if(INTCONbits.IOCIE == 1 && INTCONbits.IOCIF == 1)
     {
-        buttons[i] = 0;
+        PIN_MANAGER_IOC();
     }
-
-    if(adc <= 23)
+    else
     {
 
     }
-    else if(adc > 23 && adc <= 63)
-    {
-
-        buttons[2] = 1;
-    }
-    else if(adc > 63 && adc <= 91)
-    {
-
-        buttons[1] = 1;
-    }
-    else if(adc > 91 && adc <= 112)
-    {
-
-        buttons[2] = 1;
-        buttons[1] = 1;
-    }
-    else if(adc > 112 && adc <= 128)
-    {
-
-        buttons[0] = 1;
-    }
-    else if(adc > 128 && adc <= 140)
-    {
-
-        buttons[2] = 1;
-        buttons[0] = 1;
-    }
-    else if(adc > 140 && adc <= 151)
-    {
-
-        buttons[1] = 1;
-        buttons[0] = 1;
-    }
-    else if(adc > 151 && adc <= 200)
-    {
-
-        buttons[2] = 1;
-        buttons[1] = 1;
-        buttons[0] = 1;
-    }
-}
-
-
-void stopLEDs ()
-{
-    PWM1_Stop();
-    PWM2_Stop();
-    PWM3_Stop();
-}
-
-void startLEDs ()
-{
-    PWM1_Start();
-    PWM2_Start();
-    PWM3_Start();
-}
-
-void setLEDs (uint16_t led1, uint16_t led2, uint16_t led3)
-{
-    PWM1_DutyCycleSet(led1);
-    PWM1_LoadBufferSet();
-    PWM2_DutyCycleSet(led2);
-    PWM2_LoadBufferSet();
-    PWM3_DutyCycleSet(led3);
-    PWM3_LoadBufferSet();
-}
-
-void setupLEDs (uint16_t period)
-{
-    const uint16_t initial_duty = 0;
-    const uint16_t initial_phase = 0;
-    stopLEDs();
-
-    PWM1_PhaseSet(initial_phase);
-    PWM1_PeriodSet(period);
-
-    PWM2_PhaseSet(initial_phase);
-    PWM2_PeriodSet(period);
-
-    PWM3_PhaseSet(initial_phase);
-    PWM3_PeriodSet(period);
-
-    setLEDs(initial_duty, initial_duty, initial_duty);
-}
-
-void setLED (uint16_t duty, uint8_t LEDno)
-{
-    if(LEDno == 1)
-    {
-        PWM1_DutyCycleSet(duty);
-        PWM1_LoadBufferSet();
-    }
-    else if(LEDno == 2)
-    {
-        PWM2_DutyCycleSet(duty);
-        PWM2_LoadBufferSet();
-    }
-    else if(LEDno == 3)
-    {
-        PWM3_DutyCycleSet(duty);
-        PWM3_LoadBufferSet();
-    }
-}
-
-
-
-void wakeHandler ()
-{
-
-}
-
-void setupButtonInterrupt ()
-{
-    IOCAF0_SetInterruptHandler(wakeHandler);
-    (INTCONbits.GIE = 1);
-    (INTCONbits.PEIE = 1);
-}
-
-void goToSleep ()
-{
-
-    disableSerial();
-    ADCON0bits.ADON = 0;
-    ANSELAbits.ANSA0 = 0;
-    TRISAbits.TRISA0 = 1;
-
-
-    setLEDs(0,0,0);
-
-
-    __asm("sleep");
-
-
-
-
-    __nop();
-
-
-
-    TRISAbits.TRISA0 = 1;
-    ANSELAbits.ANSA0 = 0;
-    ADCON0bits.ADON = 0;
 }

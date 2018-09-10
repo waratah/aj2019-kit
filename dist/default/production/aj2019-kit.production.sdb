@@ -10,28 +10,15 @@ channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"70 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
-[e E3081 . `uc
-channel_AN0 0
-channel_Temp 29
-channel_DAC 30
-channel_FVR 31
-]
 "32 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-[e E3081 . `uc
+[e E3089 . `uc
 channel_AN0 0
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"9
-[v _enableSerial enableSerial `(v  1 e 1 0 ]
 "16
 [v _disableSerial disableSerial `(v  1 e 1 0 ]
-"23
-[v _EUSART_RxCheck EUSART_RxCheck `(a  1 e 1 0 ]
-"29
-[v _checkButtons checkButtons `(v  1 e 1 0 ]
 "86
 [v _stopLEDs stopLEDs `(v  1 e 1 0 ]
 "93
@@ -40,34 +27,42 @@ channel_FVR 31
 [v _setLEDs setLEDs `(v  1 e 1 0 ]
 "110
 [v _setupLEDs setupLEDs `(v  1 e 1 0 ]
+"149
+[v _wakeHandler wakeHandler `(v  1 e 1 0 ]
+"154
+[v _setupButtonInterrupt setupButtonInterrupt `(v  1 e 1 0 ]
+"161
+[v _goToSleep goToSleep `(v  1 e 1 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"27 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+"36 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
 [v _main main `(v  1 e 1 0 ]
-"65 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-[v _ADC1_Initialize ADC1_Initialize `(v  1 e 1 0 ]
-"113
+"113 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
 [v _ADC1_GetConversion ADC1_GetConversion `(us  1 e 2 0 ]
-"56 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
-"88
-[v _EUSART_is_tx_done EUSART_is_tx_done `(a  1 e 1 0 ]
-"93
+"93 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
 [v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
 "111
 [v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"52 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 "50 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "63
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "73
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-"57 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+"59 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"117
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
+"129
+[v _IOCAF0_ISR IOCAF0_ISR `(v  1 e 1 0 ]
+"144
+[v _IOCAF0_SetInterruptHandler IOCAF0_SetInterruptHandler `(v  1 e 1 0 ]
+"151
+[v _IOCAF0_DefaultInterruptHandler IOCAF0_DefaultInterruptHandler `(v  1 e 1 0 ]
 "58 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
 [v _PWM1_Initialize PWM1_Initialize `(v  1 e 1 0 ]
 "113
@@ -110,7 +105,24 @@ channel_FVR 31
 [v _PWM3_DutyCycleSet PWM3_DutyCycleSet `(v  1 e 1 0 ]
 "145
 [v _PWM3_PeriodSet PWM3_PeriodSet `(v  1 e 1 0 ]
-[s S113 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S138 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h
+[s S147 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S152 . 1 `S138 1 . 1 0 `S147 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES152  1 e 1 @11 ]
+[s S257 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TXIF 1 0 :1:4 
@@ -118,12 +130,24 @@ channel_FVR 31
 `uc 1 ADIF 1 0 :1:6 
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
-"503 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic12lf1572.h
-[u S121 . 1 `S113 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES121  1 e 1 @17 ]
+"503
+[u S265 . 1 `S257 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES265  1 e 1 @17 ]
 "914
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-[s S26 . 1 `uc 1 PS0 1 0 :1:0 
+[s S1086 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"932
+[s S1093 . 1 `uc 1 TRISA 1 0 :6:0 
+]
+[u S1095 . 1 `S1086 1 . 1 0 `S1093 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES1095  1 e 1 @140 ]
+[s S27 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 PSA 1 0 :1:3 
@@ -133,13 +157,13 @@ channel_FVR 31
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1100
-[s S35 . 1 `uc 1 PS 1 0 :3:0 
+[s S36 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S40 . 1 `S26 1 . 1 0 `S35 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES40  1 e 1 @149 ]
+[u S41 . 1 `S27 1 . 1 0 `S36 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES41  1 e 1 @149 ]
 "1217
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1276
@@ -152,7 +176,7 @@ channel_FVR 31
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "1509
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S382 . 1 `uc 1 ADON 1 0 :1:0 
+[s S526 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -161,18 +185,18 @@ channel_FVR 31
 `uc 1 CHS4 1 0 :1:6 
 ]
 "1538
-[s S390 . 1 `uc 1 . 1 0 :1:0 
+[s S534 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
-[s S394 . 1 `uc 1 . 1 0 :1:0 
+[s S538 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[s S397 . 1 `uc 1 . 1 0 :1:0 
+[s S541 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[u S400 . 1 `S382 1 . 1 0 `S390 1 . 1 0 `S394 1 . 1 0 `S397 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES400  1 e 1 @157 ]
+[u S544 . 1 `S526 1 . 1 0 `S534 1 . 1 0 `S538 1 . 1 0 `S541 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES544  1 e 1 @157 ]
 "1598
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "1664
@@ -185,6 +209,17 @@ channel_FVR 31
 [v _APFCON APFCON `VEuc  1 e 1 @285 ]
 "2242
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+[s S1066 . 1 `uc 1 ANSA0 1 0 :1:0 
+`uc 1 ANSA1 1 0 :1:1 
+`uc 1 ANSA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 ANSA4 1 0 :1:4 
+]
+"2259
+[s S1072 . 1 `uc 1 ANSELA 1 0 :5:0 
+]
+[u S1074 . 1 `S1066 1 . 1 0 `S1072 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES1074  1 e 1 @396 ]
 "2459
 [v _RCREG RCREG `VEuc  1 e 1 @409 ]
 "2479
@@ -195,7 +230,7 @@ channel_FVR 31
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
 "2546
 [v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
-[s S153 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S297 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -205,11 +240,11 @@ channel_FVR 31
 `uc 1 SPEN 1 0 :1:7 
 ]
 "2563
-[u S162 . 1 `S153 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES162  1 e 1 @413 ]
+[u S306 . 1 `S297 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES306  1 e 1 @413 ]
 "2608
 [v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
-[s S132 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S276 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -219,8 +254,8 @@ channel_FVR 31
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2625
-[u S141 . 1 `S132 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES141  1 e 1 @414 ]
+[u S285 . 1 `S276 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES285  1 e 1 @414 ]
 "2670
 [v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
 "2722
@@ -229,6 +264,42 @@ channel_FVR 31
 [v _ODCONA ODCONA `VEuc  1 e 1 @652 ]
 "2833
 [v _SLRCONA SLRCONA `VEuc  1 e 1 @780 ]
+[s S106 . 1 `uc 1 IOCAP0 1 0 :1:0 
+`uc 1 IOCAP1 1 0 :1:1 
+`uc 1 IOCAP2 1 0 :1:2 
+`uc 1 IOCAP3 1 0 :1:3 
+`uc 1 IOCAP4 1 0 :1:4 
+`uc 1 IOCAP5 1 0 :1:5 
+]
+"2962
+[s S113 . 1 `uc 1 IOCAP 1 0 :6:0 
+]
+[u S115 . 1 `S106 1 . 1 0 `S113 1 . 1 0 ]
+[v _IOCAPbits IOCAPbits `VES115  1 e 1 @913 ]
+[s S84 . 1 `uc 1 IOCAN0 1 0 :1:0 
+`uc 1 IOCAN1 1 0 :1:1 
+`uc 1 IOCAN2 1 0 :1:2 
+`uc 1 IOCAN3 1 0 :1:3 
+`uc 1 IOCAN4 1 0 :1:4 
+`uc 1 IOCAN5 1 0 :1:5 
+]
+"3020
+[s S91 . 1 `uc 1 IOCAN 1 0 :6:0 
+]
+[u S93 . 1 `S84 1 . 1 0 `S91 1 . 1 0 ]
+[v _IOCANbits IOCANbits `VES93  1 e 1 @914 ]
+[s S62 . 1 `uc 1 IOCAF0 1 0 :1:0 
+`uc 1 IOCAF1 1 0 :1:1 
+`uc 1 IOCAF2 1 0 :1:2 
+`uc 1 IOCAF3 1 0 :1:3 
+`uc 1 IOCAF4 1 0 :1:4 
+`uc 1 IOCAF5 1 0 :1:5 
+]
+"3078
+[s S69 . 1 `uc 1 IOCAF 1 0 :6:0 
+]
+[u S71 . 1 `S62 1 . 1 0 `S69 1 . 1 0 ]
+[v _IOCAFbits IOCAFbits `VES71  1 e 1 @915 ]
 "3573
 [v _PWM1PHL PWM1PHL `VEuc  1 e 1 @3473 ]
 "3651
@@ -251,7 +322,7 @@ channel_FVR 31
 [v _PWM1TMRH PWM1TMRH `VEuc  1 e 1 @3482 ]
 "4381
 [v _PWM1CON PWM1CON `VEuc  1 e 1 @3483 ]
-[s S228 . 1 `uc 1 . 1 0 :2:0 
+[s S372 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 MODE 1 0 :2:2 
 `uc 1 POL 1 0 :1:4 
 `uc 1 OUT 1 0 :1:5 
@@ -259,63 +330,63 @@ channel_FVR 31
 `uc 1 EN 1 0 :1:7 
 ]
 "4414
-[s S235 . 1 `uc 1 . 1 0 :2:0 
+[s S379 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM1MODE0 1 0 :1:2 
 `uc 1 PWM1MODE1 1 0 :1:3 
 ]
-[s S239 . 1 `uc 1 . 1 0 :2:0 
+[s S383 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM1MODE 1 0 :2:2 
 `uc 1 PWM1POL 1 0 :1:4 
 `uc 1 PWM1OUT 1 0 :1:5 
 `uc 1 PWM1OE 1 0 :1:6 
 `uc 1 PWM1EN 1 0 :1:7 
 ]
-[s S246 . 1 `uc 1 . 1 0 :2:0 
+[s S390 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 MODE0 1 0 :1:2 
 `uc 1 MODE1 1 0 :1:3 
 ]
-[u S250 . 1 `S228 1 . 1 0 `S235 1 . 1 0 `S239 1 . 1 0 `S246 1 . 1 0 ]
-[v _PWM1CONbits PWM1CONbits `VES250  1 e 1 @3483 ]
+[u S394 . 1 `S372 1 . 1 0 `S379 1 . 1 0 `S383 1 . 1 0 `S390 1 . 1 0 ]
+[v _PWM1CONbits PWM1CONbits `VES394  1 e 1 @3483 ]
 "4489
 [v _PWM1INTE PWM1INTE `VEuc  1 e 1 @3484 ]
 "4615
 [v _PWM1INTF PWM1INTF `VEuc  1 e 1 @3485 ]
-[s S316 . 1 `uc 1 PRIF 1 0 :1:0 
+[s S460 . 1 `uc 1 PRIF 1 0 :1:0 
 `uc 1 DCIF 1 0 :1:1 
 `uc 1 PHIF 1 0 :1:2 
 `uc 1 OFIF 1 0 :1:3 
 ]
 "4639
-[s S321 . 1 `uc 1 PWM1PRIF 1 0 :1:0 
+[s S465 . 1 `uc 1 PWM1PRIF 1 0 :1:0 
 `uc 1 PWM1DCIF 1 0 :1:1 
 `uc 1 PWM1PHIF 1 0 :1:2 
 `uc 1 PWM1OFIF 1 0 :1:3 
 ]
-[u S326 . 1 `S316 1 . 1 0 `S321 1 . 1 0 ]
-[v _PWM1INTFbits PWM1INTFbits `VES326  1 e 1 @3485 ]
+[u S470 . 1 `S460 1 . 1 0 `S465 1 . 1 0 ]
+[v _PWM1INTFbits PWM1INTFbits `VES470  1 e 1 @3485 ]
 "4741
 [v _PWM1CLKCON PWM1CLKCON `VEuc  1 e 1 @3486 ]
 "4849
 [v _PWM1LDCON PWM1LDCON `VEuc  1 e 1 @3487 ]
-[s S278 . 1 `uc 1 LDS 1 0 :2:0 
+[s S422 . 1 `uc 1 LDS 1 0 :2:0 
 `uc 1 . 1 0 :4:2 
 `uc 1 LDT 1 0 :1:6 
 `uc 1 LDA 1 0 :1:7 
 ]
 "4876
-[s S283 . 1 `uc 1 PWM1LDS0 1 0 :1:0 
+[s S427 . 1 `uc 1 PWM1LDS0 1 0 :1:0 
 `uc 1 PWM1LDS1 1 0 :1:1 
 ]
-[s S286 . 1 `uc 1 PWM1LDS 1 0 :2:0 
+[s S430 . 1 `uc 1 PWM1LDS 1 0 :2:0 
 `uc 1 . 1 0 :4:2 
 `uc 1 PWM1LDM 1 0 :1:6 
 `uc 1 PWM1LD 1 0 :1:7 
 ]
-[s S291 . 1 `uc 1 LDS0 1 0 :1:0 
+[s S435 . 1 `uc 1 LDS0 1 0 :1:0 
 `uc 1 LDS1 1 0 :1:1 
 ]
-[u S294 . 1 `S278 1 . 1 0 `S283 1 . 1 0 `S286 1 . 1 0 `S291 1 . 1 0 ]
-[v _PWM1LDCONbits PWM1LDCONbits `VES294  1 e 1 @3487 ]
+[u S438 . 1 `S422 1 . 1 0 `S427 1 . 1 0 `S430 1 . 1 0 `S435 1 . 1 0 ]
+[v _PWM1LDCONbits PWM1LDCONbits `VES438  1 e 1 @3487 ]
 "4931
 [v _PWM1OFCON PWM1OFCON `VEuc  1 e 1 @3488 ]
 "5046
@@ -341,46 +412,46 @@ channel_FVR 31
 "5854
 [v _PWM2CON PWM2CON `VEuc  1 e 1 @3499 ]
 "5887
-[s S472 . 1 `uc 1 . 1 0 :2:0 
+[s S616 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM2MODE0 1 0 :1:2 
 `uc 1 PWM2MODE1 1 0 :1:3 
 ]
-[s S476 . 1 `uc 1 . 1 0 :2:0 
+[s S620 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM2MODE 1 0 :2:2 
 `uc 1 PWM2POL 1 0 :1:4 
 `uc 1 PWM2OUT 1 0 :1:5 
 `uc 1 PWM2OE 1 0 :1:6 
 `uc 1 PWM2EN 1 0 :1:7 
 ]
-[u S487 . 1 `S228 1 . 1 0 `S472 1 . 1 0 `S476 1 . 1 0 `S246 1 . 1 0 ]
-[v _PWM2CONbits PWM2CONbits `VES487  1 e 1 @3499 ]
+[u S631 . 1 `S372 1 . 1 0 `S616 1 . 1 0 `S620 1 . 1 0 `S390 1 . 1 0 ]
+[v _PWM2CONbits PWM2CONbits `VES631  1 e 1 @3499 ]
 "5962
 [v _PWM2INTE PWM2INTE `VEuc  1 e 1 @3500 ]
 "6088
 [v _PWM2INTF PWM2INTF `VEuc  1 e 1 @3501 ]
 "6112
-[s S558 . 1 `uc 1 PWM2PRIF 1 0 :1:0 
+[s S702 . 1 `uc 1 PWM2PRIF 1 0 :1:0 
 `uc 1 PWM2DCIF 1 0 :1:1 
 `uc 1 PWM2PHIF 1 0 :1:2 
 `uc 1 PWM2OFIF 1 0 :1:3 
 ]
-[u S563 . 1 `S316 1 . 1 0 `S558 1 . 1 0 ]
-[v _PWM2INTFbits PWM2INTFbits `VES563  1 e 1 @3501 ]
+[u S707 . 1 `S460 1 . 1 0 `S702 1 . 1 0 ]
+[v _PWM2INTFbits PWM2INTFbits `VES707  1 e 1 @3501 ]
 "6214
 [v _PWM2CLKCON PWM2CLKCON `VEuc  1 e 1 @3502 ]
 "6322
 [v _PWM2LDCON PWM2LDCON `VEuc  1 e 1 @3503 ]
 "6349
-[s S520 . 1 `uc 1 PWM2LDS0 1 0 :1:0 
+[s S664 . 1 `uc 1 PWM2LDS0 1 0 :1:0 
 `uc 1 PWM2LDS1 1 0 :1:1 
 ]
-[s S523 . 1 `uc 1 PWM2LDS 1 0 :2:0 
+[s S667 . 1 `uc 1 PWM2LDS 1 0 :2:0 
 `uc 1 . 1 0 :4:2 
 `uc 1 PWM2LDM 1 0 :1:6 
 `uc 1 PWM2LD 1 0 :1:7 
 ]
-[u S531 . 1 `S278 1 . 1 0 `S520 1 . 1 0 `S523 1 . 1 0 `S291 1 . 1 0 ]
-[v _PWM2LDCONbits PWM2LDCONbits `VES531  1 e 1 @3503 ]
+[u S675 . 1 `S422 1 . 1 0 `S664 1 . 1 0 `S667 1 . 1 0 `S435 1 . 1 0 ]
+[v _PWM2LDCONbits PWM2LDCONbits `VES675  1 e 1 @3503 ]
 "6404
 [v _PWM2OFCON PWM2OFCON `VEuc  1 e 1 @3504 ]
 "6519
@@ -406,67 +477,67 @@ channel_FVR 31
 "7327
 [v _PWM3CON PWM3CON `VEuc  1 e 1 @3515 ]
 "7360
-[s S632 . 1 `uc 1 . 1 0 :2:0 
+[s S776 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM3MODE0 1 0 :1:2 
 `uc 1 PWM3MODE1 1 0 :1:3 
 ]
-[s S636 . 1 `uc 1 . 1 0 :2:0 
+[s S780 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PWM3MODE 1 0 :2:2 
 `uc 1 PWM3POL 1 0 :1:4 
 `uc 1 PWM3OUT 1 0 :1:5 
 `uc 1 PWM3OE 1 0 :1:6 
 `uc 1 PWM3EN 1 0 :1:7 
 ]
-[u S647 . 1 `S228 1 . 1 0 `S632 1 . 1 0 `S636 1 . 1 0 `S246 1 . 1 0 ]
-[v _PWM3CONbits PWM3CONbits `VES647  1 e 1 @3515 ]
+[u S791 . 1 `S372 1 . 1 0 `S776 1 . 1 0 `S780 1 . 1 0 `S390 1 . 1 0 ]
+[v _PWM3CONbits PWM3CONbits `VES791  1 e 1 @3515 ]
 "7435
 [v _PWM3INTE PWM3INTE `VEuc  1 e 1 @3516 ]
 "7561
 [v _PWM3INTF PWM3INTF `VEuc  1 e 1 @3517 ]
 "7585
-[s S718 . 1 `uc 1 PWM3PRIF 1 0 :1:0 
+[s S862 . 1 `uc 1 PWM3PRIF 1 0 :1:0 
 `uc 1 PWM3DCIF 1 0 :1:1 
 `uc 1 PWM3PHIF 1 0 :1:2 
 `uc 1 PWM3OFIF 1 0 :1:3 
 ]
-[u S723 . 1 `S316 1 . 1 0 `S718 1 . 1 0 ]
-[v _PWM3INTFbits PWM3INTFbits `VES723  1 e 1 @3517 ]
+[u S867 . 1 `S460 1 . 1 0 `S862 1 . 1 0 ]
+[v _PWM3INTFbits PWM3INTFbits `VES867  1 e 1 @3517 ]
 "7687
 [v _PWM3CLKCON PWM3CLKCON `VEuc  1 e 1 @3518 ]
 "7795
 [v _PWM3LDCON PWM3LDCON `VEuc  1 e 1 @3519 ]
 "7822
-[s S680 . 1 `uc 1 PWM3LDS0 1 0 :1:0 
+[s S824 . 1 `uc 1 PWM3LDS0 1 0 :1:0 
 `uc 1 PWM3LDS1 1 0 :1:1 
 ]
-[s S683 . 1 `uc 1 PWM3LDS 1 0 :2:0 
+[s S827 . 1 `uc 1 PWM3LDS 1 0 :2:0 
 `uc 1 . 1 0 :4:2 
 `uc 1 PWM3LDM 1 0 :1:6 
 `uc 1 PWM3LD 1 0 :1:7 
 ]
-[u S691 . 1 `S278 1 . 1 0 `S680 1 . 1 0 `S683 1 . 1 0 `S291 1 . 1 0 ]
-[v _PWM3LDCONbits PWM3LDCONbits `VES691  1 e 1 @3519 ]
+[u S835 . 1 `S422 1 . 1 0 `S824 1 . 1 0 `S827 1 . 1 0 `S435 1 . 1 0 ]
+[v _PWM3LDCONbits PWM3LDCONbits `VES835  1 e 1 @3519 ]
 "7877
 [v _PWM3OFCON PWM3OFCON `VEuc  1 e 1 @3520 ]
 "27 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
+[v _LED1 LED1 `us  1 e 2 0 ]
+"28
+[v _LED2 LED2 `us  1 e 2 0 ]
+"29
+[v _LED3 LED3 `us  1 e 2 0 ]
+"56 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+[v _IOCAF0_InterruptHandler IOCAF0_InterruptHandler `*.37(v  1 e 2 0 ]
+"36 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"111
-[v main@receive receive `uc  1 a 1 6 ]
-"64
-[v main@i i `i  1 a 2 9 ]
-"60
-[v main@buttons buttons `[3]a  1 a 3 17 ]
-"35
-[v main@LED3 LED3 `us  1 a 2 15 ]
-"34
-[v main@LED2 LED2 `us  1 a 2 13 ]
-"33
-[v main@LED1 LED1 `us  1 a 2 11 ]
-"59
-[v main@adc_result adc_result `us  1 a 2 7 ]
-[v main@F3445 F3445 `[3]a  1 s 3 F3445 ]
-"121
+"77
+[v main@i i `i  1 a 2 5 ]
+"73
+[v main@buttons buttons `[3]a  1 a 3 0 ]
+"72
+[v main@adc_result adc_result `us  1 a 2 3 ]
+[v main@F3457 F3457 `[3]a  1 s 3 F3457 ]
+"141
 } 0
 "93 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
 [v _startLEDs startLEDs `(v  1 e 1 0 ]
@@ -518,7 +589,53 @@ channel_FVR 31
 {
 "121
 } 0
-"100 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+"133 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
+[v _PWM3_PhaseSet PWM3_PhaseSet `(v  1 e 1 0 ]
+{
+[v PWM3_PhaseSet@phaseCount phaseCount `us  1 p 2 0 ]
+"137
+} 0
+"145
+[v _PWM3_PeriodSet PWM3_PeriodSet `(v  1 e 1 0 ]
+{
+[v PWM3_PeriodSet@periodCount periodCount `us  1 p 2 0 ]
+"149
+} 0
+"133 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
+[v _PWM2_PhaseSet PWM2_PhaseSet `(v  1 e 1 0 ]
+{
+[v PWM2_PhaseSet@phaseCount phaseCount `us  1 p 2 0 ]
+"137
+} 0
+"145
+[v _PWM2_PeriodSet PWM2_PeriodSet `(v  1 e 1 0 ]
+{
+[v PWM2_PeriodSet@periodCount periodCount `us  1 p 2 0 ]
+"149
+} 0
+"133 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
+[v _PWM1_PhaseSet PWM1_PhaseSet `(v  1 e 1 0 ]
+{
+[v PWM1_PhaseSet@phaseCount phaseCount `us  1 p 2 0 ]
+"137
+} 0
+"145
+[v _PWM1_PeriodSet PWM1_PeriodSet `(v  1 e 1 0 ]
+{
+[v PWM1_PeriodSet@periodCount periodCount `us  1 p 2 0 ]
+"149
+} 0
+"154 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+[v _setupButtonInterrupt setupButtonInterrupt `(v  1 e 1 0 ]
+{
+"159
+} 0
+"161
+[v _goToSleep goToSleep `(v  1 e 1 0 ]
+{
+"185
+} 0
+"100
 [v _setLEDs setLEDs `(v  1 e 1 0 ]
 {
 [v setLEDs@led1 led1 `us  1 p 2 2 ]
@@ -559,84 +676,10 @@ channel_FVR 31
 [v PWM1_DutyCycleSet@dutyCycleCount dutyCycleCount `us  1 p 2 0 ]
 "143
 } 0
-"133 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm3.c
-[v _PWM3_PhaseSet PWM3_PhaseSet `(v  1 e 1 0 ]
-{
-[v PWM3_PhaseSet@phaseCount phaseCount `us  1 p 2 0 ]
-"137
-} 0
-"145
-[v _PWM3_PeriodSet PWM3_PeriodSet `(v  1 e 1 0 ]
-{
-[v PWM3_PeriodSet@periodCount periodCount `us  1 p 2 0 ]
-"149
-} 0
-"133 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm2.c
-[v _PWM2_PhaseSet PWM2_PhaseSet `(v  1 e 1 0 ]
-{
-[v PWM2_PhaseSet@phaseCount phaseCount `us  1 p 2 0 ]
-"137
-} 0
-"145
-[v _PWM2_PeriodSet PWM2_PeriodSet `(v  1 e 1 0 ]
-{
-[v PWM2_PeriodSet@periodCount periodCount `us  1 p 2 0 ]
-"149
-} 0
-"133 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pwm1.c
-[v _PWM1_PhaseSet PWM1_PhaseSet `(v  1 e 1 0 ]
-{
-[v PWM1_PhaseSet@phaseCount phaseCount `us  1 p 2 0 ]
-"137
-} 0
-"145
-[v _PWM1_PeriodSet PWM1_PeriodSet `(v  1 e 1 0 ]
-{
-[v PWM1_PeriodSet@periodCount periodCount `us  1 p 2 0 ]
-"149
-} 0
-"9 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-[v _enableSerial enableSerial `(v  1 e 1 0 ]
-{
-"13
-} 0
-"29
-[v _checkButtons checkButtons `(v  1 e 1 0 ]
-{
-[v checkButtons@buttons buttons `*.4a  1 a 1 wreg ]
-"32
-[v checkButtons@adc adc `us  1 a 2 8 ]
-"33
-[v checkButtons@i i `uc  1 a 1 6 ]
-"29
-[v checkButtons@buttons buttons `*.4a  1 a 1 wreg ]
-"31
-[v checkButtons@buttons buttons `*.4a  1 a 1 7 ]
-"83
-} 0
-"16
+"16 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
 [v _disableSerial disableSerial `(v  1 e 1 0 ]
 {
 "20
-} 0
-"113 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-[v _ADC1_GetConversion ADC1_GetConversion `(us  1 e 2 0 ]
-{
-[v ADC1_GetConversion@channel channel `E3025  1 a 1 wreg ]
-[v ADC1_GetConversion@channel channel `E3025  1 a 1 wreg ]
-"116
-[v ADC1_GetConversion@channel channel `E3025  1 a 1 3 ]
-"134
-} 0
-"15 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c99\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 4 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
-"53
 } 0
 "50 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -663,46 +706,44 @@ channel_FVR 31
 {
 "110
 } 0
-"57 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+"59 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"100
+"115
+} 0
+"144
+[v _IOCAF0_SetInterruptHandler IOCAF0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v IOCAF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"146
 } 0
 "63 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "71
 } 0
-"56 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"52 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"76
+"63
 } 0
-"65 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/adc1.c
-[v _ADC1_Initialize ADC1_Initialize `(v  1 e 1 0 ]
+"117 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
-"84
+"124
 } 0
-"88 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-[v _EUSART_is_tx_done EUSART_is_tx_done `(a  1 e 1 0 ]
+"129
+[v _IOCAF0_ISR IOCAF0_ISR `(v  1 e 1 0 ]
 {
-"91
+"139
 } 0
-"111
-[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"151
+[v _IOCAF0_DefaultInterruptHandler IOCAF0_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
-[v EUSART_Write@txData txData `uc  1 a 1 0 ]
-"118
+"154
 } 0
-"23 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
-[v _EUSART_RxCheck EUSART_RxCheck `(a  1 e 1 0 ]
+"149 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\aj_hal.c
+[v _wakeHandler wakeHandler `(v  1 e 1 0 ]
 {
-"26
-} 0
-"93 C:\Users\Lachlan\Documents\GitHub\aj2019-kit\mcc_generated_files/eusart.c
-[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
-{
-"109
+"152
 } 0

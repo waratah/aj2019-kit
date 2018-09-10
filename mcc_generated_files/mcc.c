@@ -55,9 +55,9 @@ void SYSTEM_Initialize(void)
     WDT_Initialize();
     PWM1_Initialize();
     PWM2_Initialize();
-    ADC1_Initialize();
+    //ADC1_Initialize();
     PWM3_Initialize();
-    EUSART_Initialize();
+    //EUSART_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
