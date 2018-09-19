@@ -26,6 +26,25 @@ bool EUSART_RxCheck ()
 }
 
 //################### BUTTONS ####################
+#define B_7 162.1 // 111
+#define B_6 151.5 // 110
+#define B_5 142.6 // 101
+#define B_4 128.4 // 100
+#define B_3 106.3 // 011
+#define B_2 79.7 // 010
+#define B_1 51.9 // 001
+#define B_0 0.0  // 000
+
+#define B_7up (int)(B_7 + (B_7-B_6))
+#define B_67 (int)(B_6 + (B_7-B_6)/2)
+#define B_56 (int)(B_5 + (B_6-B_5)/2)
+#define B_45 (int)(B_4 + (B_5-B_4)/2)
+#define B_34 (int)(B_3 + (B_4-B_3)/2)
+#define B_23 (int)(B_2 + (B_3-B_2)/2)
+#define B_12 (int)(B_1 + (B_2-B_1)/2)
+#define B_01 (int)(B_0 + (B_1-B_0)/2)
+
+
 void checkButtons (bool buttons[]) //buttons[3]
 {
     disableSerial();
@@ -36,49 +55,49 @@ void checkButtons (bool buttons[]) //buttons[3]
         buttons[i] = 0;
     }
     
-    if(adc <= 23)
+    if(adc <= B_01)
     {
         //No Button
     }
-    else if(adc > 23 && adc <= 63)
-    {
-        //Left Button
-        buttons[2] = 1;
-    }
-    else if(adc > 63 && adc <= 91)
-    {
-        //Middle Button
-        buttons[1] = 1;
-    }
-    else if(adc > 91 && adc <= 112)
-    {
-        //Left,Middle Button
-        buttons[2] = 1;
-        buttons[1] = 1;
-    }
-    else if(adc > 112 && adc <= 128)
+    else if(adc > B_01 && adc <= B_12)
     {
         //Right Button
         buttons[0] = 1;
     }
-    else if(adc > 128 && adc <= 140)
+    else if(adc > B_12 && adc <= B_23)
     {
-        //Left,Right Button
-        buttons[2] = 1;
-        buttons[0] = 1;
+        //Middle Button
+        buttons[1] = 1;
     }
-    else if(adc > 140 && adc <= 151)
+    else if(adc > B_23 && adc <= B_34)
     {
         //Right,Middle Button
-        buttons[1] = 1;
         buttons[0] = 1;
+        buttons[1] = 1;
     }
-    else if(adc > 151 && adc <= 200)
+    else if(adc > B_34 && adc <= B_45)
     {
-        //Left,Middle,Right Button
+        //Left Button
         buttons[2] = 1;
-        buttons[1] = 1;
+    }
+    else if(adc > B_45 && adc <= B_56)
+    {
+        //Right,Left Button
         buttons[0] = 1;
+        buttons[2] = 1;
+    }
+    else if(adc > B_56 && adc <= B_67)
+    {
+        //Left,Middle Button
+        buttons[1] = 1;
+        buttons[2] = 1;
+    }
+    else if(adc > B_67 && adc <= B_7up)
+    {
+        //Right,Middle,Left Button
+        buttons[0] = 1;
+        buttons[1] = 1;
+        buttons[2] = 1;
     }
 }
 

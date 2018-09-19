@@ -97,26 +97,26 @@ void main(void)
         }
         
         //Serial Transmit
-        enableSerial();
-        //Send Serial Data
-        EUSART_Write((uint8_t)((adc_result >> 8) & 0xFF));
-        EUSART_Write(buttons[0] | buttons[1] << 1 | buttons[2] << 2);
-        //EUSART_Write((uint8_t)(adc_result & 0xFF //Additional 8-bits
-        //Wait for Serial TX to finish
-        while(!EUSART_is_tx_done());
-        
-        //If the same value sent is received, then send a 0x55 ack.
-        if(EUSART_RxCheck())
-        {
-            uint8_t receive = EUSART_Read();
-            if(receive == ((adc_result >> 8) & 0xFF))
-            {
-                EUSART_Write(0x55);
-            }
-            while(!EUSART_is_tx_done());
-        }
-        //Disable UART (for ADC to work)
-        disableSerial();
+//        enableSerial();
+//        //Send Serial Data
+//        EUSART_Write((uint8_t)((adc_result >> 8) & 0xFF));
+//        EUSART_Write(buttons[0] | buttons[1] << 1 | buttons[2] << 2);
+//        //EUSART_Write((uint8_t)(adc_result & 0xFF //Additional 8-bits
+//        //Wait for Serial TX to finish
+//        while(!EUSART_is_tx_done());
+//        
+//        //If the same value sent is received, then send a 0x55 ack.
+//        if(EUSART_RxCheck())
+//        {
+//            uint8_t receive = EUSART_Read();
+//            if(receive == ((adc_result >> 8) & 0xFF))
+//            {
+//                EUSART_Write(0x55);
+//            }
+//            while(!EUSART_is_tx_done());
+//        }
+//        //Disable UART (for ADC to work)
+//        disableSerial();
     }
 }
 /**
