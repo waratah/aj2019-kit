@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "random.h": "c",
+        "led.h": "c",
+        "game.h": "c",
+        "flashvalue.h": "c",
+        "connection.h": "c",
+        "machine.h": "c",
+        "director.h": "c"
+    }
+}
